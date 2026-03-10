@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Jaszmine DeFranco</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Jaszmine DeFranco</a>
+            <div class="nav-links">
+                <a href="index.html" class="home">Home</a>
+                <a href="about.html" class="about">About</a>
+                <a href="experiences.html" class="experience">Experience</a>
+                <a href="projects.html" class="active projects">Projects</a>
+                <a href="photography.html" class="photography">Photography</a>
+                <a href="misc.html" class="misc">Misc.</a>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!--  -->
+        <!-- !!!!! ADDING NEXT: NASA (p5), ParkCompass (p4), WhiteRock (p7) !!!!! -->
+    <!--  -->
+
+    <main class="container">
+        <section class="section">
+            <h1 class="section-title"><span class="highlight" data-text="Projects">Projects</span></h1>
+            <!-- <p class="section-subtitle">Here are some things I've built:</p> -->
+            
+            <!-- project grid thumbnails & titles -->
+            <div class="projects-grid">
+                <!-- Project Card 1: QML -->
+                <div class="project-card" onclick="openModal('modal1')">
+                    <div class="project-image-container">
+                        <img src="assets/projects/01qml.png" alt="QML" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Quantum Machine Learning for Leukemia Genomics</h3>
+                        <p class="project-description">Engineered quantum and classical ML models to classify leukemia subtypes from gene-expression data.</p>
+                    </div>
+                </div>
+
+                <!-- Project Card 2: Risk Radar -->
+                <div class="project-card" onclick="openModal('modal2')">
+                    <div class="project-image-container">
+                        <img src="assets/projects/02tac.png" alt="Tweet Analysis Dashboard" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Risk Radar: Tweet Analysis for Disaster Crisis Response</h3>
+                        <p class="project-description">Developed a near real-time crisis detection system using the Bluesky API, benchmarking LLMs to classify 25K+ disaster-related posts.</p>
+                    </div>
+                </div>
+
+                <!-- Project Card 3: Spaceport -->
+                <div class="project-card" onclick="openModal('modal3')">
+                    <div class="project-image-container">
+                        <img src="assets/projects/03rck.jpg" alt="L3 Rocket" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">L3 Rocket - Simulation Lead; Spaceport America Cup</h3>
+                        <p class="project-description">Designed & launched a high-powered rocket, leading flight simulations and 6-DOF analyses to optimize performance.</p>
+                    </div>
+                </div>
+
+                <!--  -->
+                     <!-- !!!!! ADDING NEXT (0-2) !!!!! -->
+                <!--  -->
+                <!-- Project Card 4: HackUTD XII, Park Compass -->
+                <!-- <div class="project-card" onclick="openModal('modal4')">
+                    <div class="project-image-container">
+                        <img src="assets/projects/04hpc.png" alt="Park Compass" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">HackUTD XII: Park Compass</h3>
+                        <p class="project-description">An interactive web app featuring personalized AI-generated park itineraries, dashboards, and trip documentation.</p>
+                    </div>
+                </div> -->
+
+                <!--  -->
+                     <!-- !!!!! ADDING NEXT (0-1) !!!!! -->
+                <!--  -->
+                <!-- Project Card 5: NASA -->
+                <!-- <div class="project-card" onclick="openModal('modal5')">
+                    <div class="project-image-container">
+                        <img src="assets/projects/05nasa.jpeg" alt="NASA Micro-G NExT" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">NASA Micro-G NExT -  Ocean Beacon and Object Locator</h3>
+                        <p class="project-description">Object detection system for NASA's ocean search and rescue operations; tested at the Neutral Buoyancy Lab.</p>
+                    </div>
+                </div> -->
+
+                <!-- Project Card 6: SWE/Epithelial -->
+                <!-- <div class="project-card" onclick="openModal('modal6')">
+                    <div class="project-image-container">
+                        <img src="assets/projects/06ttt.png" alt="TTT" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Epithelial Ovarian Cancer diagnosis & prognosis Platform</h3>
+                        <p class="project-description">Diagnostic platform for EOC using TensorFlow, ResNet101, and Lasso-Cox Regression to analyze whole slide images.</p>
+                    </div>
+                </div> -->
+
+                <!--  -->
+                     <!-- !!!!! ADDING NEXT (0-3) !!!!! -->
+                <!--  -->
+                <!-- Project Card 7: White Rock -->
+                <!-- <div class="project-card" onclick="openModal('modal7')">
+                    <div class="project-image-container">
+                        <img src="assets/projects/07wre.jpg" alt="Solar Array" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">White Rock Elementary School Garden Solar Array</h3>
+                        <p class="project-description">an off-grid solar array to power appliances for a sustainable elementary school garden.</p>
+                    </div>
+                </div> -->
+
+                <!--  -->
+                     <!-- !!!!! ADDING NEXT (1) !!!!! -->
+                <!--  -->
+                <!-- Project Card 8: L1 Rocket -->
+                <!-- <div class="project-card" onclick="openModal('modal8')">
+                    <div class="project-image-container">
+                        <img src="assets/projects/08rck.jpg" alt="L1 Rocket" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">L1 Rocket</h3>
+                        <p class="project-description">Built, launched & certified a high-powered rocket; NAR certified; American Institute of Aeronautics & Astronautics (AIAA).</p>
+                    </div>
+                </div> -->
+
+                <!-- Project Card 9: STAND -->
+                <!-- <div class="project-card" onclick="openModal('modal9')">
+                    <div class="project-image-container">
+                        <img src="assets/projects/09stand.png" alt="STAND" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">STAND for Global Sustainability</h3>
+                        <p class="project-description">Structural Technology for Approaching Natural Disasters business proposal; database for disaster-resilient infrastructure.</p>
+                    </div>
+                </div> -->
+
+                <!-- Project Card 10: Mosaic -->
+                <!-- <div class="project-card" onclick="openModal('modal10')">
+                    <div class="project-image-container">
+                        <img src="assets/projects/10mos.png" alt="Mosaic" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Mosaic - AIGA Design Exchange</h3>
+                        <p class="project-description">A community activity app supporting local businesses; won "Best Design Process" for solution impact & design thinking.</p>
+                    </div>
+                </div> -->
+
+                <!-- Project Card 11: WEHack '23, Einstein Studios -->
+                <!-- <div class="project-card" onclick="openModal('modal11')">
+                    <div class="project-image-container">
+                        <img src="assets/projects/11weh.jpg" alt="WeHack" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">WEHack '23: Einstein Studios</h3>
+                        <p class="project-description">A customizable no-code IDE for K-12 classrooms; placing 3rd in the L3 Harris challenge at WEHack '23.</p>
+                    </div>
+                </div> -->
+
+                <!--  -->
+                <!-- !!!!! ADDING NEXT (2) !!!!! -->
+                <!--  -->
+                <!-- Project Card 12: ATC -->
+                <!-- <div class="project-card" onclick="openModal('modal12')">
+                    <div class="project-image-container">
+                        <img src="assets/projects/12atc.png" alt="ATC" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Data Management App; Autism Treatment Center; EPICS</h3>
+                        <p class="project-description">A full-stack data collection app, streamlining behavioral data processing and eliminating paper waste.</p>
+                    </div>
+                </div> -->
+
+                <!--  -->
+                <!-- !!!!! ADDING NEXT (3) !!!!! -->
+                <!--  -->
+                <!-- Project Card 13: Envoy -->
+                <!-- <div class="project-card" onclick="openModal('modal13')">
+                    <div class="project-image-container">
+                        <img src="assets/projects/13env.jpg" alt="Envoy" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Envoy; ACM Projects</h3>
+                        <p class="project-description">Translate videos into 15+ languages in real time, featuring AI-generated transcripts and synced text-to-speech narration.</p>
+                    </div>
+                </div> -->
+
+                <!-- Project Card 14: Nokia -->
+                <!-- <div class="project-card" onclick="openModal('modal14')">
+                    <div class="project-image-container">
+                        <img src="assets/projects/14nok.png" alt="NokiaCaseComp" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Nokia Case Competition</h3>
+                        <p class="project-description">Business case discussing SaaS potential of 5G tech through cloud computing, data storage, analysis, & optimization.</p>
+                    </div>
+                </div> -->
+
+                <!-- Project Card 15: HackUTD IX, Stellar -->
+                <!-- <div class="project-card" onclick="openModal('modal15')">
+                    <div class="project-image-container">
+                        <img src="assets/projects/15ste.png" alt="Stellar" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">HackUTD IX: Stellar</h3>
+                        <p class="project-description">Built a positivity-focused social media web app; won the Beginner's Challenge at HackUTD IX out of 1k+ participants.</p>
+                    </div>
+                </div> -->
+
+                <!-- Project Card 16: WEHack '22, Plan-It UTD -->
+                <!-- <div class="project-card" onclick="openModal('modal16')">
+                    <div class="project-image-container">
+                        <img src="assets/projects/16pln.png" alt="Plan-It" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">WEHack '22: Plan-It UTD</h3>
+                        <p class="project-description">A degree planning website that aggregates resources for students; placed 3rd in State Farm's challenge at WEHack '22.</p>
+                    </div>
+                </div> -->
+            </div>
+
+            <!-- Modals -->
+            <!-- Modal 1: Quantum Machine Learning for Leukemia Genomics -->
+            <div id="modal1" class="project-modal">
+                <div class="modal-content">
+                    <span class="modal-close" onclick="closeModal('modal1')">&times;</span>
+                    
+                    <div class="modal-header">
+                        <h1 class="modal-title">Quantum Machine Learning for Leukemia Genomics</h1>
+                        <p>Fall 2025 <b>|</b> CS 4301 - Special Topics in CS: Fundamentals of Conducting Research</p>
+                        <p><b>Advisor:</b> <a href="https://profiles.utdallas.edu/ovidiu.daescu" target="_blank" class="experience-org-link"><i>Dr. Ovidiu Daescu</i></a></p>
+                    </div>
+                    
+                    <div class="modal-body">
+
+                        <h2>CS 4301: Course Description</h2>
+                        <p>The course introduced the principles of conducting research, focusing on the
+                        practical aspects of effective research facilitated by the emergence of AI
+                        technologies. The course had a lecture component and a project component.
+                        Students worked in teams to solve research problems they chose 
+                        and produced research reports and software implementations of
+                        proposed solutions.</p>
+                        
+                        <h2>Research Project Overview</h2>
+                        <p>This study investigated whether Variational Quantum Classifiers (VQCs) could achieve competitive 
+                            performance for classifying Acute Myeloid Leukemia (AML) vs. Acute Lymphoblastic Leukemia (ALL) 
+                            while demonstrating superior parameter and feature efficiency compared to classical models. 
+                            Using the seminal Golub leukemia dataset, which epitomizes the "small n, large p" challenge 
+                            with 72 patients and over 7,000 genes, we benchmarked quantum models against classical Support 
+                            Vector Machines (SVMs) and Multi-Layer Perceptrons (MLPs) across varying levels of data scarcity 
+                            and feature set sizes.</p>
+
+                        <h2>My Role & Responsibilities</h2>
+                        <ul>
+                            <li>Led the quantum model implementation in PennyLane (angle/amplitude encoding, VQC, QSVM) and assisted with the Qiskit implementations.</li>
+                            <li>Conducted comprehensive data preprocessing and EDA on the leukemia dataset.</li>
+                            <li>Established systematic benchmarking frameworks across four of the experimental groups.</li>
+                            <li>Authored significant portions of the final report including but not limited to methodology and quantum framework/circuit architecture design.</li>
+                            <li>Conducted comprehensive literature review of hybrid quantum-classical machine learning advancements and biomedical applications, synthesizing key findings and sharing insights with the team to guide experimental design and methodology selection.</li>
+                        </ul>
+                        
+                        <h2>Technical Approach</h2>
+                        <p>We implemented VQCs using two encoding strategies: angle encoding, where each gene feature is 
+                            encoded as a rotation on a dedicated qubit, and amplitude encoding, which compresses feature 
+                            vectors into the probability amplitudes of a quantum state for logarithmic qubit scaling. 
+                            Models were developed using dual quantum frameworks (Xanadu's PennyLane and IBM's Qiskit) to ensure robustness. 
+                            Classical baselines included standard SVMs with RBF kernels, MLPs with extensive regularization, 
+                            and a SCAD-regularized SVM that performed embedded feature selection via non-convex optimization.</p>
+
+                        <img src="assets/projects/mod1-pic1.png" alt="QML Circuit Diagram" class="modal-inline-image">
+                        
+                        <h2>Challenges</h2>
+                        <ul>
+                            <li>The first challenge was definitely the steep learning curve. With most of our team coming from 
+                                beginner-intermediate programming backgrounds, with little to know research experience, learning
+                                how to work through a research project from start to finish was definitely a very challenging yet
+                                rewarding experience!
+                            </li>
+                            <li>The second issue we ran into once we had gotten some rudimentary models programmed, were
+                                hardware constraints. Turns out running quantum machine learning simulations on your laptop
+                                isn't very feasible. To work around this we limited the number of qubits used in our 
+                                simulations, as well as using some of our university's devices to run some of the more intense
+                                experiments. If we had more time, we had begun to discuss the process of how we would transition to using
+                                our university system's HPC cluster. 
+                            </li>
+                            <li>Outisde of knowledge gaps and hardware constraints, one of the actual research obstacles
+                                we ran into was that of the <b>barren plateau phenomenon</b>, where gradients vanish exponentially 
+                            with qubit count, making optimization extremely difficult. The Quantum models also 
+                            exhibited <b>high sensitivity to architecture and hyperparameters</b>, small increases in qubit 
+                            count or layer depth caused sharp performance drops, indicating that more qubits or layers do 
+                            not always improve performance and may lead to overfitting or optimization failure. For amplitude 
+                            encoding, we observed persistent class imbalance issues resulting in biased predictions toward the 
+                            majority ALL class, with additional debugging needed in the codebase.
+                            </li>
+                        </ul>
+                        
+                        <img src="assets/projects/mod1-pic2.png" alt="QML Circuit Diagram" class="modal-inline-image">
+                        
+                        <h2>Results</h2>
+                        <p><b>Classical Models with Proper Regularization:</b> A SCAD-regularized SVM achieved 
+                            97.7% accuracy over 50 tests using only 4 genes, outperforming other feature selection 
+                            methods (ANOVA, SNR) that required more features but delivered lower accuracy. This demonstrates 
+                            that embedded feature selection via SCAD is highly effective for high-dimensional biological data. 
+                            The SCAD-SVM was tuned across 10 different lambda values from 0.3 to 2.0 to identify the optimal 
+                            regularization strength.</p>       
+                        <p><b>Angle-Encoded VQC:</b> Following systematic exploration of over 240 experimental configurations 
+                            (≥5 runs each), we identified an optimal setup—4 qubits, 3 layers, learning rate 0.08—that achieved 
+                            100% accuracy. This optimal configuration was discovered only after extensive hyperparameter sweeps 
+                            varying qubit counts (3–16), circuit depths (2–5 layers), learning rates (0.05–0.1), and feature set 
+                            sizes (8–50 SNR-selected genes). Performance proved highly fragile: deviations from this configuration, 
+                            such as adding more qubits or layers, consistently degraded results, highlighting overfitting and 
+                            optimization difficulties characteristic of barren plateaus. However, given the sensitivity observed 
+                            and the extensive tuning required to achieve this result, further experimentation on larger and more 
+                            diverse datasets is needed to establish whether such performance can be consistently reproduced.</p> 
+                        <p><b>Amplitude-Encoded VQC:</b> Demonstrated theoretical promise by compressing 32 gene features into 
+                            just 5 qubits (logarithmic scaling), though best accuracy reached only 85.7% with depth 2 and 200 
+                            iterations across 20+ architectural variations. The model struggled with class imbalance, remaining 
+                            below classical performance while offering a potential pathway for scaling to larger feature sets.</p>
+                        <p><b>Efficiency Comparison:</b> Quantum models used less than 1% of the parameters of a comparable 
+                            classical MLP (which contained over 2,500 parameters), validating their parameter efficiency advantage. 
+                            However, classical models still lead in accuracy and stability, while quantum offers theoretical feature 
+                            compression advantages.</p>
+
+                        <img src="assets/projects/mod1-pic3.png" alt="QML Circuit Diagram" class="modal-inline-image">
+                            
+
+                        <h2>Tools Used</h2>
+                        <ul>
+                            <li><b>Classical:</b> scikit-learn (SVM, MLP), custom SCAD regularization implementation</li>
+                            <li><b>Quantum:</b> PennyLane for hardware-agnostic hybrid training, Qiskit for complementary validation</li>
+                            <li><b></b>Optimization:</b> SPSA for noise resilience, COBYLA/Adam-optimizer for small-scale exploration, parameter-shift rule for gradient computation</li>
+                            <li><b></b>Data Processing:</b> SNR-based gene ranking, ANOVA feature selection, Z-score normalization</li>
+                        </ul>
+
+                        <h2>Conclusion</h2>
+                        <p>For AML vs. ALL classification on the Golub dataset, <b>no quantum advantage in outright accuracy was 
+                            demonstrated</b>; classical models with advanced regularization currently provide the most accurate and 
+                            stable practical solution. However, quantum models show definitive promise in parameter efficiency 
+                            and feature-space compression, presenting a compelling pathway for scalable learning in future 
+                            higher-dimensional biomedical applications where classical scaling becomes prohibitive. The 
+                            results suggest that while quantum models are more sensitive to hyperparameters and optimization 
+                            challenges, their theoretical efficiency advantages warrant continued investigation. Other than that,
+                            I really enjoyed learning a lot of the knitty gritty details, getting to work on such a compelling
+                            project, and meeting new people along the way!</p>
+                    </div>
+
+                    <!-- PDF Link Button -->
+                    <div class="modal-pdf-section">
+                        <a href="assets/projects/mod1-finalReport.pdf" target="_blank" class="modal-pdf-button">
+                            <span>Check out our full-length final report here</span>
+                            <svg class="modal-pdf-arrow" viewBox="0 0 24 24" width="20" height="20">
+                                <path fill="currentColor" d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <br><br>
+                    <div class="modal-skills">
+                            <span class="modal-skill-tag">Quantum Machine Learning</span>
+                            <!-- Quantum Computing -->
+                            <span class="modal-skill-tag">Quantum Machine Learning</span>
+                            <span class="modal-skill-tag">VQC</span>
+                            <span class="modal-skill-tag">QSVM</span>
+                            <span class="modal-skill-tag">PennyLane</span>
+                            <span class="modal-skill-tag">Qiskit</span>
+                            <span class="modal-skill-tag">Angle Encoding</span>
+                            <span class="modal-skill-tag">Amplitude Encoding</span>
+    
+                            <!-- Classical ML -->
+                            <span class="modal-skill-tag">SVM</span>
+                            <span class="modal-skill-tag">MLP</span>
+                            <span class="modal-skill-tag">SCAD Regularization</span>
+                            <span class="modal-skill-tag">Feature Selection</span>
+                            <span class="modal-skill-tag">Classification</span>
+                            <span class="modal-skill-tag">Benchmarking</span>
+                            
+                            <!-- Genomics & Biomedicine -->
+                            <span class="modal-skill-tag">Genomics</span>
+                            <span class="modal-skill-tag">Gene Expression Analysis</span>
+                            <span class="modal-skill-tag">High-dimensional Data</span>
+                            <span class="modal-skill-tag">Clinical Diagnostics</span>
+                            <span class="modal-skill-tag">Biomedical Applications</span>
+                            
+                            <!-- Data Science -->
+                            <span class="modal-skill-tag">Python</span>
+                            <span class="modal-skill-tag">Performance Optimization</span>
+                            <span class="modal-skill-tag">Statistical Analysis</span>
+                            
+                            <!-- Research & Leadership -->
+                            <span class="modal-skill-tag">Experimental Design</span>
+                            <span class="modal-skill-tag">Systematic Experimentation</span>
+                            <span class="modal-skill-tag">Model Stability Analysis</span>
+                        </div>
+                </div>
+            </div>
+
+            <!-- Modal 2: Tweet Analysis for Disaster Crisis Response -->
+            <div id="modal2" class="project-modal">
+                <div class="modal-content">
+                    <span class="modal-close" onclick="closeModal('modal2')">&times;</span>
+                    
+                    <div class="modal-header">
+                        <h1 class="modal-title">Risk Radar: Tweet Analysis for Disaster Crisis Response</h1>
+                        <p>Sep-Dec 2025 <b>|</b> CS 4485 - Senior Design Capstone Project</p>
+                        <p><b>Advisor:</b> <i>Professor Selim Sarac</i></p>
+                    </div>
+                    
+                    <div class="modal-body">
+
+                        <h2>Course Overview</h2>
+                        <p>This course was intended to complement theory and to provide an in-depth, hands-on
+                        experience in all aspects of a software development project. Students worked in teams
+                        and were involved in specifying the problem and its solution, designing and analyzing
+                        the solution, developing the software architecture, along with implementation and testing
+                        plans. The deliverables included reports that documented these steps as well as a final
+                        project report, including the challenges they faced, and a user manual of the developed
+                        system. Students explored security issues of their project and its potential impact on
+                        society. Teams also made presentations and demonstrated their final software.
+                        Additionally, this course covered topics related to computer science professions including
+                        ethics and professional responsibility, entrepreneurship, leadership, and project
+                        management.</p>
+                        
+                        <h2>Project Overview</h2>
+                        <p><b>Risk Radar</b> is a centralized crisis detection dashboard that transforms real-time social media data 
+                            from Bluesky into actionable disaster intelligence for emergency responders and the public. The system 
+                            uses a Large Language Model to automatically classify posts by disaster type, severity, location, and 
+                            help requests, presenting this information through an interactive geospatial interface.</p>
+
+
+                        <!-- Media Carousel -->
+                        <div class="experience-carousel-container">
+                            <!-- Carousel Track -->
+                            <div class="experience-carousel-track" id="carousel2">
+                                <!-- Slides -->
+                                <div class="experience-carousel-slide"> <img src="/assets/projects/mod2-slides/rr-slide1.png" alt="Slide1" class="experience-carousel-image"> <!-- <p class="experience-carousel-caption">Our 2025 Marketing Team!</p> --> </div>
+                                <div class="experience-carousel-slide"> <img src="/assets/projects/mod2-slides/rr-slide2.png" alt="Slide2" class="experience-carousel-image"> <!-- <p class="experience-carousel-caption">Our 2025 Marketing Team!</p> --> </div>
+                                <div class="experience-carousel-slide"> <img src="/assets/projects/mod2-slides/rr-slide3.png" alt="Slide3" class="experience-carousel-image"> <!-- <p class="experience-carousel-caption">Our 2025 Marketing Team!</p> --> </div>
+                                <div class="experience-carousel-slide"> <img src="/assets/projects/mod2-slides/rr-slide4.png" alt="Slide4" class="experience-carousel-image"> <!-- <p class="experience-carousel-caption">Our 2025 Marketing Team!</p> --> </div>
+                                <div class="experience-carousel-slide"> <img src="/assets/projects/mod2-slides/rr-slide5.png" alt="Slide5" class="experience-carousel-image"> <!-- <p class="experience-carousel-caption">Our 2025 Marketing Team!</p> --> </div>
+                                <div class="experience-carousel-slide"> <img src="/assets/projects/mod2-slides/rr-slide6.png" alt="Slide6" class="experience-carousel-image"> <!-- <p class="experience-carousel-caption">Our 2025 Marketing Team!</p> --> </div>
+                                <div class="experience-carousel-slide"> <img src="/assets/projects/mod2-slides/rr-slide7.png" alt="Slide7" class="experience-carousel-image"> <!-- <p class="experience-carousel-caption">Our 2025 Marketing Team!</p> --> </div>
+                                <div class="experience-carousel-slide"> <img src="/assets/projects/mod2-slides/rr-slide8.png" alt="Slide8" class="experience-carousel-image"> <!-- <p class="experience-carousel-caption">Our 2025 Marketing Team!</p> --> </div>
+                                <div class="experience-carousel-slide"> <img src="/assets/projects/mod2-slides/rr-slide9.png" alt="Slide9" class="experience-carousel-image"> <!-- <p class="experience-carousel-caption">Our 2025 Marketing Team!</p> --> </div>
+                                <div class="experience-carousel-slide"> <img src="/assets/projects/mod2-slides/rr-slide10.png" alt="Slide10" class="experience-carousel-image"> <!-- <p class="experience-carousel-caption">Our 2025 Marketing Team!</p> --> </div>
+                                <div class="experience-carousel-slide"> <img src="/assets/projects/mod2-slides/rr-slide11.png" alt="Slide11" class="experience-carousel-image"> <!-- <p class="experience-carousel-caption">Our 2025 Marketing Team!</p> --> </div>
+                                <div class="experience-carousel-slide"> <img src="/assets/projects/mod2-slides/rr-slide12.png" alt="Slide12" class="experience-carousel-image"> <!-- <p class="experience-carousel-caption">Our 2025 Marketing Team!</p> --> </div>
+                                <div class="experience-carousel-slide"> <img src="/assets/projects/mod2-slides/rr-slide13.png" alt="Slide13" class="experience-carousel-image"> <!-- <p class="experience-carousel-caption">Our 2025 Marketing Team!</p> --> </div>
+                                <div class="experience-carousel-slide"> <img src="/assets/projects/mod2-slides/rr-slide14.png" alt="Slide14" class="experience-carousel-image"> <!-- <p class="experience-carousel-caption">Our 2025 Marketing Team!</p> --> </div>
+                                <div class="experience-carousel-slide"> <img src="/assets/projects/mod2-slides/rr-slide15.png" alt="Slide15" class="experience-carousel-image"> <!-- <p class="experience-carousel-caption">Our 2025 Marketing Team!</p> --> </div>
+                                <div class="experience-carousel-slide"> <img src="/assets/projects/mod2-slides/rr-slide16.png" alt="Slide16" class="experience-carousel-image"> <!-- <p class="experience-carousel-caption">Our 2025 Marketing Team!</p> --> </div>
+                                <div class="experience-carousel-slide"> <img src="/assets/projects/mod2-slides/rr-slide17.png" alt="Slide17" class="experience-carousel-image"> <!-- <p class="experience-carousel-caption">Our 2025 Marketing Team!</p> --> </div>
+                                <div class="experience-carousel-slide"> <img src="/assets/projects/mod2-slides/rr-slide18.png" alt="Slide18" class="experience-carousel-image"> <!-- <p class="experience-carousel-caption">Our 2025 Marketing Team!</p> --> </div>
+                            </div>
+
+                            <!-- Navigation Buttons -->
+                            <button class="experience-carousel-btn experience-carousel-prev" onclick="moveCarousel('carousel2', -1)">❮</button>
+                            <button class="experience-carousel-btn experience-carousel-next" onclick="moveCarousel('carousel2', 1)">❯</button>
+
+                            <!-- Indicators -->
+                            <div class="experience-carousel-indicators" id="indicators2">
+                                <span class="experience-indicator active" onclick="jumpToSlide('carousel2', 0)"></span>
+                                <span class="experience-indicator" onclick="jumpToSlide('carousel2', 1)"></span>
+                                <span class="experience-indicator" onclick="jumpToSlide('carousel2', 2)"></span>
+                                <span class="experience-indicator" onclick="jumpToSlide('carousel2', 3)"></span>
+                                <span class="experience-indicator" onclick="jumpToSlide('carousel2', 4)"></span>
+                                <span class="experience-indicator" onclick="jumpToSlide('carousel2', 5)"></span>
+                                <span class="experience-indicator" onclick="jumpToSlide('carousel2', 6)"></span>
+                                <span class="experience-indicator" onclick="jumpToSlide('carousel2', 7)"></span>
+                                <span class="experience-indicator" onclick="jumpToSlide('carousel2', 8)"></span>
+                                <span class="experience-indicator" onclick="jumpToSlide('carousel2', 9)"></span>
+                                <span class="experience-indicator" onclick="jumpToSlide('carousel2', 10)"></span>
+                                <span class="experience-indicator" onclick="jumpToSlide('carousel2', 11)"></span>
+                                <span class="experience-indicator" onclick="jumpToSlide('carousel2', 12)"></span>
+                                <span class="experience-indicator" onclick="jumpToSlide('carousel2', 13)"></span>
+                                <span class="experience-indicator" onclick="jumpToSlide('carousel2', 14)"></span>
+                                <span class="experience-indicator" onclick="jumpToSlide('carousel2', 15)"></span>
+                                <span class="experience-indicator" onclick="jumpToSlide('carousel2', 16)"></span>
+                                <span class="experience-indicator" onclick="jumpToSlide('carousel2', 17)"></span>
+                                <span class="experience-indicator" onclick="jumpToSlide('carousel2', 18)"></span>
+                            </div>
+                        </div>
+                        
+                        
+                        <h2>My Role and Responsibilities</h2>
+                        <p>As the Data Science Lead, I was responsible for the complete model development lifecycle:</p>
+                        <ul>
+                            <li><b>Dataset Curation:</b> Assembled and labeled benchmarking datasets, including a balanced 540-post 
+                                set for initial evaluation and a 1,000-post real-world distribution for validation, sourcing from Hugging Face, Kaggle, and CrisisNLP.</li>
+                            <li><b>Model Benchmarking:</b> Evaluated 16 different LLMs across multiple architectural families through 
+                                systematic testing using Postman automation.</li>
+                            <li><b>Model Selection:</b> Led the analysis that identified Qwen3-32B as the optimal model, achieving 
+                                94-97% reproducible accuracy with balanced performance and reliability.</li>
+                            <li><b>Prompt Engineering:</b> Conducted 25 iterative refinements to optimize classification logic for 
+                                disaster taxonomy, severity assessment, and location extraction.</li>
+                            <li><b>Production Integration:</b> Collaborated with backend team to implement Supabase Edge Functions that interface 
+                                with the Groq API, incorporating rate limiting and error handling strategies.</li>
+                            <li><b>Frontend Data Visualization:</b> Assisted the frontend team in implementing analytics charts and graphs, and translating structured model 
+                                outputs into intuitive visual representations of disaster distributions and trends for the dashboard.</li>
+                        </ul>
+
+                        <img src="assets/projects/mod2-soluDesign.png" alt="Solution Design Diagram" class="project-image">
+                        
+                        <br><br>
+                        <h2>Key Component: Data Pipeline</h2>
+                        <ul>
+                            <li>Ingests live Bluesky posts via Jetstream firehose with keyword/language filtering.</li>
+                            <li>Processes posts in scheduled batches using Supabase Edge Functions.</li>
+                            <li>Classifies content using Qwen3-32B model via Groq API</li>
+                        </ul>
+
+                        <br>
+                        <h2>Key Component: Dashboard Features</h2>
+                        <ul>
+                            <li>Interactive heatmap with color-coded disaster markers and severity indicators.</li>
+                            <li>Sortable data table with multi-field filtering (disaster type, severity, date, help requests).</li>
+                            <li>Real-time statistics and analytics charts showing disaster distribution and trends.</li>
+                            <li>Resource page with FEMA-sourced preparedness information.</li>
+                        </ul>
+                        <br>
+
+                        <img src="assets/projects/mod2-seqDiagram.png" alt="UML Sequence Diagram" class="project-image">
+
+                        <br><br>
+                        <h2>Tools Used</h2>
+                        <h3>Development & Collaboration</h3>
+                        <ul>
+                            <li><b>Project Management:</b> Jira (Agile/Scrum with weekly sprints), GitHub.</li>
+                            <li><b>Communication:</b> Weekly team meetings, subteam syncs, faculty advisor check-ins.</li>
+                        </ul>
+
+                        <h3>Data Science & ML</h3>
+                        <ul>
+                            <li><b>Model Testing:</b> Postman with automated collections, custom pre-request scripts.</li>
+                            <li><b>LLM Platforms:</b> GroqCloud (primary), Mistral AI (comparative testing).</li>
+                            <li><b>Models Evaluated:</b> Qwen series, OpenAI GPT family, Gemini family, DeepSeek, MoonshotAI, Llama, Mistral (16 total).</li>
+                            <li><b>Analysis:</b> Python for metrics calculation (accuracy, F1, precision, recall).</li>
+                        </ul>
+
+                        <h3>Backend & Infrastructure</h3>
+                        <ul>
+                            <li><b>Platform:</b> Supabase (PostgreSQL, Edge Functions, REST API, authentication).</li>
+                            <li><b>APIs:</b> Groq API, AT Protocol, Jetstream data service.</li>
+                            <li><b>Scheduling:</b> GitHub Actions, Supabase cron jobs.</li>
+                        </ul>
+
+                        <h3>Frontend</h3>
+                        <ul>
+                            <li><b>Framework:</b> React.js with Vite.</li>
+                            <li><b></b> Leaflet/Mapbox (maps), Recharts/Shadcn (graphs).</li>
+                            <li><b>Styling:</b> Tailwind CSS, Shadcn UI, Lucide Icons.</li>
+                            <li><b>Deployment:</b> Vercel.</li>
+                        </ul>
+
+                        <h2>Tech Stack Summary</h2>
+                        <ul>
+                            <li><b>Frontend:</b> React.js, Vite, Leaflet, Shadcn UI, Tailwind CSS</li>
+                            <li><b>Backend:</b> Supabase (PostgreSQL, Edge Functions), GroqCloud</li>
+                            <li><b>APIs:</b> Bluesky AT Protocol, Jetstream, Groq Inference API</li>
+                            <li><b>Infrastructure:</b> Vercel, GitHub Actions</li>
+                        </ul>
+
+                        <img src="assets/projects/mod2-slides/rr-slide11.png" alt="Tech Stack" class="project-image">
+
+                        <br><br>
+                        <h2>Results</h2>
+                        <h3>Operational Performance (12-day period)</h3>
+                        <ul>
+                            <li>50,000+ Bluesky posts processed</li>
+                            <li>10,372 disaster-related events classified (29.3% positive rate)</li>
+                            <li>2,900 posts/day average throughput</li>
+                            <li>0.917 average model confidence score</li>
+                            <li>&#60 1% final failure rate after optimization</li>
+                        </ul>
+                        <h3>Classification Performance</h3>
+                        <ul>
+                            <li>94-97% accuracy on validation subsets with optimized prompts</li>
+                            <li>12-category disaster taxonomy with balanced severity distribution:</li>
+                            <ul>
+                                <li>High severity: 38.5%</li>
+                                <li>Medium severity: 33.3%</li>
+                                <li>Low severity: 28.2%</li>
+                            </ul>
+                            <li>75+ distinct geographic locations identified</li>
+                        </ul>
+
+                        <br>
+                        <img src="assets/projects/mod2-models.png" alt="Models Tested" class="project-image">
+                        <img src="assets/projects/mod2-results.png" alt="Model Benchmarking Performance" class="project-image">
+
+                        <br><br>
+                        <h2>Conclusion</h2>
+                        <p>Risk Radar successfully demonstrates that purpose-built AI classification integrated with modern serverless 
+                            architecture can transform chaotic social media streams into structured, actionable disaster intelligence. 
+                            The system processes thousands of posts daily with high accuracy, providing emergency responders and the 
+                            public with near real-time situational awareness through an intuitive geospatial dashboard.</p>
+                        <p>Key achievements include the rigorous model benchmarking process that identified Qwen3-32B as the optimal model 
+                            through evaluation of 16 alternatives, the development of a resilient pipeline that overcame significant rate 
+                            limiting challenges, and the creation of a user-centered interface validated through iterative prototyping. The 
+                            project validates that accessible cloud services and open-source LLMs can deliver enterprise-grade crisis detection 
+                            capabilities without prohibitive infrastructure costs.</p>
+                        <p>Future work could expand data sources beyond Bluesky, implement fine-tuning for further accuracy improvements, and 
+                            incorporate image classification for multimodal disaster detection. Risk Radar establishes a strong foundation for 
+                            automated crisis awareness systems that can save lives through faster, more accessible information during emergencies.</p>     
+
+                        <!-- PDF Link Button -->
+                        <div class="modal-pdf-section">
+                            <a href="assets/projects/mod2-finalReport.pdf" target="_blank" class="modal-pdf-button">
+                                <span>Check out our full-length final report here</span>
+                                <svg class="modal-pdf-arrow" viewBox="0 0 24 24" width="20" height="20">
+                                    <path fill="currentColor" d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <br>
+
+                    </div>
+
+                    <br>
+                    <div class="modal-skills">
+                            <span class="modal-skill-tag">React</span>
+                            <span class="modal-skill-tag">TypeScript</span>
+                            <span class="modal-skill-tag">Supabase</span>
+                            <span class="modal-skill-tag">Vercel</span>
+                            <span class="modal-skill-tag">REST APIs</span>
+                            <span class="modal-skill-tag">Bluesky APIs</span>
+                            <span class="modal-skill-tag">PostgreSQL</span>
+                            <span class="modal-skill-tag">Jira</span>
+                            <span class="modal-skill-tag">Agile/Scrum</span>
+                            <span class="modal-skill-tag">LLM Benchmarking/Fine-tuning</span>
+                            <span class="modal-skill-tag">Groq</span>
+                            <span class="modal-skill-tag">Mistral</span>
+                            <span class="modal-skill-tag">Deepseek</span>
+                            <span class="modal-skill-tag">Gemini</span>
+                            <span class="modal-skill-tag">OpenAI</span>
+                            <span class="modal-skill-tag">Qwen</span>
+                            <span class="modal-skill-tag">Edge Functions</span>
+                            <span class="modal-skill-tag">CRON Scheduling</span>
+                            <span class="modal-skill-tag">Shadcn</span>
+                            <span class="modal-skill-tag">Tailwind</span>
+                            <span class="modal-skill-tag">Leaflet</span>
+                        </div>
+                </div>
+            </div>
+
+            <!-- Modal 3: L3 Rocket - Simulation Lead; Spaceport America Cup -->
+            <div id="modal3" class="project-modal">
+                <div class="modal-content">
+                    <span class="modal-close" onclick="closeModal('modal3')">&times;</span>
+                    
+                    <div class="modal-header">
+                        <h1 class="modal-title">L3 Rocket - Simulation Lead; Spaceport America Cup</h1>
+                        <p>Jan-Jun 2024 <b>|</b> UTD AIAA Chapter - Competition Rocketry Team</p>
+                        <p><b>'24 Rocketry President:</b> <i>Logan Murray</i> | <b>'24 Chief Engineer:</b> <i>Gabe Butuc</i></p>
+                        <p><b>Tripoli Mentor:</b> <i>Ken Overton</i></p>
+                    </div>
+
+                    <!-- Launch Video Button -->
+                    <div class="video-button-container">
+                        <a href="https://www.youtube.com/clip/Ugkxg2h3jB8jy7CdtiSijW_dVtFETSIwrpFs" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="launch-video-btn">
+                            ▶ Check out our launch video here
+                        </a>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <img src="assets/projects/mod3/1rail.png" alt="Launch Day: L3 on the Rail" class="modal-inline-image">
+                        
+                        <h2>Overview</h2>
+                        <p>In the Summer of 2024 our university's American Institute of Aeronautics & Astronautics (AIAA) Competition Rocketry Team 
+                            competed at the International Rocket Engineering Competition (IREC) at Spaceport America in Sierra County, New Mexico. This 
+                            competition is the world's largest international rocketry engineering conference, hosted annually by the Experimental Sounding Rocket 
+                            Association (ESRA), with over 1,700 students and faculty attending from more than 150 institutions globally. After 2 years of preparation, 
+                            our team finally competed for the first time that summer in the 10K COTS competition, successfully launching and safely recovering our 
+                            L3 rocket at near-target altitudes, ultimately achieving mission success.</p>
+
+                        <img src="assets/projects/mod3/2team.JPG" alt="Rocketry Team" class="modal-inline-image">
+
+                        <h2>My Role & Responsibilities</h2>
+                        <p>As the team's first simulation lead, my primary role was to set a precedent for how the Simulations subteam would operate. I established scope 
+                            and what tools and frameworks best fit our use-case alongside our chief engineer Gabe Butuc. With no prior documentation to lean on, myself and 
+                            two other simulations members spent months, researching, testing, collaborating with the other subteams, and discussing with our mentor Ken
+                            Overton, the best way to go about the task at hand.
+
+                        </p>
+                    
+                        
+                        <h2>Design Phase</h2>
+                        <p>The summer before competition, our team began work on an L2 rocket, named Eclipse, to prepare for the eventual 
+                            L3 build. This period served as the primary design phase for both rockets, where we established the build 
+                            approach, selected materials, finalized the bill of materials (BOM), and decided on the technologies to be used 
+                            throughout the entire process. We test-launched Eclipse a couple of times to understand how the recovery process 
+                            would work and to practice the full launch workflow before tackling the more complex L3 vehicle.
+                        </p>
+                        <p>At the time, we operated with five subteams, which we eventually expanded to six. The <b>Structures subteam</b> was 
+                            responsible for fabricating the main airframe and nose cone, manufacturing components like bulkheads and 
+                            centering rings, and handling final assembly and integration. The <b>Avionics subteam</b> managed all internal electronics, 
+                            including the design and assembly of our student-researched and developed (SRAD) flight computer, as well as 
+                            parachute deployment timing and e-match circuitry. The <b>Ground Station subteam</b> developed the systems for remote telemetry 
+                            and real-time data reception during flight. The <b>Payload subteam</b> focused on the experiment carried aboard the rocket, 
+                            handling everything from battery retention and electronics board layout to coding an MVP for beacon ranging. The 
+                            <b>Simulations subteam</b> was responsible for modeling our rockets using software like RocketPy, RasAero, and Ansys to predict 
+                            performance and verify stability. Then we later developed a <b>Propulsion subteam</b>, tasked with designing and building our own rocket 
+                            motors so that our team could eventually compete in challenge tracks beyond those using commercial-off-the-shelf (COTS) motors.
+                        </p>
+                        <p>Throughout this phase, we also had to complete several milestones required for the IREC competition, including initial proposals, 
+                            technical reports, safety reviews, and regular checkpoint reports to document our progress.
+                        </p>
+                        
+
+                        <h2>Flight Simulations</h2>
+                        <p>We evaluated several different simulation software frameworks, but ultimately chose to use RocketPy due to its easily accessible 
+                            documentation and active open-source community. We supplemented this with RasAero for cross-verification and OpenRocket for rapid 
+                            initial design iterations. To keep our work organized and collaborative, we used Google Colab and Git for version control, allowing 
+                            team members to easily contribute and track changes.
+                        </p>
+
+                        <img src="assets/projects/mod3/flightSims/1motor.png" alt="Motor Simulation" class="modal-inline-image">
+
+                        <p>We began by modeling our L2 test rocket, Eclipse (aka: ETR), and comparing the simulation results against our actual test flight data 
+                            to validate our approach. This process helped us refine our inputs and better understand how each software handled variables like surface 
+                            finish and atmospheric conditions. It also required extensive research into which motor we would use, involving frequent discussions with 
+                            the Structures team to ensure compatibility, and ultimately meant we learned how to model and simulate a motor inside and out, as accurate 
+                            performance data was essential to our simulations. We repeated the same process with an L1 rocket to further cross-reference our methods. 
+                            This served a dual purpose: it helped bridge the gap for potential future competition team members who were, at the time, participating in 
+                            our other rocketry program where students learn to build, launch, and certify their own L1 rockets.
+                        </p>
+
+                        <img src="assets/projects/mod3/flightSims/2ras.png" alt="RasAero Simulation" class="modal-inline-image">
+
+                        <p>For Eclipse, we ran simulations across all three platforms. OpenRocket predicted an apogee of 5,594 feet, while RocketPy calculated 
+                            5,462 feet. The actual flight reached 5,504 feet AGL, putting RocketPy within just 42 feet of the real result. We also used RasAero 
+                            to study how different surface finish assumptions affected performance. Simulating smooth, painted, and rough painted finishes produced 
+                            apogee variations ranging from 5,457 feet to 5,462 feet, giving us valuable insight into how real-world manufacturing tolerances might 
+                            impact our L3 rocket.
+                        </p>
+
+                        <!-- Media Carousel 1 -->
+                        <div class="experience-carousel-container">
+                            <!-- Carousel Track -->
+                            <div class="experience-carousel-track" id="carousel1">
+                                <!-- Slides -->
+                                <div class="experience-carousel-slide"> <img src="/assets/projects/mod3/flightSims/car1.png" alt="Slide1" class="experience-carousel-image"> <!-- <p class="experience-carousel-caption">Our 2025 Marketing Team!</p> --> </div>
+                                <div class="experience-carousel-slide"> <img src="/assets/projects/mod3/flightSims/car2.png" alt="Slide2" class="experience-carousel-image"> </div>
+                                <div class="experience-carousel-slide"> <img src="/assets/projects/mod3/flightSims/car3.png" alt="Slide3" class="experience-carousel-image"> </div>
+                            </div>
+
+                            <!-- Navigation Buttons -->
+                            <button class="experience-carousel-btn experience-carousel-prev" onclick="moveCarousel('carousel1', -1)">❮</button>
+                            <button class="experience-carousel-btn experience-carousel-next" onclick="moveCarousel('carousel1', 1)">❯</button>
+
+                            <!-- Indicators -->
+                            <div class="experience-carousel-indicators" id="indicators1">
+                                <span class="experience-indicator active" onclick="jumpToSlide('carousel1', 0)"></span>
+                                <span class="experience-indicator" onclick="jumpToSlide('carousel1', 1)"></span>
+                                <span class="experience-indicator" onclick="jumpToSlide('carousel1', 2)"></span>
+                            </div>
+                        </div>
+
+                        <p>Once we were confident in our methods, we moved on to simulating the L3 rocket design, using insights from both RocketPy and RasAero 
+                            to refine stability margins and predicted apogee. After completing the initial six-degree-of-freedom (6-DOF) simulations for both ETR 
+                            and our L3 rocket, and waiting for each respective launch day, we began work on recovery simulations. This involved learning to run 
+                            Monte Carlo analyses and incorporating weather data into our software to better account for real-world variability on launch day. 
+                            Finding real-world, open-source weather data for our specific launch sites was sometimes challenging, but we were able to pull information from 
+                            sources like NOAA and the University of Wyoming to feed into our models. Because we had a limited number of test launches, these 
+                            simulations became especially critical to our preparation. To address this, we ended up developing a local application that could run 
+                            on our devices and be brought directly to launch sites, allowing us to input the current day-of weather conditions onsite and update our 
+                            predictions in real time.</p>
+
+                        <img src="assets/projects/mod3/flightSims/mc1.png" alt="Monte Carlo Simulation 1" class="modal-inline-image">
+                        <img src="assets/projects/mod3/flightSims/mc2.png" alt="Monte Carlo Simulation 2" class="modal-inline-image">
+
+                        <h2>Conclusion</h2>
+                        <p>The week of the competition, we drove out to Spaceport America, New Mexico. During competition week, we took the opportunity to meet and 
+                            connect with rocketry teams from all over the world (spanning six continents)! It was really interesting getting to see how many different 
+                            approaches and innovations teams brought to the field (literally met a team that had a payload you could play Doom on), genuinely learning 
+                            so much just from walking the flight line and talking with fellow competitors. 
+                            <br><br>
+                            On launch day, after months of preparation, simulation, and hard work, we were able to successfully launch and recover our rocket, 
+                            ultimately achieving mission success. It was an incredibly rewarding moment, and I've never been more proud to have gotten to contribute
+                            to and be a part of such an amazing team of bright young engineers. <3 </p>
+                        <img src="assets/projects/mod3/3launch.jpg" alt="Spaceport Launch" class="modal-inline-image">
+
+                        <!-- Modal Gallery -->
+                        <div class="conference-modal-gallery">
+                            <h3>Gallery</h3>
+                            <div class="modal-gallery-grid">
+                                <img src="assets/projects/mod3/gallery/gal1.jpg" alt="IREC Teams 2024" class="gallery-item">
+                                <img src="assets/projects/mod3/gallery/gal2.jpg" alt="L1 vs. L3" class="gallery-item">
+                                <img src="assets/projects/mod3/gallery/gal3.jpg" alt="Found It" class="gallery-item">
+                                <img src="assets/projects/mod3/gallery/gal4.jpg" alt="UTD IREC '24 Team!" class="gallery-item">
+                            </div>
+                        </div>
+                        <br>
+
+                        <!-- Gallery Lightbox Container (unique prefix) -->
+                        <div id="gallery-lightbox" class="gallery-lightbox">
+                            <span class="gallery-close-btn">&times;</span>
+                            <img class="gallery-lightbox-content" id="gallery-lightbox-img">
+                            <div id="gallery-caption"></div>
+                        </div>
+
+                        <br>
+
+                        <div class="modal-skills">
+                            <span class="modal-skill-tag">Rocket Propulsion</span>
+                            <span class="modal-skill-tag">Flight Dynamics</span>
+                            <span class="modal-skill-tag">6-DOF Simulation</span>
+                            <span class="modal-skill-tag">Monte Carlo Analysis</span>
+                            <span class="modal-skill-tag">Recovery System Design</span>
+                            <span class="modal-skill-tag">Avionics Integration</span>
+                            <span class="modal-skill-tag">PCB Design</span>
+                            <span class="modal-skill-tag">CAD</span>
+                            <span class="modal-skill-tag">BOM Management</span>
+                            <span class="modal-skill-tag">RocketPy</span>
+                            <span class="modal-skill-tag">RasAero</span>
+                            <span class="modal-skill-tag">OpenRocket</span>
+                            <span class="modal-skill-tag">Ansys (CFD)</span>
+                            <span class="modal-skill-tag">Python</span>
+                            <span class="modal-skill-tag">Git</span>
+                            <span class="modal-skill-tag">Google Colab</span>
+                            <span class="modal-skill-tag">Data Visualization</span>
+                            <span class="modal-skill-tag">Flight Trajectory Modeling</span>
+                            <span class="modal-skill-tag">Stability Margin Analysis</span>
+                            <span class="modal-skill-tag">Weather Data Integration</span>
+                            <span class="modal-skill-tag">Motor Performance Modeling</span>
+                            <span class="modal-skill-tag">Cross-Functional Collaboration</span>
+                            <span class="modal-skill-tag">Technical Documentation</span>
+                            <span class="modal-skill-tag">Safety Review Processes</span>
+                            <span class="modal-skill-tag">Mentorship / Knowledge Transfer</span>
+                            <span class="modal-skill-tag">Gantt Chart Planning</span>
+                            <span class="modal-skill-tag">Problem Solving</span>
+                            <span class="modal-skill-tag">Adaptability</span>
+                            <span class="modal-skill-tag">Research & Data Gathering</span>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+
+
+
+            
+            <!-- Modal 4: Art Sci Marketing Campaign -->
+            <!-- <div id="modal4" class="project-modal">
+                <div class="modal-content">
+                    <span class="modal-close" onclick="closeModal('modal4')">&times;</span>
+                    
+                    <div class="modal-header">
+                        <h2 class="modal-title">Art Sci Lab Marketing Campaign</h2>
+                        <div class="modal-skills">
+                            <span class="modal-skill-tag">Meta Business Suite</span>
+                            <span class="modal-skill-tag">Power BI</span>
+                            <span class="modal-skill-tag">Content Strategy</span>
+                            <span class="modal-skill-tag">Graphic Design</span>
+                            <span class="modal-skill-tag">Analytics</span>
+                            <span class="modal-skill-tag">Event Planning</span>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <img src="assets/projects/art-sci-campaign-1.jpg" alt="Campaign Materials" class="modal-inline-image">
+                        
+                        <h3>Overview</h3>
+                        <p>Led a comprehensive marketing campaign for the Art Sci Lab's "Threads of Ingenuity" exhibition series, resulting in a 40% increase in attendance and 25% growth in social media engagement.</p>
+                        
+                        <h3>Strategy</h3>
+                        <p>Developed a multi-channel strategy targeting university students, faculty, and the local arts community. Created consistent branding across digital and print materials while tailoring messaging for each platform.</p>
+                        
+                        <img src="assets/projects/art-sci-metrics.jpg" alt="Campaign Metrics Dashboard" class="modal-inline-image">
+                        
+                        <h3>Execution</h3>
+                        <p>Managed Meta Business Suite to schedule and optimize social media posts across Instagram and Facebook. Designed flyers, digital signage, and email newsletters. Coordinated with Bass School Creative Communications team for cross-promotion.</p>
+                        
+                        <h3>Results</h3>
+                        <p>Post-event analysis via Power BI revealed peak engagement times and most effective content types, informing strategy for future campaigns. Created dashboard for ongoing performance monitoring.</p>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Modal 5: Art Sci Marketing Campaign -->
+            <!-- <div id="modal5" class="project-modal">
+                <div class="modal-content">
+                    <span class="modal-close" onclick="closeModal('modal5')">&times;</span>
+                    
+                    <div class="modal-header">
+                        <h2 class="modal-title">Art Sci Lab Marketing Campaign</h2>
+                        <div class="modal-skills">
+                            <span class="modal-skill-tag">Meta Business Suite</span>
+                            <span class="modal-skill-tag">Power BI</span>
+                            <span class="modal-skill-tag">Content Strategy</span>
+                            <span class="modal-skill-tag">Graphic Design</span>
+                            <span class="modal-skill-tag">Analytics</span>
+                            <span class="modal-skill-tag">Event Planning</span>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <img src="assets/projects/art-sci-campaign-1.jpg" alt="Campaign Materials" class="modal-inline-image">
+                        
+                        <h3>Overview</h3>
+                        <p>Led a comprehensive marketing campaign for the Art Sci Lab's "Threads of Ingenuity" exhibition series, resulting in a 40% increase in attendance and 25% growth in social media engagement.</p>
+                        
+                        <h3>Strategy</h3>
+                        <p>Developed a multi-channel strategy targeting university students, faculty, and the local arts community. Created consistent branding across digital and print materials while tailoring messaging for each platform.</p>
+                        
+                        <img src="assets/projects/art-sci-metrics.jpg" alt="Campaign Metrics Dashboard" class="modal-inline-image">
+                        
+                        <h3>Execution</h3>
+                        <p>Managed Meta Business Suite to schedule and optimize social media posts across Instagram and Facebook. Designed flyers, digital signage, and email newsletters. Coordinated with Bass School Creative Communications team for cross-promotion.</p>
+                        
+                        <h3>Results</h3>
+                        <p>Post-event analysis via Power BI revealed peak engagement times and most effective content types, informing strategy for future campaigns. Created dashboard for ongoing performance monitoring.</p>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Modal 6: Art Sci Marketing Campaign -->
+            <!-- <div id="modal6" class="project-modal">
+                <div class="modal-content">
+                    <span class="modal-close" onclick="closeModal('modal6')">&times;</span>
+                    
+                    <div class="modal-header">
+                        <h2 class="modal-title">Art Sci Lab Marketing Campaign</h2>
+                        <div class="modal-skills">
+                            <span class="modal-skill-tag">Meta Business Suite</span>
+                            <span class="modal-skill-tag">Power BI</span>
+                            <span class="modal-skill-tag">Content Strategy</span>
+                            <span class="modal-skill-tag">Graphic Design</span>
+                            <span class="modal-skill-tag">Analytics</span>
+                            <span class="modal-skill-tag">Event Planning</span>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <img src="assets/projects/art-sci-campaign-1.jpg" alt="Campaign Materials" class="modal-inline-image">
+                        
+                        <h3>Overview</h3>
+                        <p>Led a comprehensive marketing campaign for the Art Sci Lab's "Threads of Ingenuity" exhibition series, resulting in a 40% increase in attendance and 25% growth in social media engagement.</p>
+                        
+                        <h3>Strategy</h3>
+                        <p>Developed a multi-channel strategy targeting university students, faculty, and the local arts community. Created consistent branding across digital and print materials while tailoring messaging for each platform.</p>
+                        
+                        <img src="assets/projects/art-sci-metrics.jpg" alt="Campaign Metrics Dashboard" class="modal-inline-image">
+                        
+                        <h3>Execution</h3>
+                        <p>Managed Meta Business Suite to schedule and optimize social media posts across Instagram and Facebook. Designed flyers, digital signage, and email newsletters. Coordinated with Bass School Creative Communications team for cross-promotion.</p>
+                        
+                        <h3>Results</h3>
+                        <p>Post-event analysis via Power BI revealed peak engagement times and most effective content types, informing strategy for future campaigns. Created dashboard for ongoing performance monitoring.</p>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Modal 7: Art Sci Marketing Campaign -->
+            <!-- <div id="modal7" class="project-modal">
+                <div class="modal-content">
+                    <span class="modal-close" onclick="closeModal('modal7')">&times;</span>
+                    
+                    <div class="modal-header">
+                        <h2 class="modal-title">Art Sci Lab Marketing Campaign</h2>
+                        <div class="modal-skills">
+                            <span class="modal-skill-tag">Meta Business Suite</span>
+                            <span class="modal-skill-tag">Power BI</span>
+                            <span class="modal-skill-tag">Content Strategy</span>
+                            <span class="modal-skill-tag">Graphic Design</span>
+                            <span class="modal-skill-tag">Analytics</span>
+                            <span class="modal-skill-tag">Event Planning</span>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <img src="assets/projects/art-sci-campaign-1.jpg" alt="Campaign Materials" class="modal-inline-image">
+                        
+                        <h3>Overview</h3>
+                        <p>Led a comprehensive marketing campaign for the Art Sci Lab's "Threads of Ingenuity" exhibition series, resulting in a 40% increase in attendance and 25% growth in social media engagement.</p>
+                        
+                        <h3>Strategy</h3>
+                        <p>Developed a multi-channel strategy targeting university students, faculty, and the local arts community. Created consistent branding across digital and print materials while tailoring messaging for each platform.</p>
+                        
+                        <img src="assets/projects/art-sci-metrics.jpg" alt="Campaign Metrics Dashboard" class="modal-inline-image">
+                        
+                        <h3>Execution</h3>
+                        <p>Managed Meta Business Suite to schedule and optimize social media posts across Instagram and Facebook. Designed flyers, digital signage, and email newsletters. Coordinated with Bass School Creative Communications team for cross-promotion.</p>
+                        
+                        <h3>Results</h3>
+                        <p>Post-event analysis via Power BI revealed peak engagement times and most effective content types, informing strategy for future campaigns. Created dashboard for ongoing performance monitoring.</p>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Modal 8: Art Sci Marketing Campaign -->
+            <!-- <div id="modal8" class="project-modal">
+                <div class="modal-content">
+                    <span class="modal-close" onclick="closeModal('modal8')">&times;</span>
+                    
+                    <div class="modal-header">
+                        <h2 class="modal-title">Art Sci Lab Marketing Campaign</h2>
+                        <div class="modal-skills">
+                            <span class="modal-skill-tag">Meta Business Suite</span>
+                            <span class="modal-skill-tag">Power BI</span>
+                            <span class="modal-skill-tag">Content Strategy</span>
+                            <span class="modal-skill-tag">Graphic Design</span>
+                            <span class="modal-skill-tag">Analytics</span>
+                            <span class="modal-skill-tag">Event Planning</span>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <img src="assets/projects/art-sci-campaign-1.jpg" alt="Campaign Materials" class="modal-inline-image">
+                        
+                        <h3>Overview</h3>
+                        <p>Led a comprehensive marketing campaign for the Art Sci Lab's "Threads of Ingenuity" exhibition series, resulting in a 40% increase in attendance and 25% growth in social media engagement.</p>
+                        
+                        <h3>Strategy</h3>
+                        <p>Developed a multi-channel strategy targeting university students, faculty, and the local arts community. Created consistent branding across digital and print materials while tailoring messaging for each platform.</p>
+                        
+                        <img src="assets/projects/art-sci-metrics.jpg" alt="Campaign Metrics Dashboard" class="modal-inline-image">
+                        
+                        <h3>Execution</h3>
+                        <p>Managed Meta Business Suite to schedule and optimize social media posts across Instagram and Facebook. Designed flyers, digital signage, and email newsletters. Coordinated with Bass School Creative Communications team for cross-promotion.</p>
+                        
+                        <h3>Results</h3>
+                        <p>Post-event analysis via Power BI revealed peak engagement times and most effective content types, informing strategy for future campaigns. Created dashboard for ongoing performance monitoring.</p>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Modal 9: Art Sci Marketing Campaign -->
+            <!-- <div id="modal9" class="project-modal">
+                <div class="modal-content">
+                    <span class="modal-close" onclick="closeModal('modal9')">&times;</span>
+                    
+                    <div class="modal-header">
+                        <h2 class="modal-title">Art Sci Lab Marketing Campaign</h2>
+                        <div class="modal-skills">
+                            <span class="modal-skill-tag">Meta Business Suite</span>
+                            <span class="modal-skill-tag">Power BI</span>
+                            <span class="modal-skill-tag">Content Strategy</span>
+                            <span class="modal-skill-tag">Graphic Design</span>
+                            <span class="modal-skill-tag">Analytics</span>
+                            <span class="modal-skill-tag">Event Planning</span>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <img src="assets/projects/art-sci-campaign-1.jpg" alt="Campaign Materials" class="modal-inline-image">
+                        
+                        <h3>Overview</h3>
+                        <p>Led a comprehensive marketing campaign for the Art Sci Lab's "Threads of Ingenuity" exhibition series, resulting in a 40% increase in attendance and 25% growth in social media engagement.</p>
+                        
+                        <h3>Strategy</h3>
+                        <p>Developed a multi-channel strategy targeting university students, faculty, and the local arts community. Created consistent branding across digital and print materials while tailoring messaging for each platform.</p>
+                        
+                        <img src="assets/projects/art-sci-metrics.jpg" alt="Campaign Metrics Dashboard" class="modal-inline-image">
+                        
+                        <h3>Execution</h3>
+                        <p>Managed Meta Business Suite to schedule and optimize social media posts across Instagram and Facebook. Designed flyers, digital signage, and email newsletters. Coordinated with Bass School Creative Communications team for cross-promotion.</p>
+                        
+                        <h3>Results</h3>
+                        <p>Post-event analysis via Power BI revealed peak engagement times and most effective content types, informing strategy for future campaigns. Created dashboard for ongoing performance monitoring.</p>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Modal 10: Art Sci Marketing Campaign -->
+            <!-- <div id="modal10" class="project-modal">
+                <div class="modal-content">
+                    <span class="modal-close" onclick="closeModal('modal10')">&times;</span>
+                    
+                    <div class="modal-header">
+                        <h2 class="modal-title">Art Sci Lab Marketing Campaign</h2>
+                        <div class="modal-skills">
+                            <span class="modal-skill-tag">Meta Business Suite</span>
+                            <span class="modal-skill-tag">Power BI</span>
+                            <span class="modal-skill-tag">Content Strategy</span>
+                            <span class="modal-skill-tag">Graphic Design</span>
+                            <span class="modal-skill-tag">Analytics</span>
+                            <span class="modal-skill-tag">Event Planning</span>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <img src="assets/projects/art-sci-campaign-1.jpg" alt="Campaign Materials" class="modal-inline-image">
+                        
+                        <h3>Overview</h3>
+                        <p>Led a comprehensive marketing campaign for the Art Sci Lab's "Threads of Ingenuity" exhibition series, resulting in a 40% increase in attendance and 25% growth in social media engagement.</p>
+                        
+                        <h3>Strategy</h3>
+                        <p>Developed a multi-channel strategy targeting university students, faculty, and the local arts community. Created consistent branding across digital and print materials while tailoring messaging for each platform.</p>
+                        
+                        <img src="assets/projects/art-sci-metrics.jpg" alt="Campaign Metrics Dashboard" class="modal-inline-image">
+                        
+                        <h3>Execution</h3>
+                        <p>Managed Meta Business Suite to schedule and optimize social media posts across Instagram and Facebook. Designed flyers, digital signage, and email newsletters. Coordinated with Bass School Creative Communications team for cross-promotion.</p>
+                        
+                        <h3>Results</h3>
+                        <p>Post-event analysis via Power BI revealed peak engagement times and most effective content types, informing strategy for future campaigns. Created dashboard for ongoing performance monitoring.</p>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Modal 11: Art Sci Marketing Campaign -->
+            <!-- <div id="modal11" class="project-modal">
+                <div class="modal-content">
+                    <span class="modal-close" onclick="closeModal('modal11')">&times;</span>
+                    
+                    <div class="modal-header">
+                        <h2 class="modal-title">Art Sci Lab Marketing Campaign</h2>
+                        <div class="modal-skills">
+                            <span class="modal-skill-tag">Meta Business Suite</span>
+                            <span class="modal-skill-tag">Power BI</span>
+                            <span class="modal-skill-tag">Content Strategy</span>
+                            <span class="modal-skill-tag">Graphic Design</span>
+                            <span class="modal-skill-tag">Analytics</span>
+                            <span class="modal-skill-tag">Event Planning</span>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <img src="assets/projects/art-sci-campaign-1.jpg" alt="Campaign Materials" class="modal-inline-image">
+                        
+                        <h3>Overview</h3>
+                        <p>Led a comprehensive marketing campaign for the Art Sci Lab's "Threads of Ingenuity" exhibition series, resulting in a 40% increase in attendance and 25% growth in social media engagement.</p>
+                        
+                        <h3>Strategy</h3>
+                        <p>Developed a multi-channel strategy targeting university students, faculty, and the local arts community. Created consistent branding across digital and print materials while tailoring messaging for each platform.</p>
+                        
+                        <img src="assets/projects/art-sci-metrics.jpg" alt="Campaign Metrics Dashboard" class="modal-inline-image">
+                        
+                        <h3>Execution</h3>
+                        <p>Managed Meta Business Suite to schedule and optimize social media posts across Instagram and Facebook. Designed flyers, digital signage, and email newsletters. Coordinated with Bass School Creative Communications team for cross-promotion.</p>
+                        
+                        <h3>Results</h3>
+                        <p>Post-event analysis via Power BI revealed peak engagement times and most effective content types, informing strategy for future campaigns. Created dashboard for ongoing performance monitoring.</p>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Modal 12: Art Sci Marketing Campaign -->
+            <!-- <div id="modal12" class="project-modal">
+                <div class="modal-content">
+                    <span class="modal-close" onclick="closeModal('modal12')">&times;</span>
+                    
+                    <div class="modal-header">
+                        <h2 class="modal-title">Art Sci Lab Marketing Campaign</h2>
+                        <div class="modal-skills">
+                            <span class="modal-skill-tag">Meta Business Suite</span>
+                            <span class="modal-skill-tag">Power BI</span>
+                            <span class="modal-skill-tag">Content Strategy</span>
+                            <span class="modal-skill-tag">Graphic Design</span>
+                            <span class="modal-skill-tag">Analytics</span>
+                            <span class="modal-skill-tag">Event Planning</span>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <img src="assets/projects/art-sci-campaign-1.jpg" alt="Campaign Materials" class="modal-inline-image">
+                        
+                        <h3>Overview</h3>
+                        <p>Led a comprehensive marketing campaign for the Art Sci Lab's "Threads of Ingenuity" exhibition series, resulting in a 40% increase in attendance and 25% growth in social media engagement.</p>
+                        
+                        <h3>Strategy</h3>
+                        <p>Developed a multi-channel strategy targeting university students, faculty, and the local arts community. Created consistent branding across digital and print materials while tailoring messaging for each platform.</p>
+                        
+                        <img src="assets/projects/art-sci-metrics.jpg" alt="Campaign Metrics Dashboard" class="modal-inline-image">
+                        
+                        <h3>Execution</h3>
+                        <p>Managed Meta Business Suite to schedule and optimize social media posts across Instagram and Facebook. Designed flyers, digital signage, and email newsletters. Coordinated with Bass School Creative Communications team for cross-promotion.</p>
+                        
+                        <h3>Results</h3>
+                        <p>Post-event analysis via Power BI revealed peak engagement times and most effective content types, informing strategy for future campaigns. Created dashboard for ongoing performance monitoring.</p>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Modal 13: Art Sci Marketing Campaign -->
+            <!-- <div id="modal3" class="project-modal">
+                <div class="modal-content">
+                    <span class="modal-close" onclick="closeModal('modal3')">&times;</span>
+                    
+                    <div class="modal-header">
+                        <h2 class="modal-title">Art Sci Lab Marketing Campaign</h2>
+                        <div class="modal-skills">
+                            <span class="modal-skill-tag">Meta Business Suite</span>
+                            <span class="modal-skill-tag">Power BI</span>
+                            <span class="modal-skill-tag">Content Strategy</span>
+                            <span class="modal-skill-tag">Graphic Design</span>
+                            <span class="modal-skill-tag">Analytics</span>
+                            <span class="modal-skill-tag">Event Planning</span>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <img src="assets/projects/art-sci-campaign-1.jpg" alt="Campaign Materials" class="modal-inline-image">
+                        
+                        <h3>Overview</h3>
+                        <p>Led a comprehensive marketing campaign for the Art Sci Lab's "Threads of Ingenuity" exhibition series, resulting in a 40% increase in attendance and 25% growth in social media engagement.</p>
+                        
+                        <h3>Strategy</h3>
+                        <p>Developed a multi-channel strategy targeting university students, faculty, and the local arts community. Created consistent branding across digital and print materials while tailoring messaging for each platform.</p>
+                        
+                        <img src="assets/projects/art-sci-metrics.jpg" alt="Campaign Metrics Dashboard" class="modal-inline-image">
+                        
+                        <h3>Execution</h3>
+                        <p>Managed Meta Business Suite to schedule and optimize social media posts across Instagram and Facebook. Designed flyers, digital signage, and email newsletters. Coordinated with Bass School Creative Communications team for cross-promotion.</p>
+                        
+                        <h3>Results</h3>
+                        <p>Post-event analysis via Power BI revealed peak engagement times and most effective content types, informing strategy for future campaigns. Created dashboard for ongoing performance monitoring.</p>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Modal 14: Art Sci Marketing Campaign -->
+            <!-- <div id="modal14" class="project-modal">
+                <div class="modal-content">
+                    <span class="modal-close" onclick="closeModal('modal14')">&times;</span>
+                    
+                    <div class="modal-header">
+                        <h2 class="modal-title">Art Sci Lab Marketing Campaign</h2>
+                        <div class="modal-skills">
+                            <span class="modal-skill-tag">Meta Business Suite</span>
+                            <span class="modal-skill-tag">Power BI</span>
+                            <span class="modal-skill-tag">Content Strategy</span>
+                            <span class="modal-skill-tag">Graphic Design</span>
+                            <span class="modal-skill-tag">Analytics</span>
+                            <span class="modal-skill-tag">Event Planning</span>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <img src="assets/projects/art-sci-campaign-1.jpg" alt="Campaign Materials" class="modal-inline-image">
+                        
+                        <h3>Overview</h3>
+                        <p>Led a comprehensive marketing campaign for the Art Sci Lab's "Threads of Ingenuity" exhibition series, resulting in a 40% increase in attendance and 25% growth in social media engagement.</p>
+                        
+                        <h3>Strategy</h3>
+                        <p>Developed a multi-channel strategy targeting university students, faculty, and the local arts community. Created consistent branding across digital and print materials while tailoring messaging for each platform.</p>
+                        
+                        <img src="assets/projects/art-sci-metrics.jpg" alt="Campaign Metrics Dashboard" class="modal-inline-image">
+                        
+                        <h3>Execution</h3>
+                        <p>Managed Meta Business Suite to schedule and optimize social media posts across Instagram and Facebook. Designed flyers, digital signage, and email newsletters. Coordinated with Bass School Creative Communications team for cross-promotion.</p>
+                        
+                        <h3>Results</h3>
+                        <p>Post-event analysis via Power BI revealed peak engagement times and most effective content types, informing strategy for future campaigns. Created dashboard for ongoing performance monitoring.</p>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Modal 15: Art Sci Marketing Campaign -->
+            <!-- <div id="modal15" class="project-modal">
+                <div class="modal-content">
+                    <span class="modal-close" onclick="closeModal('modal15')">&times;</span>
+                    
+                    <div class="modal-header">
+                        <h2 class="modal-title">Art Sci Lab Marketing Campaign</h2>
+                        <div class="modal-skills">
+                            <span class="modal-skill-tag">Meta Business Suite</span>
+                            <span class="modal-skill-tag">Power BI</span>
+                            <span class="modal-skill-tag">Content Strategy</span>
+                            <span class="modal-skill-tag">Graphic Design</span>
+                            <span class="modal-skill-tag">Analytics</span>
+                            <span class="modal-skill-tag">Event Planning</span>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <img src="assets/projects/art-sci-campaign-1.jpg" alt="Campaign Materials" class="modal-inline-image">
+                        
+                        <h3>Overview</h3>
+                        <p>Led a comprehensive marketing campaign for the Art Sci Lab's "Threads of Ingenuity" exhibition series, resulting in a 40% increase in attendance and 25% growth in social media engagement.</p>
+                        
+                        <h3>Strategy</h3>
+                        <p>Developed a multi-channel strategy targeting university students, faculty, and the local arts community. Created consistent branding across digital and print materials while tailoring messaging for each platform.</p>
+                        
+                        <img src="assets/projects/art-sci-metrics.jpg" alt="Campaign Metrics Dashboard" class="modal-inline-image">
+                        
+                        <h3>Execution</h3>
+                        <p>Managed Meta Business Suite to schedule and optimize social media posts across Instagram and Facebook. Designed flyers, digital signage, and email newsletters. Coordinated with Bass School Creative Communications team for cross-promotion.</p>
+                        
+                        <h3>Results</h3>
+                        <p>Post-event analysis via Power BI revealed peak engagement times and most effective content types, informing strategy for future campaigns. Created dashboard for ongoing performance monitoring.</p>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Modal 16: Art Sci Marketing Campaign -->
+            <!-- <div id="modal16" class="project-modal">
+                <div class="modal-content">
+                    <span class="modal-close" onclick="closeModal('modal16')">&times;</span>
+                    
+                    <div class="modal-header">
+                        <h2 class="modal-title">Art Sci Lab Marketing Campaign</h2>
+                        <div class="modal-skills">
+                            <span class="modal-skill-tag">Meta Business Suite</span>
+                            <span class="modal-skill-tag">Power BI</span>
+                            <span class="modal-skill-tag">Content Strategy</span>
+                            <span class="modal-skill-tag">Graphic Design</span>
+                            <span class="modal-skill-tag">Analytics</span>
+                            <span class="modal-skill-tag">Event Planning</span>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <img src="assets/projects/art-sci-campaign-1.jpg" alt="Campaign Materials" class="modal-inline-image">
+                        
+                        <h3>Overview</h3>
+                        <p>Led a comprehensive marketing campaign for the Art Sci Lab's "Threads of Ingenuity" exhibition series, resulting in a 40% increase in attendance and 25% growth in social media engagement.</p>
+                        
+                        <h3>Strategy</h3>
+                        <p>Developed a multi-channel strategy targeting university students, faculty, and the local arts community. Created consistent branding across digital and print materials while tailoring messaging for each platform.</p>
+                        
+                        <img src="assets/projects/art-sci-metrics.jpg" alt="Campaign Metrics Dashboard" class="modal-inline-image">
+                        
+                        <h3>Execution</h3>
+                        <p>Managed Meta Business Suite to schedule and optimize social media posts across Instagram and Facebook. Designed flyers, digital signage, and email newsletters. Coordinated with Bass School Creative Communications team for cross-promotion.</p>
+                        
+                        <h3>Results</h3>
+                        <p>Post-event analysis via Power BI revealed peak engagement times and most effective content types, informing strategy for future campaigns. Created dashboard for ongoing performance monitoring.</p>
+                    </div>
+                </div>
+            </div> -->
+
+            <script src="script.js"></script>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Jaszmine DeFranco.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

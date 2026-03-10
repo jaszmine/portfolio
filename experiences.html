@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiences | Jaszmine DeFranco</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Jaszmine DeFranco</a>
+            <div class="nav-links">
+                <a href="index.html" class="home">Home</a>
+                <a href="about.html" class="about">About</a>
+                <a href="experiences.html" class="active experience">Experience</a>
+                <a href="projects.html" class="projects">Projects</a>
+                <a href="photography.html" class="photography">Photography</a>
+                <a href="misc.html" class="misc">Misc.</a>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="section">
+            <h1 class="section-title"><span class="highlight" data-text="Work Experience">Work Experience</span></h1>
+
+            <div class="experience-grid">
+                <!-- Experience Card 1 -->
+                <div class="experience-card">
+                    <div class="experience-left">
+                        <h2 class="experience-job-title">Undergraduate Researcher</h2>
+                        <img src="assets/experience/utd-logo.png" alt="UT Dallas" class="experience-left-image">
+                    </div>
+                    <div class="experience-right">
+                        <div class="experience-employer">The University of Texas at Dallas - Computer Science Dept.</div>
+                        <div class="experience-dates">May 2025 - Dec 2025</div>
+                        <div class="experience-skills">
+                            <span class="experience-skill-tag">LaTeX</span>
+                            <span class="experience-skill-tag">Quantum Error Correction</span>
+                            <span class="experience-skill-tag">EAQECC</span>
+                            <span class="experience-skill-tag">Stabilizer Codes</span>
+                            <span class="experience-skill-tag">Linear Algebra</span>
+                            <span class="experience-skill-tag">Mathematical Proofs</span>
+                            <span class="experience-skill-tag">Scientific Writing</span>
+                            <span class="experience-skill-tag">Technical Presentation</span>
+                        </div>
+                        <p class="experience-overview">Optimized entanglement-assisted quantum error correcting codes (EAQECCs) by developing a novel method to reduce entangled bits in stabilizer codes, enhancing resource efficiency. Formalized a mathematical conjecture into a proof, demonstrating a qubit-to-ebit transformation while preserving error correcting capabilities. Presented findings at the UT Dallas SPUR Symposium (2025).</p>
+                        <br>
+                        <p class="experience-overview"><b><a href="https://arxiv.org/abs/2603.03182" target="_blank" class="experience-org-link">https://arxiv.org/abs/2603.03182</a></b> 
+
+                    </div>
+
+                    <!-- Dropdown Toggle -->
+                    <div class="experience-dropdown-toggle" onclick="toggleMedia('media1')">
+                        <span class="experience-dropdown-text">View Media</span>
+                        <svg class="experience-dropdown-arrow" id="arrow1" viewBox="0 0 24 24" width="20" height="20">
+                            <path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                        </svg>
+                    </div>
+
+                    <!-- Collapsible Media Row -->
+                    <div class="experience-media-row" id="media1">
+                        <div class="experience-media-container">
+                            <img src="assets/SPUR_2025.png" alt="SPUR Symposium Presentation" class="experience-media-image">
+                            <div class="experience-media-overlay">
+                                <a href="assets/SPUR_2025.pdf" class="experience-pdf-button" target="_blank">
+                                    <svg class="experience-pdf-button-icon" viewBox="0 0 24 24" width="20" height="20">
+                                        <path fill="currentColor" d="M20,2H8A2,2 0 0,0 6,4V16A2,2 0 0,0 8,18H20A2,2 0 0,0 22,16V4A2,2 0 0,0 20,2M20,16H8V4H20V16M4,6H2V20A2,2 0 0,0 4,22H18V20H4V6M16,10H12V11H14A2,2 0 0,1 16,13A2,2 0 0,1 14,15H12V14H14V13H12V10H16V10Z" />
+                                    </svg>
+                                    View Research Paper (PDF)
+                                </a>
+                            </div>
+                        </div>
+                        <p class="experience-media-caption">SPUR Symposium Presentation (2025)</p>
+                    </div>
+
+                </div>
+
+                <!-- Experience Card 2 -->
+                <div class="experience-card">
+                    <div class="experience-left">
+                        <h2 class="experience-job-title">Communications Specialist</h2>
+                        <img src="assets/experience/asl-logo.png" alt="Art Sci Lab" class="experience-left-image">
+                    </div>
+                    <div class="experience-right">
+                        <div class="experience-employer">The University of Texas at Dallas - Bass School, Art Sci Lab</div>
+                        <div class="experience-dates">Nov 2024 - Dec 2025</div>
+                        <div class="experience-skills">
+                            <span class="experience-skill-tag">Marketing Communications</span>
+                            <span class="experience-skill-tag">Social Media Management</span>
+                            <span class="experience-skill-tag">Content Creation</span>
+                            <span class="experience-skill-tag">Data Analytics</span>
+                            <span class="experience-skill-tag">Audience Engagement</span>
+                            <span class="experience-skill-tag">Performance Metrics</span>
+                            <span class="experience-skill-tag">Event Planning</span>
+                            <span class="experience-skill-tag">Logistics Management</span>
+                            <span class="experience-skill-tag">Stakeholder Coordination</span>
+                            <span class="experience-skill-tag">Project Management</span>
+                            <span class="experience-skill-tag">Cross-Functional Collaboration</span>
+                        </div>
+                        <p class="experience-overview">Advanced <b><a href="https://artscilab.utdallas.edu/" target="_blank" class="experience-org-link">Art Sci Lab</a></b> 
+                            initiatives through strategic marketing, event coordination, 
+                            and data-driven proposal development to drive engagement and organizational success. Developed comprehensive 
+                            proposals focused on marketing and external partnerships, leveraging data analysis to support campaigns and maximize 
+                            audience reach. Strategized and executed targeted marketing campaigns promoting Art Sci Lab projects, research, and 
+                            events in close collaboration with the Bass School Creative Communications team. Monitored cross-platform engagement 
+                            metrics using Meta Business Suite while creating compelling marketing materials including digital content, flyers, 
+                            and newsletters. Coordinated end-to-end event logistics, managing everything from initial setup and promotion to on-site 
+                            activities and post-event reporting, with performance analysis conducted via Meta Business Suite and Power BI to 
+                            optimize future initiatives. I also occasionally helped take event photos!</p>
+                        <br>
+                        <p class="experience-overview">Check out the Art Sci Lab's <b><a href="https://artscilab.utdallas.edu/" target="_blank" class="experience-org-link">website</a></b>
+                            and <b><a href="https://www.instagram.com/utd_artscilab/" target="_blank" class="experience-org-link">Instagram</a></b>!</p> 
+                    </div>
+
+                    <!-- Dropdown Toggle -->
+                    <div class="experience-dropdown-toggle" onclick="toggleMedia('media2')">
+                        <span class="experience-dropdown-text">View Media</span>
+                        <svg class="experience-dropdown-arrow" id="arrow2" viewBox="0 0 24 24" width="20" height="20">
+                            <path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                        </svg>
+                    </div>
+
+                    <!-- Collapsible Media Row -->
+                    <div class="experience-media-row" id="media2">
+                        <div class="experience-carousel-container">
+                            <!-- Carousel Track -->
+                            <div class="experience-carousel-track" id="carousel2">
+                                <!-- Image 1 -->
+                                <div class="experience-carousel-slide">
+                                    <img src="/assets/experience/asl-team.png" alt="Marketing Team" class="experience-carousel-image">
+                                    <p class="experience-carousel-caption">Our 2025 Marketing Team!</p>
+                                </div>
+                                
+                                <!-- Image 2 -->
+                                <div class="experience-carousel-slide">
+                                    <img src="/assets/experience/asl-flyer.png" alt="Event Flyer" class="experience-carousel-image">
+                                    <p class="experience-carousel-caption">Example Flyer</p>
+                                </div>
+
+                                <!-- Image 3 -->
+                                <div class="experience-carousel-slide">
+                                    <img src="/assets/experience/asl-toi.jpg" alt="TOI Group Picture" class="experience-carousel-image">
+                                    <p class="experience-carousel-caption">"Threads of Ingenuity" Event with Guest Speakers</p>
+                                </div>
+                            </div>
+
+                            <!-- Navigation Buttons -->
+                            <button class="experience-carousel-btn experience-carousel-prev" onclick="moveCarousel('carousel2', -1)">❮</button>
+                            <button class="experience-carousel-btn experience-carousel-next" onclick="moveCarousel('carousel2', 1)">❯</button>
+
+                            <!-- Indicators -->
+                            <div class="experience-carousel-indicators" id="indicators2">
+                                <span class="experience-indicator active" onclick="jumpToSlide('carousel2', 0)"></span>
+                                <span class="experience-indicator" onclick="jumpToSlide('carousel2', 1)"></span>
+                                <span class="experience-indicator" onclick="jumpToSlide('carousel2', 2)"></span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- Experience Card 3 -->
+                <div class="experience-card">
+                    <div class="experience-left">
+                        <h2 class="experience-job-title">Early Quantum Career Immersion Intern</h2>
+                            <div style="display: flex; align-items: center; gap: 1rem; margin-top: 1rem;">
+                                <img src="assets/experience/tcs-logo.jpg" alt="The Coding School - Logo" 
+                                    style="height: 100px; width: auto; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                                <img src="assets/experience/qxq-logo.png" alt="Qubit x Qubit - Logo" 
+                                    style="height: 100px; width: auto; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                            </div>
+                        <br>
+                        <img src="assets/experience/bp-logo.png" alt="bp - Logo" class="experience-left-image" 
+                            style="width: auto; height: auto; max-width: 100px; aspect-ratio: auto;">
+                    </div>
+                    <div class="experience-right">
+                        <div class="experience-employer">Qubit x Qubit / bp</div>
+                        <div class="experience-dates">Nov 2024 - Dec 2025</div>
+                        <div class="experience-skills">
+                            <span class="experience-skill-tag">Quantum Computing</span>
+                            <span class="experience-skill-tag">Variational Quantum Eigensolver</span>
+                            <span class="experience-skill-tag">QUBO</span>
+                            <span class="experience-skill-tag">Mixed Integer Programming<</span>
+                            <span class="experience-skill-tag">Energy Market Operation</span>
+                            <span class="experience-skill-tag">Machine Learning</span>
+                            <span class="experience-skill-tag">Algorithm Implementation</span>
+                            <span class="experience-skill-tag">External Partnerships</span>
+                            <span class="experience-skill-tag">Technical Presentation</span>
+                        </div>
+                        <p class="experience-overview">Selected for
+                            <b><a href="https://the-cs.org/" target="_blank" class="experience-org-link">The Coding School's</a> - </b>
+                            <b><a href="https://www.qubitbyqubit.org/" target="_blank" class="experience-org-link">Qubit x Qubit</a> </b>
+                            <b><a href="https://www.qubitbyqubit.org/eqci" target="_blank" class="experience-org-link">Early Quantum Career Immersion Program,</a> </b>
+                            a highly competitive initiative bringing together undergraduate students for intensive training in quantum computing with 
+                            emphasis on real-world applications. <br><br>
+                            
+                            Developed fundamental quantum mechanics and computing skills through daily 
+                            lectures and labs while building professional research capabilities including technical communication and networking. 
+                            Completed additional projects implementing quantum algorithms including BB84 and B92 QKD protocols, Grover's algorithm 
+                            for graph coloring problems, QAOA, and noise models. Presented final project on the Eckert 91 Quantum Key Distribution 
+                            protocol while engaging with mentors from academia and quantum industry partners. <br><br>
+
+                            Collaborated with professionals from <b>bp (British Petroleum)</b> across internal Centers of Excellence (COEs) and external 
+                            partners to explore hybrid classical-quantum solutions for energy optimization. Investigated implementations utilizing mixed 
+                            integer programming, quadratic unconstrained binary optimization (QUBO), and the unit commitment problem, analyzing results 
+                            generated by NISQ-era hardware while discussing progress toward fault-tolerant quantum computers and implications for 
+                            achieving quantum advantage. Participated in cross-functional discussions regarding successful implementations of quantum, 
+                            AI/LLM, and robotics products for applications of interest including energy market operation. Implemented the Variational 
+                            Quantum Eigensolver (VQE) to calculate ground states of the transverse Ising model, investigating further applications in 
+                            machine learning and protein folding.
+                        </p>
+                    </div>
+
+                    <!-- Dropdown Toggle -->
+                    <div class="experience-dropdown-toggle" onclick="toggleMedia('media3')">
+                        <span class="experience-dropdown-text">View Media</span>
+                        <svg class="experience-dropdown-arrow" id="arrow3" viewBox="0 0 24 24" width="20" height="20">
+                            <path fill="currentColor" d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                        </svg>
+                    </div>
+
+                    <!-- Collapsible Media Row -->
+                    <div class="experience-media-row" id="media3">
+                        <div class="experience-carousel-container">
+                            <!-- Carousel Track -->
+                            <div class="experience-carousel-track" id="carousel3">
+                                <!-- Image 1 -->
+                                <div class="experience-carousel-slide">
+                                    <img src="/assets/experience/eqci-cohort.jpg" alt="2023 EQCI Cohort" class="experience-carousel-image">
+                                    <p class="experience-carousel-caption">2023 EQCI Cohort</p>
+                                </div>
+                                
+                                <!-- Image 2 -->
+                                <div class="experience-carousel-slide">
+                                    <img src="/assets/experience/bp-pink.JPG" alt="bp/QxQ Interns & Mentors" class="experience-carousel-image">
+                                    <p class="experience-carousel-caption">bp/QxQ Interns & Mentors</p>
+                                </div>
+                                
+                                <!-- Image 3 -->
+                                <div class="experience-carousel-slide">
+                                    <img src="/assets/experience/bp-team.JPG" alt="2023 Digital Science Team" class="experience-carousel-image">
+                                    <p class="experience-carousel-caption">2023 bp Digital Science Team</p>
+                                </div>
+
+                            </div>
+
+                            <!-- Navigation Buttons -->
+                            <button class="experience-carousel-btn experience-carousel-prev" onclick="moveCarousel('carousel3', -1)">❮</button>
+                            <button class="experience-carousel-btn experience-carousel-next" onclick="moveCarousel('carousel3', 1)">❯</button>
+
+                            <!-- Indicators -->
+                            <div class="experience-carousel-indicators" id="indicators3">
+                                <span class="experience-indicator active" onclick="jumpToSlide('carousel3', 0)"></span>
+                                <span class="experience-indicator" onclick="jumpToSlide('carousel3', 1)"></span>
+                                <span class="experience-indicator" onclick="jumpToSlide('carousel3', 2)"></span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Jaszmine DeFranco.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

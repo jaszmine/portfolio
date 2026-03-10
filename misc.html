@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Misc. | Jaszmine DeFranco</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="map-styles.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Jaszmine DeFranco</a>
+            <div class="nav-links">
+                <a href="index.html" class="home">Home</a>
+                <a href="about.html" class="about">About</a>
+                <a href="experiences.html" class="experience">Experience</a>
+                <a href="projects.html" class="projects">Projects</a>
+                <a href="photography.html" class="photography">Photography</a>
+                <a href="misc.html" class="active misc">Misc.</a>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <!-- Buttons to separate  -->
+        <!-- <section class="section">
+            <div class="filter-buttons">
+                <button class="filter-btn red active" data-target="conferences">Conferences</button>
+                <button class="filter-btn green" data-target="travel-map">Travel Map</button>
+                <button class="filter-btn blue" data-target="other-again">University Clubs</button>
+            </div>
+        </section> -->
+
+        <!-- Other Content Section -->
+        <!-- <section class="section">
+            <div class="misc-grid">
+
+            </div>
+        </section> -->
+
+        <section class="conferences-timeline">
+            <h1 id="conferences" class="timeline-title"><span class="highlight" data-text="Conferences Attended">Conferences Attended</span></h1>
+            
+            <div class="timeline-container">
+                <!-- Timeline Line -->
+                <div class="timeline-line"></div>
+                
+                <!-- Conference Entry 1 (Left side) -->
+                <div class="timeline-item timeline-left">
+                    <div class="timeline-card">
+                        <!-- Header with conference info -->
+                        <div class="conference-header">
+                            <h3 class="conference-title">Texas Quantum Summit</h3>
+                            <div class="conference-meta">
+                                <span class="conference-date"><i class="far fa-calendar"></i> September 19-20, 2025</span>
+                                <span class="conference-location"><i class="fas fa-map-marker-alt"></i> College Station, TX</span>
+                            </div>
+                        </div>
+
+                        <div class="conference-main">
+                            <div class="conference-featured-image">
+                                <img src="/assets/misc/1tqs.png" alt="Texas Quantum Summit 2025">
+                            </div>
+                            <div class="conference-description">
+                                <p>The Texas Quantum Summit marked the first statewide gathering of quantum stakeholders following 
+                                    the passage of the Texas Quantum Initiative. Signed into law by Gov. Greg Abbott and effective 
+                                    September 1, 2025, the initiative establishes a formal planning framework and advisory committee to 
+                                    coordinate quantum research priorities, funding strategies, and manufacturing capabilities across 
+                                    Texas.</p>
+                                <p class="clear-below-image">The summit served as a launchpad for aligning academic research priorities, 
+                                    industrial capabilities, funding opportunities, and governmental efforts across Texas. This second 
+                                    paragraph will start below the image since we added the clear class.</p>
+                            </div>
+                            <!-- Read More Button -->
+                            <div class="conference-readmore-container">
+                                <button class="conference-readmore-btn" onclick="openConferenceModal('modal-tqs-2025')">
+                                    <span>My TQS Experience</span>
+                                    <svg class="conference-readmore-arrow" viewBox="0 0 24 24" width="20" height="20">
+                                        <path fill="currentColor" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+
+                <!-- Conference Entry 2 (Right side) -->
+                <div class="timeline-item timeline-right">
+                    <div class="timeline-card">
+                        <!-- Header with conference info -->
+                        <div class="conference-header">
+                            <h3 class="conference-title">Solidworks: 3DEXPERIENCE World 2024</h3>
+                            <div class="conference-meta">
+                                <span class="conference-date"><i class="far fa-calendar"></i> February 11-14, 2024</span>
+                                <span class="conference-location"><i class="fas fa-map-marker-alt"></i> Dallas, TX</span>
+                            </div>
+                        </div>
+
+                        <div class="conference-main">
+                            <div class="conference-featured-image">
+                                <img src="/assets/misc/2sld.jpg" alt="Solidworks: 3DEXPERIENCE World 2024">
+                            </div>
+                            <div class="conference-description">
+                                <p>3DEXPERIENCE World 2024 served as the premier annual gathering for designers, engineers, and business 
+                                    leaders, carrying forward the legacy of SOLIDWORKS World. The event centered on unifying the product 
+                                    development process through cloud-based collaboration on the 3DEXPERIENCE platform.</p>
+                                <p class="clear-below-image">Key sessions explored cutting-edge design and collaboration tools for desktop 
+                                    and cloud environments, while also demonstrating how integrated simulation is transforming development 
+                                    by removing guesswork. Additionally, a manufacturing panel addressed strategies for bridging the industry's 
+                                    skill gap and labor shortages, with a focus on building a resilient and diverse pipeline for future growth.</p>
+                            </div>
+                            <!-- Read More Button -->
+                            <div class="conference-readmore-container">
+                                <button class="conference-readmore-btn" onclick="openConferenceModal('modal-sld-2024')">
+                                    <span>My Conference Experience</span>
+                                    <svg class="conference-readmore-arrow" viewBox="0 0 24 24" width="20" height="20">
+                                        <path fill="currentColor" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+                
+                
+                <!-- Conference Entry 3 (Left side) -->
+                <div class="timeline-item timeline-left">
+                    <div class="timeline-card">
+                        <!-- Header with conference info -->
+                        <div class="conference-header">
+                            <h3 class="conference-title">IEEE Quantum Week 2023</h3>
+                            <div class="conference-meta">
+                                <span class="conference-date"><i class="far fa-calendar"></i> September 17-22, 2023</span>
+                                <span class="conference-location"><i class="fas fa-map-marker-alt"></i> Bellevue, WA</span>
+                            </div>
+                        </div>
+
+                        <div class="conference-main">
+                            <div class="conference-featured-image">
+                                <img src="/assets/misc/3ieee.png" alt="IEEE Quantum Week 2023">
+                            </div>
+                            <div class="conference-description">
+                                <p>IEEE Quantum Week is the premier international conference bridging quantum computing science 
+                                    with industry development. The 2023 event in Bellevue, Washington, uniquely brought together researchers, 
+                                    engineers, and entrepreneurs through an extensive program of keynotes, tutorials, and workshops designed 
+                                    to foster collaboration across the field.</p>
+                                <p class="clear-below-image">The conference provided ample networking opportunities while showcasing the latest 
+                                    advancements in quantum algorithms, software systems, and hardware engineering. By connecting professionals 
+                                    from industry, government, and academia, IEEE Quantum Week aims to accelerate innovation and build a cohesive 
+                                    community around all aspects of quantum computing and engineering.</p>
+                            </div>
+                            <!-- Read More Button -->
+                            <div class="conference-readmore-container">
+                                <button class="conference-readmore-btn" onclick="openConferenceModal('modal-ieee-2023')">
+                                    <span>My Quantum Week Experience</span>
+                                    <svg class="conference-readmore-arrow" viewBox="0 0 24 24" width="20" height="20">
+                                        <path fill="currentColor" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- Conference Modal 1 -->
+            <div id="modal-tqs-2025" class="conference-modal">
+                <div class="conference-modal-content">
+                    <!-- Modal Header -->
+                    <div class="conference-modal-header">
+                        <h2 class="conference-modal-title">Texas Quantum Summit 2025</h2>
+                        <button class="conference-modal-close" onclick="closeConferenceModal('modal-tqs-2025')">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <!-- Modal Body -->
+                    <div class="conference-modal-body">
+                        <!-- Conference Meta Info -->
+                        <div class="conference-modal-meta">
+                            <span><i class="far fa-calendar"></i> September 2025</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Austin, TX</span>
+                        </div>
+                        
+                        <!-- Main Experience Text -->
+                        <div class="conference-modal-text">
+                            <h3>My Experience</h3>
+                            <p>Two years ago, I attended my first conference, IEEE Quantum Week 2023 in Bellevue, Washington, where I got my 
+                                first glimpse into the vast landscape of quantum research, witnessing the intersection of academia and industry. 
+                                At the time, much of it felt overwhelming, and I was just beginning to grasp the scale of the field.</p>
+
+                            <p>In September of 2025, I had the privilege of attending the inaugural Texas Quantum Summit hosted at Texas A&M University. 
+                                Returning with a different perspective, and now equipped with research experience in quantum error correction, I was 
+                                excited to see the current state of the field and how much things had progressed. I was no longer the confused undergrad trying 
+                                to keep up, but instead as a soon-to-be college graduate, with a clearer sense of direction.</p>
+
+                            <p>The summit brought together an impressive cross-section of stakeholders: Texas senators, economic development leaders, 
+                                startup founders, academic experts, industry representatives, and educators. What stood out most was the shift in conversation, 
+                                from purely technical discussions to how quantum can serve as a solution for real-world economic challenges. Speakers emphasized 
+                                aligning research agendas with the commerce they can enable, and directly connecting innovation to the Texas economy.</p>
+
+                            <p>The momentum was undeniable. With over 400+ attendees, far exceeding the projected 250, it was clear that the quantum ecosystem 
+                                in Texas is no longer theoretical. The message resonated throughout: this moment requires collaboration across academia, industry, 
+                                and government. Quantum's time is here, and the challenge now is how we channel that momentum into lasting impact.</p>
+                        </div>
+                        
+                        <!-- Modal Gallery -->
+                        <div class="conference-modal-gallery">
+                            <h3>Gallery</h3>
+                            <div class="modal-gallery-grid">
+                                <img src="assets/misc/conferences/1tqs/1panel.jpg" alt="Panel discussion">
+                                <img src="assets/misc/conferences/1tqs/2poster.jpg" alt="UTD Graduate Students' Poster">
+                                <img src="assets/misc/conferences/1tqs/3kyle.jpg" alt="Kyle Field">
+                                <img src="assets/misc/conferences/1tqs/4utd.jpg" alt="UTD Research - Presented by Dr.K">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conference Modal 2 -->
+            <div id="modal-sld-2024" class="conference-modal">
+                <div class="conference-modal-content">
+                    <!-- Modal Header -->
+                    <div class="conference-modal-header">
+                        <h2 class="conference-modal-title">Solidworks: 3DEXPERIENCE World 2024</h2>
+                        <button class="conference-modal-close" onclick="closeConferenceModal('modal-sld-2024')">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <!-- Modal Body -->
+                    <div class="conference-modal-body">
+                        <!-- Conference Meta Info -->
+                        <div class="conference-modal-meta">
+                            <span><i class="far fa-calendar"></i> February 2024</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Dallas, TX</span>
+                        </div>
+                        
+                        <!-- Main Experience Text -->
+                        <div class="conference-modal-text">
+                            <h3>My Experience</h3>
+                            <p>Attending 3DEXPERIENCE World 2024 in Dallas Texas was an incredible experience, especially as a member of 
+                                UT Dallas's AIAA group. We were honored to be invited to showcase our projects at an EDU booth, which was a 
+                                fantastic platform to share our work with a global audience of engineers and designers. This opportunity was 
+                                made possible by a generous sponsorship from SOLIDWORKS, which provided our group with software keys. This 
+                                access was instrumental in allowing our members to learn CAD and implement professional-grade design tools 
+                                directly into our engineering projects.</p>
+
+                            <p>Beyond our own booth, the "Playground" was easily one of the coolest parts of the conference. It was an interactive 
+                                hub where I met people from all sorts of businesses and backgrounds, all eager to talk about their projects and 
+                                initiatives. Seeing firsthand how others are using these technologies to innovate was genuinely inspiring! I also 
+                                made it a point to attend several workshops; one session on 3D printing and manufacturing practices stood out in 
+                                particular. It was fascinating to learn how AI is currently being used to streamline production processes and how 
+                                companies are looking to implement similar smart practices across other machine shop tools in the near future.</p>
+
+                            <p>Overall, the conference left me with a powerful message about the future of design. The focus wasn't just on the tools 
+                                we have today, but on the horizon of what's possible with AI-based generative design and cloud-based collaboration on 
+                                the 3DEXPERIENCE platform. It was clear that the industry is moving toward a more connected and intelligent workflow, 
+                                and being surrounded by that energy, from student teams to seasoned professionals, reinforced my excitement to be a 
+                                part of this evolving engineering landscape!</p>
+                        </div>
+                        
+                        <!-- Modal Gallery -->
+                        <div class="conference-modal-gallery">
+                            <h3>Gallery</h3>
+                            <div class="modal-gallery-grid">
+                                <img src="assets/misc/conferences/2sld/1group.jpg" alt="UTD-AIAA-Rocketry">
+                                <img src="assets/misc/conferences/2sld/2droids.jpg" alt="Interactive Playground">
+                                <img src="assets/misc/conferences/2sld/3ws.jpg" alt="Manufacturing Workshop">
+                                <img src="assets/misc/conferences/2sld/4selfie.jpg" alt="Friends!">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conference Modal 3 -->
+            <div id="modal-ieee-2023" class="conference-modal">
+                <div class="conference-modal-content">
+                    <!-- Modal Header -->
+                    <div class="conference-modal-header">
+                        <h2 class="conference-modal-title">IEEE Quantum Week 2023</h2>
+                        <button class="conference-modal-close" onclick="closeConferenceModal('modal-ieee-2023')">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <!-- Modal Body -->
+                    <div class="conference-modal-body">
+                        <!-- Conference Meta Info -->
+                        <div class="conference-modal-meta">
+                            <span><i class="far fa-calendar"></i> September 2023</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Bellevue, WA</span>
+                        </div>
+                        
+                        <!-- Main Experience Text -->
+                        <div class="conference-modal-text">
+                            <h3>My Experience</h3>
+                            <p>The 2023 IEEE Quantum Week conference marked my very first professional conference that I have attended!
+                                It was made possible by the <a href="https://labs.utdallas.edu/mkolodru/quantum-connect/" target="_blank" class="experience-org-link">Quantum Connect program</a>
+                                at UT Dallas, a travel grant opportunity funded through 
+                                the NSF’s ExpandQISE program. After being selected as one of the student participants, I was awarded a 
+                                grant to attend the conference in Bellevue, Washington. The program provided a structured and invaluable 
+                                framework for my first major conference experience, which included attending talks, workshops, participating 
+                                in dedicated student career development activities, and interacting with members of the quantum industrial 
+                                workforce. This opportunity not only facilitated my travel but also connected me with an international community 
+                                of peers and professionals in the quantum field. I am incredibly  grateful to Dr. Kolodrubetz and Dr. Henderson 
+                                for the opportunity to participate in this program; their belief in students like me truly expanded my world and 
+                                set a new trajectory for my future in innovative technologies and sciences.</p>
+
+                            <!-- Media Carousel 1 -->
+                            <div class="experience-carousel-container">
+                                <!-- Carousel Track -->
+                                <div class="experience-carousel-track" id="carousel1">
+                                    <!-- Slides -->
+                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel1/1self.jpg" alt="Slide1" class="experience-carousel-image"> <!-- <p class="experience-carousel-caption">Our 2025 Marketing Team!</p> --> </div>
+                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel1/2group.jpg" alt="Slide2" class="experience-carousel-image"> <!-- <p class="experience-carousel-caption">Our 2025 Marketing Team!</p> --> </div>
+                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel1/3lobby.jpg" alt="Slide3" class="experience-carousel-image"> <!-- <p class="experience-carousel-caption">Our 2025 Marketing Team!</p> --> </div>
+                                </div>
+
+                                <!-- Navigation Buttons -->
+                                <button class="experience-carousel-btn experience-carousel-prev" onclick="moveCarousel('carousel1', -1)">❮</button>
+                                <button class="experience-carousel-btn experience-carousel-next" onclick="moveCarousel('carousel1', 1)">❯</button>
+
+                                <!-- Indicators -->
+                                <div class="experience-carousel-indicators" id="indicators1">
+                                    <span class="experience-indicator active" onclick="jumpToSlide('carousel1', 0)"></span>
+                                    <span class="experience-indicator" onclick="jumpToSlide('carousel1', 1)"></span>
+                                    <span class="experience-indicator" onclick="jumpToSlide('carousel1', 2)"></span>
+                                </div>
+                            </div>
+
+
+                            <h3>The Scale of the Quantum Community</h3>
+                            <p>Stepping into the IEEE Quantum Week conference in Bellevue was my first real glimpse into the sheer scale of the 
+                                quantum community. With over 1,000 attendees, the convention center was a bustling ecosystem that brought together 
+                                every corner of the field, from academics, to engineers, researchers, educators, startup founders, representatives from 
+                                large international companies, and more. People of all ages and career stages filled the halls, from high 
+                                schoolers presenting posters to seasoned academics leading breakout sessions. Seeing those young researchers 
+                                confidently present their work was a powerful moment for me; it shattered any preconceived notions I had about who 
+                                gets to contribute to this field and showed me that anything is truly possible. I quickly got used to networking 
+                                with those around me, striking up conversations during coffee breaks and between sessions. It was inspiring to be 
+                                surrounded by so many people from all over the world, all united by a passion for advancing quantum science.
+                            </p>
+
+                            <!-- Media Carousel 2 -->
+                            <div class="experience-carousel-container">
+                                <!-- Carousel Track -->
+                                <div class="experience-carousel-track" id="carousel2">
+                                    <!-- Slides -->
+                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel2/1intro.jpg" alt="Slide1" class="experience-carousel-image"> <!-- <p class="experience-carousel-caption">Our 2025 Marketing Team!</p> --> </div>
+                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel2/2people.jpg" alt="Slide2" class="experience-carousel-image"></div>
+                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel2/3poster.jpg" alt="Slide3" class="experience-carousel-image"></div>
+                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel2/4expo.jpg" alt="Slide4" class="experience-carousel-image"></div>
+
+                                </div>
+
+                                <!-- Navigation Buttons -->
+                                <button class="experience-carousel-btn experience-carousel-prev" onclick="moveCarousel('carousel2', -1)">❮</button>
+                                <button class="experience-carousel-btn experience-carousel-next" onclick="moveCarousel('carousel2', 1)">❯</button>
+
+                                <!-- Indicators -->
+                                <div class="experience-carousel-indicators" id="indicators2">
+                                    <span class="experience-indicator active" onclick="jumpToSlide('carousel2', 0)"></span>
+                                    <span class="experience-indicator" onclick="jumpToSlide('carousel2', 1)"></span>
+                                    <span class="experience-indicator" onclick="jumpToSlide('carousel2', 2)"></span>
+                                    <span class="experience-indicator" onclick="jumpToSlide('carousel2', 3)"></span>
+                                </div>
+                            </div>
+
+                            <h3>Speed Mentoring Session & Workshops</h3>
+                            <p>One of the most memorable structured events was a speed mentoring session, where we sat in small groups at tables 
+                                while quantum professionals rotated through to share their experiences. I had the chance to speak with a lead 
+                                researcher from Microsoft, who discussed their topological initiatives. I also met a researcher from the Los Alamos 
+                                National Laboratory, who shared their unique career trajectory and emphasized how their teams are intentionally 
+                                built from people of diverse backgrounds, highlighting just how crucial a multidisciplinary mindset is to solving 
+                                complex problems.
+                            </p>
+
+                            <!-- Media Carousel 3 -->
+                            <div class="experience-carousel-container">
+                                <!-- Carousel Track -->
+                                <div class="experience-carousel-track" id="carousel3">
+                                    <!-- Slides -->
+                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel3/1ibm.jpg" alt="Slide1" class="experience-carousel-image"> <!-- <p class="experience-carousel-caption">Our 2025 Marketing Team!</p> --> </div>
+                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel3/2edu.jpg" alt="Slide2" class="experience-carousel-image"> </div>
+                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel3/3los.jpg" alt="Slide3" class="experience-carousel-image"> </div>
+                                </div>
+
+                                <!-- Navigation Buttons -->
+                                <button class="experience-carousel-btn experience-carousel-prev" onclick="moveCarousel('carousel3', -1)">❮</button>
+                                <button class="experience-carousel-btn experience-carousel-next" onclick="moveCarousel('carousel3', 1)">❯</button>
+
+                                <!-- Indicators -->
+                                <div class="experience-carousel-indicators" id="indicators3">
+                                    <span class="experience-indicator active" onclick="jumpToSlide('carousel3', 0)"></span>
+                                    <span class="experience-indicator" onclick="jumpToSlide('carousel3', 1)"></span>
+                                    <span class="experience-indicator" onclick="jumpToSlide('carousel3', 2)"></span>
+                                </div>
+                            </div>
+
+                            <p>Beyond the mentoring, I immersed myself in numerous breakout session talks. Listening to seasoned academics present 
+                                on incredibly niche but advanced topics was truly inspiring; it gave me a sense of the depth and rigor that defines 
+                                this field. I also attended a workshop led by researchers from the Netherlands, who walked us through a demo of 
+                                <a href="https://netsquid.org/" target="_blank" class="experience-org-link">NetSquid</a>
+                                NetSquid (The Network Simulator for Quantum Information using Discrete events). The fact that I could actually try 
+                                out this cutting-edge simulation tool on my own device, learning how it models scalable quantum networks and the future 
+                                quantum internet, made the future feel tangible and within reach.</p>
+
+                            <!-- Media Carousel 4 -->
+                            <div class="experience-carousel-container">
+                                <!-- Carousel Track -->
+                                <div class="experience-carousel-track" id="carousel4">
+                                    <!-- Slides -->
+                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel4/1qblox.jpg" alt="Slide1" class="experience-carousel-image"> <!-- <p class="experience-carousel-caption">Our 2025 Marketing Team!</p> --> </div>
+                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel4/2qec.jpg" alt="Slide2" class="experience-carousel-image"> </div>
+                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel4/3chandelier.jpg" alt="Slide3" class="experience-carousel-image"> </div>
+                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel4/4netsquid.png" alt="Slide4" class="experience-carousel-image"> </div>
+                                </div>
+
+                                <!-- Navigation Buttons -->
+                                <button class="experience-carousel-btn experience-carousel-prev" onclick="moveCarousel('carousel4', -1)">❮</button>
+                                <button class="experience-carousel-btn experience-carousel-next" onclick="moveCarousel('carousel4', 1)">❯</button>
+
+                                <!-- Indicators -->
+                                <div class="experience-carousel-indicators" id="indicators4">
+                                    <span class="experience-indicator active" onclick="jumpToSlide('carousel4', 0)"></span>
+                                    <span class="experience-indicator" onclick="jumpToSlide('carousel4', 1)"></span>
+                                    <span class="experience-indicator" onclick="jumpToSlide('carousel4', 2)"></span>
+                                    <span class="experience-indicator" onclick="jumpToSlide('carousel4', 3)"></span>
+                                </div>
+                            </div>
+
+                            <h3>Connecting with My Peers and a Glimpse into Academia</h3>
+                            <p>Equally valuable were the connections I built closer to home. Throughout the conference, I spent time with my fellow 
+                                UT Dallas participants, about half of whom were graduate students. I really enjoyed discussing their research and 
+                                learning about projects happening at my own university that I had previously been unaware of. Later in the trip, 
+                                a couple of these fellow participants and I had the chance to visit the University of Washington, which was a fun 
+                                and insightful side adventure. Several of the undergraduates in our group were actively applying to graduate schools, 
+                                so I was particularly interested in learning about the application process and the broader world of academia through 
+                                our discussions with the professors who accompanied us on the trip.
+                            </p>
+
+                            <!-- Media Carousel 5 -->
+                            <div class="experience-carousel-container">
+                                <!-- Carousel Track -->
+                                <div class="experience-carousel-track" id="carousel5">
+                                    <!-- Slides -->
+                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel5/1hall.jpg" alt="Slide1" class="experience-carousel-image"> <!-- <p class="experience-carousel-caption">Our 2025 Marketing Team!</p> --> </div>
+                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel5/2group.jpg" alt="Slide2" class="experience-carousel-image"> </div>
+                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel5/3physics.jpg" alt="Slide3" class="experience-carousel-image"> </div>
+                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel5/4lib.jpg" alt="Slide4" class="experience-carousel-image"> </div>
+                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel5/5bay.jpg" alt="Slide5" class="experience-carousel-image"> </div>
+                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel5/6fountain.jpg" alt="Slide6" class="experience-carousel-image"> </div>
+                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel5/7ivars.jpg" alt="Slide7" class="experience-carousel-image"> </div>
+                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel5/8sunset.jpg" alt="Slide8" class="experience-carousel-image"> </div>
+                                </div>
+
+                                <!-- Navigation Buttons -->
+                                <button class="experience-carousel-btn experience-carousel-prev" onclick="moveCarousel('carousel5', -1)">❮</button>
+                                <button class="experience-carousel-btn experience-carousel-next" onclick="moveCarousel('carousel5', 1)">❯</button>
+
+                                <!-- Indicators -->
+                                <div class="experience-carousel-indicators" id="indicators5">
+                                    <span class="experience-indicator active" onclick="jumpToSlide('carousel5', 0)"></span>
+                                    <span class="experience-indicator" onclick="jumpToSlide('carousel5', 1)"></span>
+                                    <span class="experience-indicator" onclick="jumpToSlide('carousel5', 2)"></span>
+                                    <span class="experience-indicator" onclick="jumpToSlide('carousel5', 3)"></span>
+                                    <span class="experience-indicator" onclick="jumpToSlide('carousel5', 4)"></span>
+                                    <span class="experience-indicator" onclick="jumpToSlide('carousel5', 5)"></span>
+                                    <span class="experience-indicator" onclick="jumpToSlide('carousel5', 6)"></span>
+                                    <span class="experience-indicator" onclick="jumpToSlide('carousel5', 7)"></span>
+                                </div>
+                            </div>
+
+                            <p>A serendipitous detour made the visit even more special: one of the graduate students we were with had a friend in 
+                                the materials science department at UW who was in the final year of their PhD. We got to visit their lab and learn 
+                                about their research on biodegradable materials. It was another moment where I got a sneak peek into the life of a 
+                                researcher at a critical stage in their career. Getting to talk with students early in their graduate programs, 
+                                those in the final stretch of their dissertations, and professionals spanning every corner of the field, all with 
+                                varying years and types of experience, painted a full picture of the paths available. Overall, this entire experience 
+                                opened my eyes to an entire different world and ecosystem of people all working to advance the industry. 
+
+                                It was a defining moment that left me with two main takeaways: first, a profound admiration for the dedication and 
+                                passion everyone poured into their practice, navigating incredible technical difficulty with genuine enthusiasm; 
+                                and second, an inspiring realization that I now carry with me, a higher standard for what it means to be part of a 
+                                community united by curiosity and purpose.
+                            </p>
+
+                            <!-- Media Carousel 6 -->
+                            <div class="experience-carousel-container">
+                                <!-- Carousel Track -->
+                                <div class="experience-carousel-track" id="carousel6">
+                                    <!-- Slides -->
+                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel6/1bye.jpg" alt="Slide1" class="experience-carousel-image"> <!-- <p class="experience-carousel-caption">Our 2025 Marketing Team!</p> --> </div>
+                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel6/2poster.jpg" alt="Slide2" class="experience-carousel-image"> </div>
+                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel6/3mitigation.jpg" alt="Slide3" class="experience-carousel-image"> </div>
+                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel6/4mtn.jpg" alt="Slide4" class="experience-carousel-image"> </div>
+                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel6/5group.jpg" alt="Slide5" class="experience-carousel-image"> </div>
+                                </div>
+
+                                <!-- Navigation Buttons -->
+                                <button class="experience-carousel-btn experience-carousel-prev" onclick="moveCarousel('carousel6', -1)">❮</button>
+                                <button class="experience-carousel-btn experience-carousel-next" onclick="moveCarousel('carousel6', 1)">❯</button>
+
+                                <!-- Indicators -->
+                                <div class="experience-carousel-indicators" id="indicators6">
+                                    <span class="experience-indicator active" onclick="jumpToSlide('carousel6', 0)"></span>
+                                    <span class="experience-indicator" onclick="jumpToSlide('carousel6', 1)"></span>
+                                    <span class="experience-indicator" onclick="jumpToSlide('carousel6', 2)"></span>
+                                    <span class="experience-indicator" onclick="jumpToSlide('carousel6', 3)"></span>
+                                    <span class="experience-indicator" onclick="jumpToSlide('carousel6', 4)"></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Modal Gallery -->
+                        <!-- <div class="conference-modal-gallery">
+                            <h3>Gallery</h3>
+                            <div class="modal-gallery-grid">
+                                <img src="assets/misc/conferences/1tqs/1panel.jpg" alt="Panel discussion">
+                                <img src="assets/misc/conferences/1tqs/2poster.jpg" alt="UTD Graduate Students' Poster">
+                                <img src="assets/misc/conferences/1tqs/3kyle.jpg" alt="Kyle Field">
+                                <img src="assets/misc/conferences/1tqs/4utd.jpg" alt="UTD Research - Presented by Dr.K">
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--  -->
+        <!-- before mapbox-script.js -->
+        <!-- <script>
+        // Preload states data to avoid CORS issues
+        let usStatesData = null;
+        fetch('us-states.geojson')
+            .then(response => response.json())
+            .then(data => {
+                usStatesData = data;
+                console.log('Preloaded US states data');
+            })
+            .catch(error => {
+                console.warn('Could not preload states data:', error);
+            });
+        </script> -->
+
+        <!-- <section class="section">
+            <h1 id="travel-map" class="section-title">Travel Map</h1>
+            
+            <div class="map-intro">
+                <p>Areas I've visited are colored in. Click markers for details.</p>
+            </div>
+
+            <div class="map-controls">
+                <div class="map-stats">
+                    <div class="map-stat-item">
+                        Visited: <span class="map-stat-value" id="visitedCount">0</span>
+                    </div>
+                    <div class="map-stat-item">
+                        Unvisited: <span class="map-stat-value" id="unvisitedCount">0</span>
+                    </div>
+                    <div class="map-stat-item">
+                        Locations: <span class="map-stat-value" id="locationsCount">0</span>
+                    </div>
+                </div>
+                
+                <div class="map-legend">
+                    <div class="map-legend-item">
+                        <div class="map-legend-color" style="background:#34a853"></div>
+                        <span class="map-legend-label">Visited State</span>
+                    </div>
+                    <div class="map-legend-item">
+                        <div class="map-legend-color" style="background:#4285f4"></div>
+                        <span class="map-legend-label">Visited Country</span>
+                    </div>
+                    <div class="map-legend-item">
+                        <div class="map-legend-color" style="background:#ea4335"></div>
+                        <span class="map-legend-label">Location</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="map-container">
+                <div id="map" class="map-instance"></div>
+                <div class="map-loading" id="mapLoading">
+                    <div class="map-loading-spinner"></div>
+                    <div>Loading map...</div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Add Mapbox CSS and JS -->
+        <!-- <link href="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css" rel="stylesheet">
+        <script src="https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js"></script> -->
+
+
+        <!-- University Organizations Section -->
+        <!-- <section class="section">
+            <h1 id="other-again" class="section-title">University Clubs</h1>
+            <div class="misc-grid">
+
+            </div>
+        </section> -->
+
+        
+
+    </main>
+
+<!-- Config must be loaded FIRST -->
+<!-- <script src="config.js"></script> -->
+
+<!-- Then map script -->
+<!-- <script src="mapbox-script.js"></script> -->
+
+<!-- existing scripts -->
+<!-- <script src="script.js"></script> -->
+
+<!-- navigation script -->
+<!-- <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const filterButtons = document.querySelectorAll('.filter-btn[data-target]');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-target');
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Smooth scroll to the h1
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    // Update URL hash
+                    history.pushState(null, null, '#' + targetId);
+                }
+            });
+        });
+        
+        // Check URL hash on page load
+        if (window.location.hash) {
+            const hash = window.location.hash.substring(1);
+            const targetButton = document.querySelector(`.filter-btn[data-target="${hash}"]`);
+            if (targetButton) {
+                targetButton.click();
+            }
+        }
+    });
+</script> -->
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+

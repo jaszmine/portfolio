@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography | Jaszmine DeFranco</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Jaszmine DeFranco</a>
+            <div class="nav-links">
+                <a href="index.html" class="home">Home</a>
+                <a href="about.html" class="about">About</a>
+                <a href="experiences.html" class="experience">Experience</a>
+                <a href="projects.html" class="projects">Projects</a>
+                <a href="photography.html" class="active photography">Photography</a>
+                <a href="misc.html" class="misc">Misc.</a>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main class="ph-container">
+        <section class="ph-section">
+            <h1 class="ph-section-title"><span class="highlight" data-text="Photography">Photography</span></h1>
+            
+            <!-- Filter Buttons with Color Classes -->
+            <div class="filter-buttons">
+                <button class="filter-btn red active" data-filter="recents">Recents</button>
+                <button class="filter-btn green" data-filter="people">People</button>
+                <button class="filter-btn blue" data-filter="outdoors">Outdoors</button>
+                <button class="filter-btn cyan" data-filter="beginnings">Beginnings</button>
+            </div>
+            
+            <!-- Lightbox Modal -->
+            <div class="lightbox-overlay" id="lightbox">
+                <button class="lightbox-close" id="lightbox-close">
+                    <i class="fas fa-times"></i>
+                </button>
+                <button class="lightbox-nav lightbox-prev hidden" id="lightbox-prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="lightbox-nav lightbox-next hidden" id="lightbox-next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <div class="lightbox-content">
+                    <div class="lightbox-image-container">
+                        <img class="lightbox-image" id="lightbox-image" src="" alt="">
+                    </div>
+                    <div class="lightbox-info">
+                        <h2 class="lightbox-title" id="lightbox-title">Photo Title</h2>
+                        <p class="lightbox-description" id="lightbox-description">Photo description goes here.</p>
+                        <div class="lightbox-meta" id="lightbox-meta">
+                            <span id="lightbox-category">Category: Loading...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Photo Gallery Container -- populated by the js -->
+            <div class="photo-gallery">
+                <div class="photo-column" id="left-column">
+                    <!-- Photos loaded here by js -->
+                </div>
+                <div class="photo-column" id="right-column">
+                    <!-- Photos loaded here by js -->
+                </div>
+            </div>
+            
+            <!-- Loading indicator -->
+            <div id="loading-indicator" style="text-align: center; padding: 40px; display: none;">
+                <div style="display: inline-block; padding: 20px; background: #f5f5f5; border-radius: 8px;">
+                    <i class="fas fa-spinner fa-spin" style="margin-right: 10px;"></i>
+                    Loading photos...
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Jaszmine DeFranco.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="photography.js"></script>
+</body>
+</html>

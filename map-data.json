@@ -1,0 +1,80 @@
+{
+  "areas": [
+    {
+      "name": "California",
+      "type": "state",
+      "status": "visited",
+      "state": "CA",
+      "country": "US",
+      "description": "Lived here for 5 years."
+    },
+    {
+      "name": "New York",
+      "type": "state",
+      "status": "visited",
+      "state": "NY",
+      "country": "US",
+      "description": "Visited New York City"
+    },
+    {
+      "name": "Arizona",
+      "type": "state", 
+      "status": "visited",
+      "state": "AZ",
+      "country": "US",
+      "description": "Visited Grand Canyon"
+    },
+    {
+      "name": "France",
+      "type": "country",
+      "status": "visited",  
+      "state": null,
+      "country": "FRA",     
+      "description": "Visited Paris and Nice."
+    },
+    {
+      "name": "Japan",
+      "type": "country",
+      "status": "visited",  
+      "state": null,
+      "country": "JPN",    
+      "description": "Visited Tokyo and Kyoto."
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "name": "New York City",
+      "type": "city",
+      "coordinates": { "lat": 40.7128, "lng": -74.0060 },
+      "state": "NY",
+      "country": "US",
+      "date": "2023",
+      "description": "The city that never sleeps!",
+      "tags": ["city", "urban", "landmark"],
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=300&h=200&fit=crop",
+          "caption": "Times Square at night"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Grand Canyon National Park",
+      "type": "park",
+      "coordinates": { "lat": 36.0998, "lng": -112.1125 },
+      "state": "AZ",
+      "country": "US",
+      "date": "2022",
+      "description": "Breathtaking natural wonder with stunning views.",
+      "tags": ["nature", "hiking", "scenic"],
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=300&h=200&fit=crop",
+          "caption": "Sunset at the Grand Canyon"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,540 @@
+// Mobile menu toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (menuToggle) {
+        menuToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+            
+            // Change icon
+            const icon = this.querySelector('i');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+    }
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!menuToggle.contains(event.target) && !navLinks.contains(event.target)) {
+            navLinks.classList.remove('active');
+            const icon = menuToggle.querySelector('i');
+            if (icon) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        }
+    });
+    
+    // Add active class to current page in nav
+    const currentPage = window.location.pathname.split('/').pop();
+    const navLinksAll = document.querySelectorAll('.nav-links a');
+    
+    navLinksAll.forEach(link => {
+        const linkPage = link.getAttribute('href');
+        if (currentPage === linkPage || (currentPage === '' && linkPage === 'index.html')) {
+            link.classList.add('active');
+        }
+    });
+
+    // MISC. - CONFERENCE SECTION //
+    // Initialize conference carousels
+    const conferenceCarousels = document.querySelectorAll('[id^="carousel-"]');
+    conferenceCarousels.forEach(carousel => {
+        const carouselId = carousel.id;
+        // Extract the number/identifier from the ID
+        const indicatorId = 'indicators-' + carouselId.replace('carousel-', '');
+        
+        // Initialize in your currentSlides object
+        currentSlides[carouselId] = 0;
+        
+        // Generate indicators dynamically
+        const indicators = document.getElementById(indicatorId);
+        if (indicators) {
+            const slides = carousel.children;
+            indicators.innerHTML = ''; // Clear existing
+            
+            for (let i = 0; i < slides.length; i++) {
+                const dot = document.createElement('span');
+                dot.className = i === 0 ? 'experience-indicator active' : 'experience-indicator';
+                dot.setAttribute('onclick', `jumpToSlide('${carouselId}', ${i})`);
+                indicators.appendChild(dot);
+            }
+        }
+        
+        updateCarousel(carouselId);
+    });
+});
+
+
+// hero super swag cube matrix animation 
+// credits to -- on codpen
+(function() {
+    // Configuration
+    const CANVAS_WIDTH = 400; // Increased for hero section
+    const CANVAS_HEIGHT = 400;
+    const MONOCHROME_FILL = (opacity) => 
+        `rgba(255, 255, 255, ${Math.max(0, Math.min(1, opacity))})`;
+    const GLOBAL_SPEED = 0.5;
+
+    // Easing function
+    function easeInOutCubic(t) {
+        return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    }
+
+    // Create canvas in container
+    function createCanvasInContainer(containerId) {
+        const container = document.getElementById(containerId);
+        if (!container) return null;
+        container.innerHTML = "";
+        const canvas = document.createElement("canvas");
+        canvas.width = CANVAS_WIDTH;
+        canvas.height = CANVAS_HEIGHT;
+        canvas.style.width = "100%";
+        canvas.style.height = "100%";
+        canvas.style.display = "block";
+        container.appendChild(canvas);
+        return canvas.getContext("2d");
+    }
+
+    // Add corner decorations (optional)
+    function addCornerDecorations() {
+        const container = document.querySelector(".animation-container");
+        if (!container || container.querySelector(".corner")) return;
+        
+        const corners = ["top-left", "top-right", "bottom-left", "bottom-right"];
+        corners.forEach((position) => {
+            const corner = document.createElement("div");
+            corner.className = `corner ${position}`;
+            const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+            svg.setAttribute("width", "16");
+            svg.setAttribute("height", "16");
+            svg.setAttribute("viewBox", "0 0 512 512");
+            svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+            const polygon = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+            polygon.setAttribute("points", "448,224 288,224 288,64 224,64 224,224 64,224 64,288 224,288 224,448 288,448 288,288 448,288");
+            polygon.setAttribute("fill", "currentColor");
+            svg.appendChild(polygon);
+            corner.appendChild(svg);
+            container.appendChild(corner);
+        });
+    }
+
+    // Voxel Matrix Morph Animation
+    function setupVoxelMatrixMorph() {
+        const ctx = createCanvasInContainer("voxel-matrix-morph");
+        if (!ctx) return;
+        let time = 0;
+        let lastTime = 0;
+
+        const centerX = CANVAS_WIDTH / 2,
+              centerY = CANVAS_HEIGHT / 2;
+        
+        // Create 3D grid of points (5x5x5 voxel matrix)
+        const points = [],
+              gridSize = 5,
+              spacing = 35; // Increased spacing for larger canvas
+        const totalSize = (gridSize - 1) * spacing;
+        
+        for (let x = 0; x < gridSize; x++) {
+            for (let y = 0; y < gridSize; y++) {
+                for (let z = 0; z < gridSize; z++) {
+                    points.push({
+                        x: (x - (gridSize - 1) / 2) * spacing,
+                        y: (y - (gridSize - 1) / 2) * spacing,
+                        z: (z - (gridSize - 1) / 2) * spacing
+                    });
+                }
+            }
+        }
+
+        function animate(timestamp) {
+            if (!lastTime) lastTime = timestamp;
+            const deltaTime = timestamp - lastTime;
+            lastTime = timestamp;
+            time += deltaTime * 0.0005 * GLOBAL_SPEED;
+
+            ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+
+            const rotX = time * 0.4,
+                  rotY = time * 0.6;
+            
+            // Create scanning effect
+            const easedTime = easeInOutCubic((Math.sin(time * 2) + 1) / 2);
+            const scanLine = (easedTime * 2 - 1) * (totalSize / 2 + 10),
+                  scanWidth = 30;
+
+            points.forEach((p) => {
+                let { x, y, z } = p;
+                
+                // Apply 3D rotation
+                let nX = x * Math.cos(rotY) - z * Math.sin(rotY);
+                let nZ = x * Math.sin(rotY) + z * Math.cos(rotY);
+                x = nX;
+                z = nZ;
+                
+                let nY = y * Math.cos(rotX) - z * Math.sin(rotX);
+                nZ = y * Math.sin(rotX) + z * Math.cos(rotX);
+                y = nY;
+                z = nZ;
+                
+                // Scanning effect
+                const distToScan = Math.abs(y - scanLine);
+                let scanInfluence = 0,
+                    displacement = 1;
+                
+                if (distToScan < scanWidth) {
+                    scanInfluence = Math.cos((distToScan / scanWidth) * (Math.PI / 2));
+                    displacement = 1 + scanInfluence * 0.4;
+                }
+                
+                // Perspective scaling
+                const scale = (z + 100) / 200; // Adjusted for larger canvas
+                const pX = centerX + x * displacement,
+                      pY = centerY + y * displacement;
+                
+                const size = Math.max(0, scale * 3 + scanInfluence * 3); // Increased dot sizes
+                const opacity = Math.max(0.1, scale * 0.7 + scanInfluence * 0.3);
+                
+                // Draw the point
+                ctx.beginPath();
+                ctx.arc(pX, pY, size, 0, Math.PI * 2);
+                ctx.fillStyle = MONOCHROME_FILL(opacity);
+                ctx.fill();
+            });
+
+            requestAnimationFrame(animate);
+        }
+
+        requestAnimationFrame(animate);
+    }
+
+    // Initialize when page loads
+    window.addEventListener("load", function() {
+        addCornerDecorations();
+        setupVoxelMatrixMorph();
+        
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            // resize handling here if needed
+        });
+    });
+
+})();
+
+
+// Experience Section - Carousel
+
+// Initialize carousels when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize carousel2
+    currentSlides['carousel2'] = 0;
+    updateCarousel('carousel2');
+    
+    // Add more carousels as needed
+    // currentSlides['carousel1'] = 0;
+    // updateCarousel('carousel1');
+});
+
+let currentSlides = {};
+
+function moveCarousel(carouselId, direction) {
+    const track = document.getElementById(carouselId);
+    if (!track) return;
+    
+    const slides = track.children;
+    const totalSlides = slides.length;
+    
+    if (!currentSlides[carouselId]) {
+        currentSlides[carouselId] = 0;
+    }
+    
+    currentSlides[carouselId] = (currentSlides[carouselId] + direction + totalSlides) % totalSlides;
+    
+    updateCarousel(carouselId);
+}
+
+function jumpToSlide(carouselId, slideIndex) {
+    const track = document.getElementById(carouselId);
+    if (!track) return;
+    
+    const slides = track.children;
+    if (slideIndex >= 0 && slideIndex < slides.length) {
+        currentSlides[carouselId] = slideIndex;
+        updateCarousel(carouselId);
+    }
+}
+
+function updateCarousel(carouselId) {
+    const track = document.getElementById(carouselId);
+    const indicators = document.getElementById(`indicators${carouselId.replace('carousel', '')}`);
+    
+    if (!track || !indicators) return;
+    
+    const slideWidth = track.children[0].offsetWidth;
+    track.style.transform = `translateX(-${currentSlides[carouselId] * slideWidth}px)`;
+    
+    // Update indicators
+    const indicatorSpans = indicators.children;
+    for (let i = 0; i < indicatorSpans.length; i++) {
+        if (i === currentSlides[carouselId]) {
+            indicatorSpans[i].classList.add('active');
+        } else {
+            indicatorSpans[i].classList.remove('active');
+        }
+    }
+}
+
+// Handle window resize to maintain correct carousel position
+window.addEventListener('resize', function() {
+    for (let carouselId in currentSlides) {
+        updateCarousel(carouselId);
+    }
+});
+
+//Experience - Dropdown
+
+function toggleMedia(mediaId) {
+    const mediaRow = document.getElementById(mediaId);
+    const arrow = document.getElementById(`arrow${mediaId.replace('media', '')}`);
+    
+    if (mediaRow && arrow) {
+        mediaRow.classList.toggle('open');
+        arrow.classList.toggle('open');
+        
+        // Optional: Update the text based on state
+        const toggleDiv = mediaRow.previousElementSibling;
+        const textSpan = toggleDiv.querySelector('.experience-dropdown-text');
+        
+        if (mediaRow.classList.contains('open')) {
+            textSpan.textContent = 'Hide Media';
+        } else {
+            textSpan.textContent = 'View Media';
+        }
+    }
+}
+
+// Alternative: If using data attributes for more flexibility
+function toggleMediaWithData(element) {
+    const mediaId = element.getAttribute('data-media');
+    const mediaRow = document.getElementById(mediaId);
+    const arrow = element.querySelector('.experience-dropdown-arrow');
+    const textSpan = element.querySelector('.experience-dropdown-text');
+    
+    if (mediaRow && arrow && textSpan) {
+        mediaRow.classList.toggle('open');
+        arrow.classList.toggle('open');
+        
+        if (mediaRow.classList.contains('open')) {
+            textSpan.textContent = 'Hide Media';
+        } else {
+            textSpan.textContent = 'View Media';
+        }
+    }
+}
+
+//
+// PROJECTS SECTION
+//
+
+// Open modal function
+function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+}
+
+// Close modal function
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scrolling
+    }
+}
+
+// Close modal when clicking outside the content
+window.onclick = function(event) {
+    if (event.target.classList.contains('project-modal')) {
+        event.target.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(event) {
+    // if (event.key === 'Escape') {
+    //     const openModals = document.querySelectorAll('.project-modal.active');
+    //     openModals.forEach(modal => {
+    //         modal.classList.remove('active');
+    //     });
+    //     document.body.style.overflow = '';
+    // }
+    if (event.key === 'Escape') {
+        // Close project modals
+        const openProjectModals = document.querySelectorAll('.project-modal.active');
+        openProjectModals.forEach(modal => {
+            modal.classList.remove('active');
+        });
+        
+        // Close conference modals
+        const openConferenceModals = document.querySelectorAll('.conference-modal.active');
+        openConferenceModals.forEach(modal => {
+            modal.classList.remove('active');
+        });
+        
+        document.body.style.overflow = '';
+    }
+});
+
+//
+//  Misc. Page - Conference Section
+//
+
+// Initialize all conference carousels
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all carousel containers
+    const carousels = document.querySelectorAll('.carousel-container');
+    
+    carousels.forEach(carousel => {
+        const carouselId = carousel.id;
+        const indicatorsId = 'indicators-' + carouselId.split('-').slice(1).join('-');
+        initializeConferenceCarousel(carouselId, indicatorsId);
+    });
+});
+
+function initializeConferenceCarousel(carouselId, indicatorsId) {
+    const carousel = document.getElementById(carouselId);
+    const indicators = document.getElementById(indicatorsId);
+    if (!carousel || !indicators) return;
+    
+    const track = carousel.querySelector('.carousel-track');
+    const slides = track.children;
+    
+    // Clear existing indicators
+    indicators.innerHTML = '';
+    
+    // Create a dot for each slide
+    for (let i = 0; i < slides.length; i++) {
+        const dot = document.createElement('span');
+        dot.className = i === 0 ? 'indicator active' : 'indicator';
+        dot.setAttribute('onclick', `jumpConferenceSlide('${carouselId}', ${i})`);
+        indicators.appendChild(dot);
+    }
+}
+
+// Carousel navigation functions
+function moveConferenceCarousel(carouselId, direction) {
+    const carousel = document.getElementById(carouselId);
+    const track = carousel.querySelector('.carousel-track');
+    const slides = track.children;
+    const slideWidth = slides[0].offsetWidth;
+    
+    // Get current transform value
+    const currentTransform = track.style.transform;
+    let currentIndex = 0;
+    
+    if (currentTransform) {
+        const match = currentTransform.match(/-?\d+\.?\d*/);
+        if (match) {
+            currentIndex = Math.round(Math.abs(parseFloat(match[0])) / slideWidth);
+        }
+    }
+    
+    // Calculate new index
+    let newIndex = currentIndex + direction;
+    
+    // Loop around if at ends
+    if (newIndex < 0) newIndex = slides.length - 1;
+    if (newIndex >= slides.length) newIndex = 0;
+    
+    // Update transform
+    track.style.transform = `translateX(-${newIndex * slideWidth}px)`;
+    
+    // Update indicators
+    updateIndicators(carouselId, newIndex);
+}
+
+function jumpConferenceSlide(carouselId, slideIndex) {
+    const carousel = document.getElementById(carouselId);
+    const track = carousel.querySelector('.carousel-track');
+    const slides = track.children;
+    const slideWidth = slides[0].offsetWidth;
+    
+    track.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
+    updateIndicators(carouselId, slideIndex);
+}
+
+function updateIndicators(carouselId, activeIndex) {
+    const carousel = document.getElementById(carouselId);
+    const container = carousel.closest('.conference-carousel');
+    const indicators = container.querySelectorAll('.indicator');
+    
+    indicators.forEach((indicator, index) => {
+        if (index === activeIndex) {
+            indicator.classList.add('active');
+        } else {
+            indicator.classList.remove('active');
+        }
+    });
+}
+
+// Update on window resize
+window.addEventListener('resize', function() {
+    // Reset transforms to prevent misalignment
+    document.querySelectorAll('.carousel-track').forEach(track => {
+        const carousel = track.closest('.carousel-container');
+        if (carousel) {
+            track.style.transform = 'translateX(0px)';
+            updateIndicators(carousel.id, 0);
+        }
+    });
+});
+
+//
+// Misc. - CONFERENCE MODAL
+//
+
+// Conference Modal Functions
+function openConferenceModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+}
+
+function closeConferenceModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scrolling
+    }
+}
+
+// Close modal when clicking outside the content
+window.addEventListener('click', function(event) {
+    if (event.target.classList.contains('conference-modal')) {
+        event.target.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+});
+
+// Close modal with Escape key (add to your existing keydown listener)
+// Just add this condition to your existing keydown function
+/*
+if (event.key === 'Escape') {
+    const openModals = document.querySelectorAll('.conference-modal.active');
+    openModals.forEach(modal => {
+        modal.classList.remove('active');
+    });
+    document.body.style.overflow = '';
+}
+*/
