@@ -58,6 +58,7 @@ function setupPageWithData() {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const leftColumn = document.getElementById('left-column');
     const rightColumn = document.getElementById('right-column');
+    const beginningsText = document.getElementById('beginnings-text');
     
     // Lightbox elements
     const lightbox = document.getElementById('lightbox');
@@ -210,7 +211,7 @@ function setupPageWithData() {
     
     // Function to navigate photos
     // Function to navigate to next photo - ultra smooth slide
-function nextPhoto() {
+    function nextPhoto() {
     if (currentPhotos.length <= 1) return;
     
     const container = document.querySelector('.lightbox-content').parentNode;
@@ -291,6 +292,8 @@ function nextPhoto() {
     // Initialize with recents photos
     const recentsPhotos = allPhotosData.filter(photo => photo.category === 'recents');
     reorganizeColumns(recentsPhotos);
+
+    if (beginningsText) beginningsText.style.display = 'none';
     
     // Add click events to filter buttons
     filterButtons.forEach(button => {
@@ -311,6 +314,15 @@ function nextPhoto() {
             
             // Reorganize columns with filtered photos
             reorganizeColumns(filteredPhotos);
+
+            // Show/hide beginnings description
+            if (beginningsText) {
+                if (filterValue === 'beginnings') {
+                    beginningsText.style.display = 'block';
+                } else {
+                    beginningsText.style.display = 'none';
+                }
+            }
         });
     });
     

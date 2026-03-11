@@ -3718,3 +3718,29 @@ canvas {
     color: white;
     text-decoration: none;
 }
+
+/*
+
+*/
+
+.beginnings-description {
+    max-width: 800px;
+    margin: 20px auto 30px;
+    padding: 20px;
+    background-color: rgba(0, 255, 255, 0.05);
+    border-left: 4px solid cyan;
+    border-radius: 0 8px 8px 0;
+    line-height: 1.6;
+    display: none; /* Hidden by default */
+    transition: opacity 0.3s ease;
+    opacity: 1;
+}
+
+.beginnings-description[style*="display: block"] {
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
