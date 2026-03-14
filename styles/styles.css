@@ -228,25 +228,216 @@ body {
 }
 
 /* Common responsive breakpoints */
+/* Common responsive breakpoints */
 @media (max-width: 768px) {
+    /* Adjust navbar for mobile */
+    .navbar {
+        position: relative;
+        max-width: 100%;
+        border-bottom: 2px solid rgb(41, 41, 41);
+    }
+    
+    .nav-container {
+        flex-wrap: wrap;
+        position: relative; /* Add this for proper positioning */
+    }
+    
+    /* Hamburger menu button styles */
+    .menu-toggle {
+        display: block;
+        background: transparent;
+        border: none;
+        font-size: 1.8rem;
+        cursor: pointer;
+        color: var(--color-cream);
+        padding: 0.5rem;
+        transition: color 0.3s ease;
+        width: auto;
+        height: auto;
+        line-height: 1;
+        margin-left: auto; /* Push to the right */
+        position: relative; /* Ensure it stays in place */
+        z-index: 1000; /* Keep above menu */
+    }
+    
+    /* Page-specific hover colors for hamburger */
+    /* Home page - red */
+    body.home-page .menu-toggle:hover {
+        color: var(--red-color);
+    }
+    
+    /* About page - green */
+    body.about-page .menu-toggle:hover {
+        color: var(--green-color);
+    }
+    
+    /* Experience page - blue */
+    body.experience-page .menu-toggle:hover {
+        color: var(--blue-color);
+    }
+    
+    /* Projects page - cyan */
+    body.projects-page .menu-toggle:hover {
+        color: var(--cyan-color);
+    }
+    
+    /* Photography page - magenta */
+    body.photography-page .menu-toggle:hover {
+        color: var(--magenta-color);
+    }
+    
+    /* Misc page - yellow */
+    body.misc-page .menu-toggle:hover {
+        color: var(--yellow-color);
+    }
+    
+    .menu-toggle:focus {
+        outline: none;
+    }
+    
+    /* Style for when menu is open (X button) */
+    .menu-toggle.active {
+        color: var(--color-cream);
+    }
+    
+    /* Page-specific active states for X button */
+    body.home-page .menu-toggle.active:hover {
+        color: var(--red-color);
+    }
+    
+    body.about-page .menu-toggle.active:hover {
+        color: var(--green-color);
+    }
+    
+    body.experience-page .menu-toggle.active:hover {
+        color: var(--blue-color);
+    }
+    
+    body.projects-page .menu-toggle.active:hover {
+        color: var(--cyan-color);
+    }
+    
+    body.photography-page .menu-toggle.active:hover {
+        color: var(--magenta-color);
+    }
+    
+    body.misc-page .menu-toggle.active:hover {
+        color: var(--yellow-color);
+    }
+    
+    /* Navigation links container */
     .nav-links {
         display: none;
         flex-direction: column;
-        position: absolute;
-        top: 100%;
+        position: relative;
+        top: 0;
         left: 0;
         width: 100%;
-        background: white;
-        padding: 1rem;
-        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        background: var(--color-dark);
+        padding: 1rem 0;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+        border-top: 2px solid rgb(41, 41, 41);
+        margin-top: 1rem;
+        z-index: 999;
+        transition: all 0.3s ease;
+        flex-basis: 100%; /* Take full width */
+        order: 3; /* Push below everything */
     }
     
     .nav-links.active {
         display: flex;
     }
     
-    .menu-toggle {
-        display: block;
+    .nav-links a {
+        position: relative;
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        padding: 1rem 2rem;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        transition: color 0.3s ease;
+        border-bottom: 1px solid rgba(233, 222, 184, 0.1);
+    }
+    
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+    
+    /* Keep all the hover effects */
+    .nav-links a:hover {
+        color: white;
+    }
+    
+    .nav-links a::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 15px;
+        right: 15px;
+        height: 2px;
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: transform 0.4s ease;
+    }
+    
+    .nav-links a.home::after {
+        background: linear-gradient(90deg, var(--red-color), rgba(255, 0, 0, 0.7));
+    }
+    
+    .nav-links a.about::after {
+        background: linear-gradient(90deg, var(--green-color), rgba(0, 255, 0, 0.7));
+    }
+    
+    .nav-links a.experience::after {
+        background: linear-gradient(90deg, var(--blue-color), rgba(0, 0, 255, 0.7));
+    }
+    
+    .nav-links a.projects::after {
+        background: linear-gradient(90deg, var(--cyan-color), rgba(0, 255, 255, 0.7));
+    }
+    
+    .nav-links a.photography::after {
+        background: linear-gradient(90deg, var(--magenta-color), rgba(255, 0, 255, 0.7));
+    }
+    
+    .nav-links a.misc::after {
+        background: linear-gradient(90deg, var(--yellow-color), rgba(255, 255, 0, 0.7));
+    }
+    
+    .nav-links a.home.active {
+        color: color-mix(in srgb, var(--red-color) 70%, white);
+    }
+    
+    .nav-links a.about.active {
+        color: color-mix(in srgb, var(--green-color) 70%, white);
+    }
+    
+    .nav-links a.experience.active {
+        color: color-mix(in srgb, var(--blue-color) 70%, white);
+    }
+    
+    .nav-links a.projects.active {
+        color: color-mix(in srgb, var(--cyan-color) 70%, white);
+    }
+    
+    .nav-links a.photography.active {
+        color: color-mix(in srgb, var(--magenta-color) 70%, white);
+    }
+    
+    .nav-links a.misc.active {
+        color: color-mix(in srgb, var(--yellow-color) 70%, white);
+    }
+    
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+        transform: scaleX(1);
+    }
+    
+    /* Adjust main content to account for menu height */
+    .hero, .section, .about-section, .experience-grid, 
+    .projects-grid, .ph-section, .conferences-timeline {
+        transition: margin-top 0.3s ease;
     }
 }
 

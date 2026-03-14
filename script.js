@@ -22,6 +22,10 @@ const Utils = {
 // MOBILE NAVIGATION
 // ============================================
 
+// ============================================
+// MOBILE NAVIGATION
+// ============================================
+
 const MobileNav = {
     init: function() {
         this.menuToggle = document.querySelector('.menu-toggle');
@@ -31,6 +35,7 @@ const MobileNav = {
         
         this.setupEventListeners();
         this.setActiveNavItem();
+        this.setPageClass();
     },
     
     setupEventListeners: function() {
@@ -39,20 +44,50 @@ const MobileNav = {
         
         // Close menu when clicking outside
         document.addEventListener('click', (e) => this.handleOutsideClick(e));
+        
+        // Close menu when clicking a nav link
+        if (this.navLinks) {
+            this.navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => this.closeMenu());
+            });
+        }
     },
     
     toggleMenu: function() {
+        // Toggle the menu
         this.navLinks.classList.toggle('active');
-        this.toggleMenuIcon();
+        this.menuToggle.classList.toggle('active');
+        
+        // Update icon based on new state
+        const isOpen = this.navLinks.classList.contains('active');
+        const icon = this.menuToggle.querySelector('i');
+        
+        if (icon) {
+            if (isOpen) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        }
+        
+        // Toggle body class
+        document.body.classList.toggle('menu-open', isOpen);
     },
     
-    toggleMenuIcon: function() {
-        const icon = this.menuToggle.querySelector('i');
-        if (!icon) return;
+    closeMenu: function() {
+        this.navLinks.classList.remove('active');
+        this.menuToggle.classList.remove('active');
         
-        const isOpen = this.navLinks.classList.contains('active');
-        icon.classList.toggle('fa-bars', !isOpen);
-        icon.classList.toggle('fa-times', isOpen);
+        // Reset icon to hamburger
+        const icon = this.menuToggle.querySelector('i');
+        if (icon) {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+        
+        document.body.classList.remove('menu-open');
     },
     
     handleOutsideClick: function(event) {
@@ -62,12 +97,7 @@ const MobileNav = {
                               !this.navLinks.contains(event.target);
         
         if (clickedOutside && this.navLinks.classList.contains('active')) {
-            this.navLinks.classList.remove('active');
-            const icon = this.menuToggle.querySelector('i');
-            if (icon) {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
+            this.closeMenu();
         }
     },
     
@@ -79,6 +109,28 @@ const MobileNav = {
                 link.classList.add('active');
             }
         });
+    },
+    
+    setPageClass: function() {
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        
+        // Remove any existing page classes
+        document.body.className = document.body.className.replace(/\b\w*-page\b/g, '').trim();
+        
+        // Add appropriate page class based on current page
+        if (currentPage === 'index.html' || currentPage === '') {
+            document.body.classList.add('home-page');
+        } else if (currentPage.includes('about')) {
+            document.body.classList.add('about-page');
+        } else if (currentPage.includes('experience')) {
+            document.body.classList.add('experience-page');
+        } else if (currentPage.includes('projects')) {
+            document.body.classList.add('projects-page');
+        } else if (currentPage.includes('photography')) {
+            document.body.classList.add('photography-page');
+        } else if (currentPage.includes('misc')) {
+            document.body.classList.add('misc-page');
+        }
     }
 };
 
