@@ -1,0 +1,298 @@
+/* Home page specific styles */
+.hero {
+    display: flex;
+    align-items: center;
+    min-height: calc(100vh - 80px);
+    padding: 60px 0;
+    gap: 60px;
+}
+
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 50px; 
+    padding-right: 50px; 
+    max-width: 600px; 
+}
+
+.hero-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+
+.keyword {
+    display: inline-block;
+    position: relative;
+    margin: 0 0px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.keyword a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.keyword::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: width 0.4s ease;
+}
+
+.keyword.red::after {
+    background: linear-gradient(90deg, #ff0000, #ff3333);
+}
+
+.keyword.red:hover {
+    color: #ff6666;
+}
+
+.keyword.red:hover::after {
+    width: 100%;
+}
+
+.keyword.green::after {
+    background: linear-gradient(90deg, #00ff00, #33ff33);
+}
+
+.keyword.green:hover {
+    color: #66ff66;
+}
+
+.keyword.green:hover::after {
+    width: 100%;
+}
+
+.keyword.blue::after {
+    background: linear-gradient(90deg, #0000ff, #3333ff);
+}
+
+.keyword.blue:hover {
+    color: #6666ff;
+}
+
+.keyword.blue:hover::after {
+    width: 100%;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.hero-image {
+    position: relative;
+    width: 100%;
+    max-width: 400px; 
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.animation-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: visible;
+    border-radius: 20px;
+}
+
+.circle-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 10px;
+}
+
+.corner {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    color: white;
+    opacity: 0;
+    z-index: 10;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.animation-container:hover .corner {
+    opacity: 1;
+}
+
+.top-left {
+    top: -8px;
+    left: -8px;
+    transition-delay: 0s;
+}
+
+.top-right {
+    top: -8px;
+    right: -8px;
+    transform: rotate(90deg);
+    transition-delay: 0.1s;
+}
+
+.bottom-left {
+    bottom: -8px;
+    left: -8px;
+    transform: rotate(-90deg);
+    transition-delay: 0.2s;
+}
+
+.bottom-right {
+    bottom: -8px;
+    right: -8px;
+    transform: rotate(180deg);
+    transition-delay: 0.3s;
+}
+
+.section {
+    padding: 3rem 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #ffffff;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background: var(--color-cream); 
+    padding: 2rem;
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: block;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-accent);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), 
+                0 0 20px rgba(247, 202, 12, 0.2);
+}
+
+.card-icon {
+    font-size: 2rem;
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+}
+
+.card-icon.red { color: var(--red-color); }
+.card-icon.green { color: var(--green-color); }
+.card-icon.blue { color: var(--blue-color); }
+.card-icon.cyan { color: var(--cyan-color); }
+.card-icon.magenta { color: var(--magenta-color); }
+.card-icon.yellow { color: var(--yellow-color); }
+
+.card h3 {
+    margin-bottom: 0.5rem;
+    color: #1f2937;
+}
+
+.card p {
+    color: #6b7280;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    background: var(--color-cream); 
+    border-radius: 10px;
+    text-decoration: none;
+    color: #4b5563;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border: 2px solid transparent;
+}
+
+.contact-link.red:hover {
+    background: var(--red-color);
+    color: white;
+    border-color: var(--red-color);
+    box-shadow: 0 8px 20px rgba(255, 0, 0, 0.2);
+}
+
+.contact-link.green:hover {
+    background: var(--green-color);
+    color: white;
+    border-color: var(--green-color);
+    box-shadow: 0 8px 20px rgba(0, 255, 0, 0.2);
+}
+
+.contact-link.blue:hover {
+    background: var(--blue-color);
+    color: white;
+    border-color: var(--blue-color);
+    box-shadow: 0 8px 20px rgba(0, 0, 255, 0.2);
+}
+
+.contact-link.cyan:hover {
+    background: var(--cyan-color);
+    color: var(--color-dark);
+    border-color: var(--cyan-color);
+    box-shadow: 0 8px 20px rgba(0, 255, 255, 0.2);
+}
+
+.contact-link.magenta:hover {
+    background: var(--magenta-color);
+    color: white;
+    border-color: var(--magenta-color);
+    box-shadow: 0 8px 20px rgba(255, 0, 255, 0.2);
+}
+
+.contact-link.yellow:hover {
+    background: var(--yellow-color);
+    color: var(--color-dark);
+    border-color: var(--yellow-color);
+    box-shadow: 0 8px 20px rgba(255, 255, 0, 0.2);
+}
+
+.contact-link:hover {
+    transform: translateY(-4px) scale(1.05);
+}

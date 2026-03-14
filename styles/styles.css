@@ -1,0 +1,580 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet');
+
+:root {
+    /* Base Colors */
+    --color-dark: #000000;
+    --color-cream: #fafafa;
+
+    --red-color: #ff0000;
+    --green-color: #00ff00;
+    --blue-color: #0000ff;
+    --cyan-color: #00ffff;
+    --magenta-color: #ff00ff;
+    --yellow-color: #ffff00;
+
+    /* Navbar Page Colors (in order) */
+    --color-orange: #f16c06;    /* Orange - Projects */
+    --color-purple: #ac07ce; /* Purple - Interesting */
+    
+    /* Accent Colors */
+    --color-accent: var(--red-color);  /* Default to home color */
+    
+    /* Derived Colors (automatically calculated) */
+    --color-dark-light: rgba(32, 32, 32, 0.8);
+    --color-cream-dark: #d4caa8;
+    --color-cream-light: #f5f0e0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Google Sans", Helvetica, sans-serif; 
+    line-height: 1.3;
+    color: var(--color-cream);
+    background: var(--color-dark);
+    min-height: 100vh;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1.2em; 
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 3rem 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #ffffff;
+}
+
+/* Navbar - common across all pages */
+.navbar {
+    background: var(--color-dark);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid rgb(41, 41, 41);
+    max-width: 90%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 0.75rem;
+    padding: 1rem 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-cream);
+    text-decoration: none;
+}
+
+.nav-links a {
+    position: relative;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    padding: 8px 32px;
+    margin: 0 -15px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    right: 15px;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.4s ease;
+}
+
+/* Home */
+.nav-links a.home::after {
+    background: linear-gradient(90deg, var(--red-color), rgba(255, 0, 0, 0.7));
+}
+
+.nav-links a.home.active {
+    color: color-mix(in srgb, var(--red-color) 70%, white);
+}
+
+/* About */
+.nav-links a.about::after {
+    background: linear-gradient(90deg, var(--green-color), rgba(0, 255, 0, 0.7));
+}
+
+.nav-links a.about.active {
+    color: color-mix(in srgb, var(--green-color) 70%, white);
+}
+
+/* Experiences */
+.nav-links a.experience::after {
+    background: linear-gradient(90deg, var(--blue-color), rgba(0, 0, 255, 0.7));
+}
+
+.nav-links a.experience.active {
+    color: color-mix(in srgb, var(--blue-color) 70%, white);
+}
+
+/* Projects */
+.nav-links a.projects::after {
+    background: linear-gradient(90deg, var(--cyan-color), rgba(0, 255, 255, 0.7));
+}
+
+.nav-links a.projects.active {
+    color: color-mix(in srgb, var(--cyan-color) 70%, white);
+}
+
+/* Photography */
+.nav-links a.photography::after {
+    background: linear-gradient(90deg, var(--magenta-color), rgba(255, 0, 255, 0.7));
+}
+
+.nav-links a.photography.active {
+    color: color-mix(in srgb, var(--magenta-color) 70%, white);
+}
+
+/* Misc */
+.nav-links a.misc::after {
+    background: linear-gradient(90deg, var(--yellow-color), rgba(255, 255, 0, 0.7));
+}
+
+.nav-links a.misc.active {
+    color: color-mix(in srgb, var(--yellow-color) 70%, white);
+}
+
+/* Shared states */
+.nav-links a:hover {
+    color: white;
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1);
+}
+
+.nav-links a.active::after {
+    transform: scaleX(1);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--red-color);
+}
+
+/* Footer - common */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+    color: rgba(233, 222, 184, 0.6);
+    border-top: 1px solid rgba(233, 222, 184, 0.1);
+}
+
+/* Common button styles */
+.btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: var(--red-color);
+    color: var(--color-dark);
+    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+}
+
+.btn-secondary {
+    background: rgba(233, 222, 184, 0.1);
+    color: var(--color-cream);
+    border: 2px solid var(--red-color);
+}
+
+/* Common animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Common responsive breakpoints */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 1rem;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+}
+
+.highlight {
+    color: white;
+    position: relative;
+    display: inline-block;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.highlight::before,
+.highlight::after,
+.highlight span {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    mix-blend-mode: difference;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.highlight::before {
+    color: #f00;
+}
+
+.highlight::after {
+    color: #00f;
+}
+
+.highlight span {
+    color: #0f0;
+    position: relative;
+    display: inline-block;
+}
+
+.highlight:hover::before {
+    opacity: 1;
+    animation: ANIMATE-RED 1000ms forwards;
+}
+
+.highlight:hover::after {
+    opacity: 1;
+    animation: ANIMATE-BLUE 1000ms forwards;
+}
+
+@keyframes ANIMATE-RED {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(4px, 4px); }
+}
+
+@keyframes ANIMATE-BLUE {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-4px, -4px); }
+}
+
+/* ============================================= */
+/* -------------- CAROUSEL STYLES -------------- */
+/* ============================================= */
+
+/* Carousel Container */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden; 
+    border-radius: 12px;
+    padding-bottom: 30px; 
+}
+
+/* Carousel Track - holds all slides */
+.carousel-track {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    scroll-behavior: smooth;
+}
+
+/* Individual Carousel Slide */
+.carousel-slide {
+    flex: 0 0 100%;
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Carousel Image */
+.carousel-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 8px;
+    background-color: #f8fafc;
+    display: block;
+}
+
+/* Carousel Caption */
+.carousel-caption {
+    text-align: center;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    color: #6b7280;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* Carousel Navigation Buttons */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #4b5563;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-btn:hover {
+    background-color: #ffffff;
+    color: #2563eb;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-prev {
+    left: 15px;
+}
+
+.carousel-next {
+    right: 15px;
+}
+
+/* Carousel Indicators (dots) */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    width: 100%; 
+    z-index: 5;  
+}
+
+.carousel-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #d1d5db;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.carousel-indicator:hover {
+    background-color: #9ca3af;
+    transform: scale(1.2);
+}
+
+.carousel-indicator.active {
+    background-color: #2563eb;
+    width: 24px;
+    border-radius: 12px;
+}
+
+/* Progress bar */
+.carousel-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background-color: #2563eb;
+    transition: width 0.1s linear;
+}
+
+/* Thumbnail navigation */
+.carousel-thumbnails {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.carousel-thumbnail {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+}
+
+.carousel-thumbnail:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+.carousel-thumbnail.active {
+    opacity: 1;
+    border-color: #2563eb;
+}
+
+/* Grid layout for multiple items in one slide */
+.carousel-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0.5rem;
+}
+
+.carousel-grid-item {
+    background-color: #f8fafc;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+}
+
+.carousel-grid-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-color: #2563eb;
+}
+
+.carousel-grid-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0.5rem;
+    color: #dc2626;
+}
+
+.carousel-grid-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #4b5563;
+    margin-bottom: 0.5rem;
+}
+
+.carousel-grid-link {
+    display: inline-block;
+    color: #2563eb;
+    text-decoration: none;
+    font-size: 0.85rem;
+    padding: 0.25rem 0.75rem;
+    border: 1px solid #2563eb;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.carousel-grid-link:hover {
+    background-color: #2563eb;
+    color: white;
+}
+
+/* Dark mode support for carousel */
+@media (prefers-color-scheme: dark) {
+    .carousel-btn {
+        background-color: rgba(30, 41, 59, 0.9);
+        color: #e2e8f0;
+    }
+    
+    .carousel-btn:hover {
+        background-color: #1e293b;
+        color: #60a5fa;
+    }
+    
+    .carousel-image {
+        background-color: #1e293b;
+    }
+    
+    .carousel-caption {
+        color: #9ca3af;
+    }
+    
+    .carousel-indicator {
+        background-color: #4b5563;
+    }
+    
+    .carousel-indicator.active {
+        background-color: #60a5fa;
+    }
+    
+    .carousel-grid-item {
+        background-color: #1e293b;
+        border-color: #334155;
+    }
+    
+    .carousel-grid-title {
+        color: #e2e8f0;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .carousel-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 1.2rem;
+    }
+    
+    .carousel-prev {
+        left: 8px;
+    }
+    
+    .carousel-next {
+        right: 8px;
+    }
+    
+    .carousel-image {
+        max-height: 300px;
+    }
+    
+    .carousel-indicator.active {
+        width: 20px;
+    }
+}

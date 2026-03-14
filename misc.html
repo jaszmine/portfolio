@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="assets/jd.png">
     <title>Misc. | Jaszmine DeFranco</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="map-styles.css">
-    
+    <!-- <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="map-styles.css"> -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/misc.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -331,24 +332,23 @@
                                 set a new trajectory for my future in innovative technologies and sciences.</p>
 
                             <!-- Media Carousel 1 -->
-                            <div class="experience-carousel-container">
+                            <div class="carousel-container">
                                 <!-- Carousel Track -->
-                                <div class="experience-carousel-track" id="carousel1">
+                                <div class="carousel-track" id="carousel1">
                                     <!-- Slides -->
-                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel1/1self.jpg" alt="Slide1" class="experience-carousel-image"> <!-- <p class="experience-carousel-caption">Our 2025 Marketing Team!</p> --> </div>
-                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel1/2group.jpg" alt="Slide2" class="experience-carousel-image"> <!-- <p class="experience-carousel-caption">Our 2025 Marketing Team!</p> --> </div>
-                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel1/3lobby.jpg" alt="Slide3" class="experience-carousel-image"> <!-- <p class="experience-carousel-caption">Our 2025 Marketing Team!</p> --> </div>
+                                    <div class="carousel-slide"> 
+                                        <img src="/assets/misc/conferences/3ieee/carousel1/1self.jpg" alt="Slide1" class="carousel-image"> <!-- <p class="carousel-caption">Caption</p> --> </div>
+                                    <div class="carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel1/2group.jpg" alt="Slide2" class="carousel-image"> </div>
+                                    <div class="carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel1/3lobby.jpg" alt="Slide3" class="carousel-image"> </div>
                                 </div>
-
                                 <!-- Navigation Buttons -->
-                                <button class="experience-carousel-btn experience-carousel-prev" onclick="moveCarousel('carousel1', -1)">❮</button>
-                                <button class="experience-carousel-btn experience-carousel-next" onclick="moveCarousel('carousel1', 1)">❯</button>
-
+                                <button class="carousel-btn carousel-prev" onclick="moveCarousel('carousel1', -1)">❮</button>
+                                <button class="carousel-btn carousel-next" onclick="moveCarousel('carousel1', 1)">❯</button>
                                 <!-- Indicators -->
-                                <div class="experience-carousel-indicators" id="indicators1">
-                                    <span class="experience-indicator active" onclick="jumpToSlide('carousel1', 0)"></span>
-                                    <span class="experience-indicator" onclick="jumpToSlide('carousel1', 1)"></span>
-                                    <span class="experience-indicator" onclick="jumpToSlide('carousel1', 2)"></span>
+                                <div class="carousel-indicators" id="indicators1">
+                                    <span class="carousel-indicator active" onclick="jumpToSlide('carousel1', 0)"></span>
+                                    <span class="carousel-indicator" onclick="jumpToSlide('carousel1', 1)"></span>
+                                    <span class="carousel-indicator" onclick="jumpToSlide('carousel1', 2)"></span>
                                 </div>
                             </div>
 
@@ -366,27 +366,26 @@
                             </p>
 
                             <!-- Media Carousel 2 -->
-                            <div class="experience-carousel-container">
+                            <div class="carousel-container">
                                 <!-- Carousel Track -->
-                                <div class="experience-carousel-track" id="carousel2">
+                                <div class="carousel-track" id="carousel2">
                                     <!-- Slides -->
-                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel2/1intro.jpg" alt="Slide1" class="experience-carousel-image"> <!-- <p class="experience-carousel-caption">Our 2025 Marketing Team!</p> --> </div>
-                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel2/2people.jpg" alt="Slide2" class="experience-carousel-image"></div>
-                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel2/3poster.jpg" alt="Slide3" class="experience-carousel-image"></div>
-                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel2/4expo.jpg" alt="Slide4" class="experience-carousel-image"></div>
-
+                                    <div class="carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel2/1intro.jpg" alt="Slide1" class="carousel-image"> </div>
+                                    <div class="carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel2/2people.jpg" alt="Slide2" class="carousel-image"> </div>
+                                    <div class="carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel2/3poster.jpg" alt="Slide3" class="carousel-image"> </div>
+                                    <div class="carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel2/4expo.jpg" alt="Slide4" class="carousel-image"> </div>
                                 </div>
 
                                 <!-- Navigation Buttons -->
-                                <button class="experience-carousel-btn experience-carousel-prev" onclick="moveCarousel('carousel2', -1)">❮</button>
-                                <button class="experience-carousel-btn experience-carousel-next" onclick="moveCarousel('carousel2', 1)">❯</button>
+                                <button class="carousel-btn carousel-prev" onclick="moveCarousel('carousel2', -1)">❮</button>
+                                <button class="carousel-btn carousel-next" onclick="moveCarousel('carousel2', 1)">❯</button>
 
                                 <!-- Indicators -->
-                                <div class="experience-carousel-indicators" id="indicators2">
-                                    <span class="experience-indicator active" onclick="jumpToSlide('carousel2', 0)"></span>
-                                    <span class="experience-indicator" onclick="jumpToSlide('carousel2', 1)"></span>
-                                    <span class="experience-indicator" onclick="jumpToSlide('carousel2', 2)"></span>
-                                    <span class="experience-indicator" onclick="jumpToSlide('carousel2', 3)"></span>
+                                <div class="carousel-indicators" id="indicators2">
+                                    <span class="carousel-indicator active" onclick="jumpToSlide('carousel2', 0)"></span>
+                                    <span class="carousel-indicator" onclick="jumpToSlide('carousel2', 1)"></span>
+                                    <span class="carousel-indicator" onclick="jumpToSlide('carousel2', 2)"></span>
+                                    <span class="carousel-indicator" onclick="jumpToSlide('carousel2', 3)"></span>
                                 </div>
                             </div>
 
@@ -400,24 +399,24 @@
                             </p>
 
                             <!-- Media Carousel 3 -->
-                            <div class="experience-carousel-container">
+                            <div class="carousel-container">
                                 <!-- Carousel Track -->
-                                <div class="experience-carousel-track" id="carousel3">
+                                <div class="carousel-track" id="carousel3">
                                     <!-- Slides -->
-                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel3/1ibm.jpg" alt="Slide1" class="experience-carousel-image"> <!-- <p class="experience-carousel-caption">Our 2025 Marketing Team!</p> --> </div>
-                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel3/2edu.jpg" alt="Slide2" class="experience-carousel-image"> </div>
-                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel3/3los.jpg" alt="Slide3" class="experience-carousel-image"> </div>
+                                    <div class="carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel3/1ibm.jpg" alt="Slide1" class="carousel-image"> </div>
+                                    <div class="carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel3/2edu.jpg" alt="Slide2" class="carousel-image"> </div>
+                                    <div class="carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel3/3los.jpg" alt="Slide3" class="carousel-image"> </div>
                                 </div>
 
                                 <!-- Navigation Buttons -->
-                                <button class="experience-carousel-btn experience-carousel-prev" onclick="moveCarousel('carousel3', -1)">❮</button>
-                                <button class="experience-carousel-btn experience-carousel-next" onclick="moveCarousel('carousel3', 1)">❯</button>
+                                <button class="carousel-btn carousel-prev" onclick="moveCarousel('carousel3', -1)">❮</button>
+                                <button class="carousel-btn carousel-next" onclick="moveCarousel('carousel3', 1)">❯</button>
 
                                 <!-- Indicators -->
-                                <div class="experience-carousel-indicators" id="indicators3">
-                                    <span class="experience-indicator active" onclick="jumpToSlide('carousel3', 0)"></span>
-                                    <span class="experience-indicator" onclick="jumpToSlide('carousel3', 1)"></span>
-                                    <span class="experience-indicator" onclick="jumpToSlide('carousel3', 2)"></span>
+                                <div class="carousel-indicators" id="indicators3">
+                                    <span class="carousel-indicator active" onclick="jumpToSlide('carousel3', 0)"></span>
+                                    <span class="carousel-indicator" onclick="jumpToSlide('carousel3', 1)"></span>
+                                    <span class="carousel-indicator" onclick="jumpToSlide('carousel3', 2)"></span>
                                 </div>
                             </div>
 
@@ -430,26 +429,26 @@
                                 quantum internet, made the future feel tangible and within reach.</p>
 
                             <!-- Media Carousel 4 -->
-                            <div class="experience-carousel-container">
+                            <div class="carousel-container">
                                 <!-- Carousel Track -->
-                                <div class="experience-carousel-track" id="carousel4">
+                                <div class="carousel-track" id="carousel4">
                                     <!-- Slides -->
-                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel4/1qblox.jpg" alt="Slide1" class="experience-carousel-image"> <!-- <p class="experience-carousel-caption">Our 2025 Marketing Team!</p> --> </div>
-                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel4/2qec.jpg" alt="Slide2" class="experience-carousel-image"> </div>
-                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel4/3chandelier.jpg" alt="Slide3" class="experience-carousel-image"> </div>
-                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel4/4netsquid.png" alt="Slide4" class="experience-carousel-image"> </div>
+                                    <div class="carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel4/1qblox.jpg" alt="Slide1" class="carousel-image"> </div>
+                                    <div class="carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel4/2qec.jpg" alt="Slide2" class="carousel-image"> </div>
+                                    <div class="carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel4/3chandelier.jpg" alt="Slide3" class="carousel-image"> </div>
+                                    <div class="carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel4/4netsquid.png" alt="Slide4" class="carousel-image"> </div>
                                 </div>
 
                                 <!-- Navigation Buttons -->
-                                <button class="experience-carousel-btn experience-carousel-prev" onclick="moveCarousel('carousel4', -1)">❮</button>
-                                <button class="experience-carousel-btn experience-carousel-next" onclick="moveCarousel('carousel4', 1)">❯</button>
+                                <button class="carousel-btn carousel-prev" onclick="moveCarousel('carousel4', -1)">❮</button>
+                                <button class="carousel-btn carousel-next" onclick="moveCarousel('carousel4', 1)">❯</button>
 
                                 <!-- Indicators -->
-                                <div class="experience-carousel-indicators" id="indicators4">
-                                    <span class="experience-indicator active" onclick="jumpToSlide('carousel4', 0)"></span>
-                                    <span class="experience-indicator" onclick="jumpToSlide('carousel4', 1)"></span>
-                                    <span class="experience-indicator" onclick="jumpToSlide('carousel4', 2)"></span>
-                                    <span class="experience-indicator" onclick="jumpToSlide('carousel4', 3)"></span>
+                                <div class="carousel-indicators" id="indicators4">
+                                    <span class="carousel-indicator active" onclick="jumpToSlide('carousel4', 0)"></span>
+                                    <span class="carousel-indicator" onclick="jumpToSlide('carousel4', 1)"></span>
+                                    <span class="carousel-indicator" onclick="jumpToSlide('carousel4', 2)"></span>
+                                    <span class="carousel-indicator" onclick="jumpToSlide('carousel4', 3)"></span>
                                 </div>
                             </div>
 
@@ -464,34 +463,34 @@
                             </p>
 
                             <!-- Media Carousel 5 -->
-                            <div class="experience-carousel-container">
+                            <div class="carousel-container">
                                 <!-- Carousel Track -->
-                                <div class="experience-carousel-track" id="carousel5">
+                                <div class="carousel-track" id="carousel5">
                                     <!-- Slides -->
-                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel5/1hall.jpg" alt="Slide1" class="experience-carousel-image"> <!-- <p class="experience-carousel-caption">Our 2025 Marketing Team!</p> --> </div>
-                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel5/2group.jpg" alt="Slide2" class="experience-carousel-image"> </div>
-                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel5/3physics.jpg" alt="Slide3" class="experience-carousel-image"> </div>
-                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel5/4lib.jpg" alt="Slide4" class="experience-carousel-image"> </div>
-                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel5/5bay.jpg" alt="Slide5" class="experience-carousel-image"> </div>
-                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel5/6fountain.jpg" alt="Slide6" class="experience-carousel-image"> </div>
-                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel5/7ivars.jpg" alt="Slide7" class="experience-carousel-image"> </div>
-                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel5/8sunset.jpg" alt="Slide8" class="experience-carousel-image"> </div>
+                                    <div class="carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel5/1hall.jpg" alt="Slide1" class="carousel-image"> </div>
+                                    <div class="carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel5/2group.jpg" alt="Slide2" class="carousel-image"> </div>
+                                    <div class="carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel5/3physics.jpg" alt="Slide3" class="carousel-image"> </div>
+                                    <div class="carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel5/4lib.jpg" alt="Slide4" class="carousel-image"> </div>
+                                    <div class="carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel5/5bay.jpg" alt="Slide5" class="carousel-image"> </div>
+                                    <div class="carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel5/6fountain.jpg" alt="Slide6" class="carousel-image"> </div>
+                                    <div class="carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel5/7ivars.jpg" alt="Slide7" class="carousel-image"> </div>
+                                    <div class="carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel5/8sunset.jpg" alt="Slide8" class="carousel-image"> </div>
                                 </div>
 
                                 <!-- Navigation Buttons -->
-                                <button class="experience-carousel-btn experience-carousel-prev" onclick="moveCarousel('carousel5', -1)">❮</button>
-                                <button class="experience-carousel-btn experience-carousel-next" onclick="moveCarousel('carousel5', 1)">❯</button>
+                                <button class="carousel-btn carousel-prev" onclick="moveCarousel('carousel5', -1)">❮</button>
+                                <button class="carousel-btn carousel-next" onclick="moveCarousel('carousel5', 1)">❯</button>
 
                                 <!-- Indicators -->
-                                <div class="experience-carousel-indicators" id="indicators5">
-                                    <span class="experience-indicator active" onclick="jumpToSlide('carousel5', 0)"></span>
-                                    <span class="experience-indicator" onclick="jumpToSlide('carousel5', 1)"></span>
-                                    <span class="experience-indicator" onclick="jumpToSlide('carousel5', 2)"></span>
-                                    <span class="experience-indicator" onclick="jumpToSlide('carousel5', 3)"></span>
-                                    <span class="experience-indicator" onclick="jumpToSlide('carousel5', 4)"></span>
-                                    <span class="experience-indicator" onclick="jumpToSlide('carousel5', 5)"></span>
-                                    <span class="experience-indicator" onclick="jumpToSlide('carousel5', 6)"></span>
-                                    <span class="experience-indicator" onclick="jumpToSlide('carousel5', 7)"></span>
+                                <div class="carousel-indicators" id="indicators5">
+                                    <span class="carousel-indicator active" onclick="jumpToSlide('carousel5', 0)"></span>
+                                    <span class="carousel-indicator" onclick="jumpToSlide('carousel5', 1)"></span>
+                                    <span class="carousel-indicator" onclick="jumpToSlide('carousel5', 2)"></span>
+                                    <span class="carousel-indicator" onclick="jumpToSlide('carousel5', 3)"></span>
+                                    <span class="carousel-indicator" onclick="jumpToSlide('carousel5', 4)"></span>
+                                    <span class="carousel-indicator" onclick="jumpToSlide('carousel5', 5)"></span>
+                                    <span class="carousel-indicator" onclick="jumpToSlide('carousel5', 6)"></span>
+                                    <span class="carousel-indicator" onclick="jumpToSlide('carousel5', 7)"></span>
                                 </div>
                             </div>
 
@@ -510,42 +509,32 @@
                             </p>
 
                             <!-- Media Carousel 6 -->
-                            <div class="experience-carousel-container">
+                            <div class="carousel-container">
                                 <!-- Carousel Track -->
-                                <div class="experience-carousel-track" id="carousel6">
+                                <div class="carousel-track" id="carousel6">
                                     <!-- Slides -->
-                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel6/1bye.jpg" alt="Slide1" class="experience-carousel-image"> <!-- <p class="experience-carousel-caption">Our 2025 Marketing Team!</p> --> </div>
-                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel6/2poster.jpg" alt="Slide2" class="experience-carousel-image"> </div>
-                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel6/3mitigation.jpg" alt="Slide3" class="experience-carousel-image"> </div>
-                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel6/4mtn.jpg" alt="Slide4" class="experience-carousel-image"> </div>
-                                    <div class="experience-carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel6/5group.jpg" alt="Slide5" class="experience-carousel-image"> </div>
+                                    <div class="carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel6/1bye.jpg" alt="Slide1" class="carousel-image"> <!-- <p class="carousel-caption">caption</p> --> </div>
+                                    <div class="carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel6/2poster.jpg" alt="Slide2" class="carousel-image"> </div>
+                                    <div class="carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel6/3mitigation.jpg" alt="Slide3" class="carousel-image"> </div>
+                                    <div class="carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel6/4mtn.jpg" alt="Slide4" class="carousel-image"> </div>
+                                    <div class="carousel-slide"> <img src="/assets/misc/conferences/3ieee/carousel6/5group.jpg" alt="Slide5" class="carousel-image"> </div>
                                 </div>
 
                                 <!-- Navigation Buttons -->
-                                <button class="experience-carousel-btn experience-carousel-prev" onclick="moveCarousel('carousel6', -1)">❮</button>
-                                <button class="experience-carousel-btn experience-carousel-next" onclick="moveCarousel('carousel6', 1)">❯</button>
+                                <button class="carousel-btn carousel-prev" onclick="moveCarousel('carousel6', -1)">❮</button>
+                                <button class="carousel-btn carousel-next" onclick="moveCarousel('carousel6', 1)">❯</button>
 
                                 <!-- Indicators -->
-                                <div class="experience-carousel-indicators" id="indicators6">
-                                    <span class="experience-indicator active" onclick="jumpToSlide('carousel6', 0)"></span>
-                                    <span class="experience-indicator" onclick="jumpToSlide('carousel6', 1)"></span>
-                                    <span class="experience-indicator" onclick="jumpToSlide('carousel6', 2)"></span>
-                                    <span class="experience-indicator" onclick="jumpToSlide('carousel6', 3)"></span>
-                                    <span class="experience-indicator" onclick="jumpToSlide('carousel6', 4)"></span>
+                                <div class="carousel-indicators" id="indicators6">
+                                    <span class="carousel-indicator active" onclick="jumpToSlide('carousel6', 0)"></span>
+                                    <span class="carousel-indicator" onclick="jumpToSlide('carousel6', 1)"></span>
+                                    <span class="carousel-indicator" onclick="jumpToSlide('carousel6', 2)"></span>
+                                    <span class="carousel-indicator" onclick="jumpToSlide('carousel6', 3)"></span>
+                                    <span class="carousel-indicator" onclick="jumpToSlide('carousel6', 4)"></span>
                                 </div>
                             </div>
                         </div>
                         
-                        <!-- Modal Gallery -->
-                        <!-- <div class="conference-modal-gallery">
-                            <h3>Gallery</h3>
-                            <div class="modal-gallery-grid">
-                                <img src="assets/misc/conferences/1tqs/1panel.jpg" alt="Panel discussion">
-                                <img src="assets/misc/conferences/1tqs/2poster.jpg" alt="UTD Graduate Students' Poster">
-                                <img src="assets/misc/conferences/1tqs/3kyle.jpg" alt="Kyle Field">
-                                <img src="assets/misc/conferences/1tqs/4utd.jpg" alt="UTD Research - Presented by Dr.K">
-                            </div>
-                        </div> -->
                     </div>
                 </div>
             </div>
