@@ -417,7 +417,7 @@
 }
 
 /* Project page specific link styles */
-.project-advisor-link {
+/* .project-advisor-link {
     color: #00ffff; 
     text-decoration: none;
     font-style: italic;
@@ -431,11 +431,11 @@
     text-decoration: none;
     transform: translateY(-1px);
     text-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
-}
+} */
 
 /* Override visited state - keep it cyan */
-.project-advisor-link:visited {
-    color: #00ffff; /* Same cyan, doesn't turn purple */
+/* .project-advisor-link:visited {
+    color: #00ffff;
 }
 
 .project-advisor-link:visited:hover {
@@ -455,4 +455,24 @@
 
 .project-advisor-link:hover::after {
     width: 100%;
+} */
+
+/* Project page specific link colors */
+.project-advisor-link,
+.project-content .content-link,
+.projects-page .content-link {
+    color: var(--cyan-color);
+}
+
+.project-advisor-link:visited,
+.project-content .content-link:visited,
+.projects-page .content-link:visited {
+    color: var(--cyan-color); /* Stays cyan */
+}
+
+.project-advisor-link:hover,
+.project-content .content-link:hover,
+.projects-page .content-link:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
 }

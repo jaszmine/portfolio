@@ -22,10 +22,6 @@ const Utils = {
 // MOBILE NAVIGATION
 // ============================================
 
-// ============================================
-// MOBILE NAVIGATION
-// ============================================
-
 const MobileNav = {
     init: function() {
         this.menuToggle = document.querySelector('.menu-toggle');
@@ -113,11 +109,9 @@ const MobileNav = {
     
     setPageClass: function() {
         const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-        
-        // Remove any existing page classes
         document.body.className = document.body.className.replace(/\b\w*-page\b/g, '').trim();
         
-        // Add appropriate page class based on current page
+        // page classes
         if (currentPage === 'index.html' || currentPage === '') {
             document.body.classList.add('home-page');
         } else if (currentPage.includes('about')) {

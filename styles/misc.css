@@ -861,3 +861,17 @@
         padding: 0.5rem 0.8rem;
     }
 }
+
+/* Misc page specific link colors */
+.misc-page .content-link {
+    color: var(--yellow-color);
+}
+
+.misc-page .content-link:visited {
+    color: var(--yellow-color); /* Stays yellow */
+}
+
+.misc-page .content-link:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(255, 255, 0, 0.5);
+}

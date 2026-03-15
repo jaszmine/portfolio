@@ -165,3 +165,17 @@
         justify-content: center;
     }
 }
+
+/* About page specific link colors */
+.about-page .content-link {
+    color: var(--green-color);
+}
+
+.about-page .content-link:visited {
+    color: var(--green-color); /* Stays green */
+}
+
+.about-page .content-link:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(0, 255, 0, 0.5);
+}

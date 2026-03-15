@@ -769,3 +769,34 @@ body {
         width: 20px;
     }
 }
+
+/*
+    ~~~ LINKS ~~~
+*/
+
+/* Global link styles - prevent purple visited links */
+a {
+    color: inherit; /* Inherit color from parent */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:visited {
+    color: inherit; /* Keep same color even after visited */
+}
+
+/* For links that need to stand out (like in content) */
+.content-link {
+    color: var(--cyan-color); /* Default, but pages will override */
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: all 0.3s ease;
+}
+
+/* .content-link:visited {
+    color: var(--cyan-color); 
+} */
+
+.content-link:hover {
+    text-decoration-color: currentColor;
+}

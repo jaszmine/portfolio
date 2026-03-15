@@ -530,3 +530,20 @@
         width: 20px;
     }
 }
+
+/* Experience page specific link colors */
+.experience-page .content-link,
+.experience-org-link {
+    color: #2663eb; /* Hardcode the specific blue */
+}
+
+.experience-page .content-link:visited,
+.experience-org-link:visited {
+    color: #2663eb; /* Stays this blue */
+}
+
+.experience-page .content-link:hover,
+.experience-org-link:hover {
+    color: #2663eb;
+    text-shadow: 0 0 8px #2663eb; /* Match the shadow to the link color */
+}

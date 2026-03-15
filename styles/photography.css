@@ -677,3 +677,17 @@
         font-size: 1rem;
     }
 }
+
+/* Photography page specific link colors */
+.photography-page .content-link {
+    color: var(--magenta-color);
+}
+
+.photography-page .content-link:visited {
+    color: var(--magenta-color); /* Stays magenta */
+}
+
+.photography-page .content-link:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(255, 0, 255, 0.5);
+}
