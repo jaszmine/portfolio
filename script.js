@@ -416,22 +416,132 @@ const ProjectModals = {
     }
 };
 
+// // ============================================
+// // PROJECTS SECTION - GALLERY LIGHTBOX
+// // ============================================
+
+// const ProjectGallery = {
+//     init: function() {
+//         // Only initialize if gallery elements exist on the page
+//         if (!document.querySelector('.gallery-item')) return;
+        
+//         this.galleryLightbox = document.getElementById('gallery-lightbox');
+//         this.galleryLightboxImg = document.getElementById('gallery-lightbox-img');
+//         this.galleryCaption = document.getElementById('gallery-caption');
+//         this.galleryCloseBtn = document.querySelector('.gallery-close-btn');
+        
+//         // If lightbox elements don't exist, create them
+//         if (!this.galleryLightbox) {
+//             this.createLightboxElements();
+//         }
+        
+//         this.setupEventListeners();
+//     },
+    
+//     createLightboxElements: function() {
+//         // Create lightbox container
+//         const lightbox = document.createElement('div');
+//         lightbox.id = 'gallery-lightbox';
+//         lightbox.className = 'gallery-lightbox';
+//         lightbox.innerHTML = `
+//             <span class="gallery-close-btn">&times;</span>
+//             <img class="gallery-lightbox-content" id="gallery-lightbox-img">
+//             <div id="gallery-caption"></div>
+//         `;
+//         document.body.appendChild(lightbox);
+        
+//         // Update references
+//         this.galleryLightbox = document.getElementById('gallery-lightbox');
+//         this.galleryLightboxImg = document.getElementById('gallery-lightbox-img');
+//         this.galleryCaption = document.getElementById('gallery-caption');
+//         this.galleryCloseBtn = document.querySelector('.gallery-close-btn');
+//     },
+    
+//     setupEventListeners: function() {
+//         // Get all gallery images
+//         const galleryItems = document.querySelectorAll('.gallery-item');
+        
+//         // Open lightbox when image clicked
+//         galleryItems.forEach(item => {
+//             item.addEventListener('click', (e) => {
+//                 this.open(e.target.src, e.target.alt);
+//             });
+//         });
+        
+//         // Close lightbox when X clicked
+//         if (this.galleryCloseBtn) {
+//             this.galleryCloseBtn.addEventListener('click', () => {
+//                 this.close();
+//             });
+//         }
+        
+//         // Close lightbox when clicking outside the image
+//         if (this.galleryLightbox) {
+//             this.galleryLightbox.addEventListener('click', (e) => {
+//                 if (e.target === this.galleryLightbox) {
+//                     this.close();
+//                 }
+//             });
+//         }
+        
+//         // Close with Escape key - uses existing keydown listener pattern
+//         document.addEventListener('keydown', (e) => {
+//             if (e.key === 'Escape' && this.galleryLightbox && 
+//                 this.galleryLightbox.style.display === 'block') {
+//                 this.close();
+//             }
+//         });
+//     },
+    
+//     open: function(imgSrc, imgAlt) {
+//         if (!this.galleryLightbox || !this.galleryLightboxImg || !this.galleryCaption) return;
+        
+//         this.galleryLightboxImg.src = imgSrc;
+//         this.galleryCaption.innerHTML = imgAlt || '';
+//         this.galleryLightbox.style.display = 'block';
+//         Utils.lockScroll(); // Reuse your existing lockScroll utility
+//     },
+    
+//     close: function() {
+//         if (!this.galleryLightbox) return;
+        
+//         this.galleryLightbox.style.display = 'none';
+//         Utils.unlockScroll(); // Reuse your existing unlockScroll utility
+//     }
+// };
+
 // ============================================
 // PROJECTS SECTION - GALLERY LIGHTBOX
 // ============================================
 
 const ProjectGallery = {
     init: function() {
-        // Only initialize if gallery elements exist on the page
-        if (!document.querySelector('.gallery-item')) return;
+        console.log('ProjectGallery initializing...');
+        
+        // Check if gallery elements exist
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        console.log('Found gallery items:', galleryItems.length);
+        
+        if (galleryItems.length === 0) {
+            console.log('No gallery items found with class .gallery-item');
+            return;
+        }
         
         this.galleryLightbox = document.getElementById('gallery-lightbox');
         this.galleryLightboxImg = document.getElementById('gallery-lightbox-img');
         this.galleryCaption = document.getElementById('gallery-caption');
         this.galleryCloseBtn = document.querySelector('.gallery-close-btn');
         
+        console.log('Lightbox elements:', {
+            lightbox: this.galleryLightbox,
+            img: this.galleryLightboxImg,
+            caption: this.galleryCaption,
+            closeBtn: this.galleryCloseBtn
+        });
+        
         // If lightbox elements don't exist, create them
         if (!this.galleryLightbox) {
+            console.log('Lightbox not found, creating it...');
             this.createLightboxElements();
         }
         
@@ -449,6 +559,7 @@ const ProjectGallery = {
             <div id="gallery-caption"></div>
         `;
         document.body.appendChild(lightbox);
+        console.log('Lightbox created and appended to body');
         
         // Update references
         this.galleryLightbox = document.getElementById('gallery-lightbox');
@@ -458,19 +569,45 @@ const ProjectGallery = {
     },
     
     setupEventListeners: function() {
+        console.log('Setting up gallery event listeners');
+        
         // Get all gallery images
         const galleryItems = document.querySelectorAll('.gallery-item');
+        console.log('Attaching click listeners to', galleryItems.length, 'items');
         
         // Open lightbox when image clicked
-        galleryItems.forEach(item => {
+        galleryItems.forEach((item, index) => {
             item.addEventListener('click', (e) => {
-                this.open(e.target.src, e.target.alt);
+                console.log('Gallery item', index, 'clicked');
+                
+                // Get image source and alt from the img inside or from the item itself
+                let imgSrc, imgAlt;
+                
+                if (item.tagName === 'IMG') {
+                    // If item is directly an img element
+                    imgSrc = item.src;
+                    imgAlt = item.alt;
+                    console.log('Direct img clicked:', imgSrc, imgAlt);
+                } else {
+                    // If item is a div containing an img
+                    const img = item.querySelector('img');
+                    if (img) {
+                        imgSrc = img.src;
+                        imgAlt = img.alt;
+                        console.log('Div with img clicked:', imgSrc, imgAlt);
+                    }
+                }
+                
+                if (imgSrc) {
+                    this.open(imgSrc, imgAlt);
+                }
             });
         });
         
         // Close lightbox when X clicked
         if (this.galleryCloseBtn) {
             this.galleryCloseBtn.addEventListener('click', () => {
+                console.log('Close button clicked');
                 this.close();
             });
         }
@@ -479,37 +616,52 @@ const ProjectGallery = {
         if (this.galleryLightbox) {
             this.galleryLightbox.addEventListener('click', (e) => {
                 if (e.target === this.galleryLightbox) {
+                    console.log('Clicked outside image, closing');
                     this.close();
                 }
             });
         }
         
-        // Close with Escape key - uses existing keydown listener pattern
+        // Close with Escape key
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && this.galleryLightbox && 
                 this.galleryLightbox.style.display === 'block') {
+                console.log('Escape pressed, closing');
                 this.close();
             }
         });
     },
     
     open: function(imgSrc, imgAlt) {
-        if (!this.galleryLightbox || !this.galleryLightboxImg || !this.galleryCaption) return;
+        console.log('Opening lightbox with:', imgSrc, imgAlt);
+        
+        if (!this.galleryLightbox || !this.galleryLightboxImg || !this.galleryCaption) {
+            console.error('Lightbox elements missing:', {
+                lightbox: this.galleryLightbox,
+                img: this.galleryLightboxImg,
+                caption: this.galleryCaption
+            });
+            return;
+        }
         
         this.galleryLightboxImg.src = imgSrc;
         this.galleryCaption.innerHTML = imgAlt || '';
         this.galleryLightbox.style.display = 'block';
-        Utils.lockScroll(); // Reuse your existing lockScroll utility
+        Utils.lockScroll();
     },
     
     close: function() {
-        if (!this.galleryLightbox) return;
+        console.log('Closing lightbox');
+        
+        if (!this.galleryLightbox) {
+            console.error('Lightbox element missing');
+            return;
+        }
         
         this.galleryLightbox.style.display = 'none';
-        Utils.unlockScroll(); // Reuse your existing unlockScroll utility
+        Utils.unlockScroll();
     }
 };
-
 
 // ============================================
 // MISC PAGE - CONFERENCE SECTION

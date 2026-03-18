@@ -258,7 +258,7 @@
     align-items: center;
     gap: 0.75rem;
     background-color: #00ffff;
-    color: 232323;
+    color: #232323;
     padding: 0.85rem 2rem;
     border-radius: 50px;
     text-decoration: none;
@@ -269,8 +269,15 @@
     transition: all 0.2s ease;
 }
 
-.modal-pdf-button:hover {
+/* Override the global visited style for project PDF buttons */
+.modal-pdf-button:visited {
+    color: #232323 !important; /* Keep the same dark color even when visited */
+}
+
+.modal-pdf-button:hover,
+.modal-pdf-button:visited:hover {
     background-color: #00e6e6;
+    color: #232323; /* Keep dark text on hover */
     transform: translateY(-2px);
     box-shadow: 0 6px 10px -1px rgba(0, 180, 180, 0.4);
 }
@@ -475,4 +482,117 @@
 .projects-page .content-link:hover {
     color: #ffffff;
     text-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
+}
+
+/* ============================================= */
+/* VIDEO/LAUNCH BUTTON STYLES */
+/* ============================================= */
+
+.video-button-container {
+    text-align: center;
+    margin: 2rem 0 1rem 0;
+    width: 100%;
+}
+
+.launch-video-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, var(--cyan-color), #00b3b3);
+    background-origin: border-box;
+    color: var(--color-dark);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.launch-video-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 255, 255, 0.5);
+    background: linear-gradient(135deg, #00b3b3, var(--cyan-color));
+    color: white;
+}
+
+.launch-video-btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.4);
+}
+
+/* pulsing animation for attention */
+@keyframes pulse-cyan {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 255, 255, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(0, 255, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 255, 255, 0);
+    }
+}
+
+.launch-video-btn {
+    animation: pulse-cyan 2s infinite;
+}
+
+.launch-video-btn:hover {
+    animation: none;
+}
+
+/* For the play button symbol */
+/* .launch-video-btn::before {
+    content: '▶';
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+} */
+
+/* .launch-video-btn:hover::before {
+    transform: scale(1.2);
+} */
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+    .launch-video-btn {
+        background: linear-gradient(135deg, #00b3b3, #008080);
+        background-origin: border-box;
+        color: white;
+        box-shadow: 0 4px 15px rgba(0, 255, 255, 0.2);
+    }
+    
+    .launch-video-btn:hover {
+        box-shadow: 0 8px 25px rgba(0, 255, 255, 0.4);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .video-button-container {
+        margin: 1.5rem 0;
+    }
+    
+    .launch-video-btn {
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
+        width: auto;
+        min-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .launch-video-btn {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.95rem;
+        min-width: 200px;
+        width: 100%;
+        max-width: 300px;
+    }
 }

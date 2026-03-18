@@ -244,7 +244,7 @@
                     <div class="modal-header">
                         <h1 class="modal-title">Quantum Machine Learning for Leukemia Genomics</h1>
                         <p>Fall 2025 <b>|</b> CS 4301 - Special Topics in CS: Fundamentals of Conducting Research</p>
-                         <p><b>Advisor:</b> <a href="https://profiles.utdallas.edu/ovidiu.daescu" target="_blank" class="content-link"><i>Dr. Ovidiu Daescu</i></a></p>
+                         <p><b>Advisor:</b> <a href="https://profiles.utdallas.edu/ovidiu.daescu" target="_blank" class="content-link" class="project-advisor-link"><i>Dr. Ovidiu Daescu</i></a></p>
                     </div>
                     
                     <div class="modal-body">
@@ -670,12 +670,21 @@
                     </div>
 
                     <!-- Launch Video Button -->
-                    <div class="video-button-container">
+                    <!-- <div class="video-button-container">
                         <a href="https://www.youtube.com/clip/Ugkxg2h3jB8jy7CdtiSijW_dVtFETSIwrpFs" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         class="launch-video-btn">
                             ▶ Check out our launch video here
+                        </a>
+                    </div> -->
+
+                    <div class="video-button-container">
+                        <a href="https://www.youtube.com/clip/Ugkxg2h3jB8jy7CdtiSijW_dVtFETSIwrpFs" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="launch-video-btn">
+                            <span class="emoji-play">▶</span> Check out our launch video here
                         </a>
                     </div>
                     
@@ -798,7 +807,7 @@
                         <img src="assets/projects/mod3/3launch.jpg" alt="Spaceport Launch" class="modal-inline-image">
 
                         <!-- Modal Gallery -->
-                        <div class="conference-modal-gallery">
+                        <!-- <div class="conference-modal-gallery">
                             <h3>Gallery</h3>
                             <div class="modal-gallery-grid">
                                 <img src="assets/projects/mod3/gallery/gal1.jpg" alt="IREC Teams 2024" class="gallery-item">
@@ -807,15 +816,53 @@
                                 <img src="assets/projects/mod3/gallery/gal4.jpg" alt="UTD IREC '24 Team!" class="gallery-item">
                             </div>
                         </div>
-                        <br>
+                        <br> -->
 
                         <!-- Gallery Lightbox Container (unique prefix) -->
+                        <!-- <div id="gallery-lightbox" class="gallery-lightbox">
+                            <span class="gallery-close-btn">&times;</span>
+                            <img class="gallery-lightbox-content" id="gallery-lightbox-img">
+                            <div id="gallery-caption"></div>
+                        </div> -->
+
+                        <!-- Modal Gallery -->
+                        <div>
+                            <h3>Gallery</h3>
+                            <div class="gallery-grid">
+
+                                <div class="gallery-item">
+                                    <img src="assets/projects/mod3/gallery/gal1.jpg" alt="IREC Teams 2024">
+                                    <div class="gallery-overlay"></div>
+                                    <div class="gallery-caption">IREC Teams 2024</div>
+                                </div>
+
+                                <div class="gallery-item">
+                                    <img src="assets/projects/mod3/gallery/gal2.jpg" alt="L1 vs. L3">
+                                    <div class="gallery-overlay"></div>
+                                    <div class="gallery-caption">L1 vs. L3</div>
+                                </div>
+
+                                <div class="gallery-item">
+                                    <img src="assets/projects/mod3/gallery/gal3.jpg" alt="Found It">
+                                    <div class="gallery-overlay"></div>
+                                    <div class="gallery-caption">Found It</div>
+                                </div>
+
+                                <div class="gallery-item">
+                                    <img src="assets/projects/mod3/gallery/gal4.jpg" alt="UTD IREC '24 Team!">
+                                    <div class="gallery-overlay"></div>
+                                    <div class="gallery-caption">UTD IREC '24 Team!</div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Gallery Lightbox Container (MUST be outside the modal, at the end of body) -->
                         <div id="gallery-lightbox" class="gallery-lightbox">
                             <span class="gallery-close-btn">&times;</span>
                             <img class="gallery-lightbox-content" id="gallery-lightbox-img">
                             <div id="gallery-caption"></div>
                         </div>
-
                         <br>
 
                         <div class="modal-skills">
