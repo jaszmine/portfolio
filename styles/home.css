@@ -251,6 +251,7 @@ canvas {
     border: 2px solid transparent;
 }
 
+.contact-link.red,
 .contact-link.red:hover {
     background: var(--red-color);
     color: white;
@@ -258,6 +259,7 @@ canvas {
     box-shadow: 0 8px 20px rgba(255, 0, 0, 0.2);
 }
 
+.contact-link.green,
 .contact-link.green:hover {
     background: var(--green-color);
     color: white;
@@ -265,6 +267,7 @@ canvas {
     box-shadow: 0 8px 20px rgba(0, 255, 0, 0.2);
 }
 
+.contact-link.blue,
 .contact-link.blue:hover {
     background: var(--blue-color);
     color: white;
@@ -272,6 +275,7 @@ canvas {
     box-shadow: 0 8px 20px rgba(0, 0, 255, 0.2);
 }
 
+.contact-link.cyan,
 .contact-link.cyan:hover {
     background: var(--cyan-color);
     color: var(--color-dark);
@@ -279,6 +283,7 @@ canvas {
     box-shadow: 0 8px 20px rgba(0, 255, 255, 0.2);
 }
 
+.contact-link.magenta,
 .contact-link.magenta:hover {
     background: var(--magenta-color);
     color: white;
@@ -286,6 +291,7 @@ canvas {
     box-shadow: 0 8px 20px rgba(255, 0, 255, 0.2);
 }
 
+.contact-link.yellow,
 .contact-link.yellow:hover {
     background: var(--yellow-color);
     color: var(--color-dark);
