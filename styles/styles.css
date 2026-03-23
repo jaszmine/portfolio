@@ -24,7 +24,7 @@
 }
 
 .logo img {
-    width: 110px;
+    width: 100px;
     height: auto; /* keeps aspect ratio */
     margin-right: clamp(1rem, 3vw, 3rem); /* gap btwn logo and nav elmnts schrinks on smaller screens */
     display: block; /* rmvs default line height from a.logo */
@@ -58,7 +58,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0;
 }
 
 .section {

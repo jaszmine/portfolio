@@ -227,7 +227,7 @@
     left: 50%;
     transform: translateX(-50%);
     width: 3px;
-    background: linear-gradient(180deg, #ffff00 0%, #ff00ff 100%);
+    background: linear-gradient(180deg, yellow 0%, magenta 100%);
     border-radius: 3px;
     top: 30px;
     height: calc(100% - 60px);
@@ -255,12 +255,12 @@
 }
 
 .timeline-card {
-    background: white;
+    background: #2d2d2d;
     border-radius: 16px;
     padding: 1.5rem;
     box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1), 0 5px 15px -5px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid #424242;
     min-width: 300px; 
     font-size: 1rem;
 }
@@ -304,14 +304,14 @@
 
 .conference-header {
     margin-bottom: 1.5rem;
-    border-bottom: 2px solid #f0f0f0;
+    border-bottom: 2px solid #424242;
     padding-bottom: 1rem;
 }
 
 .conference-title {
     font-size: 1.5rem;
     font-weight: 600;
-    color: white;
+    color: #f1f5f9;
     margin: 0 0 0.5rem 0;
 }
 
@@ -319,7 +319,7 @@
     display: flex;
     gap: 1.5rem;
     flex-wrap: wrap;
-    color: white;
+    color: #cdcdcd;
     font-size: 0.95rem;
 }
 
@@ -340,7 +340,7 @@
 }
 
 .conference-description {
-    color: #334155;
+    color: #e9e9e9;
     line-height: 1.6;
 }
 
@@ -382,7 +382,7 @@
 
 .conference-carousel {
     margin-top: 1.5rem;
-    border-top: 2px solid #f0f0f0;
+    border-top: 2px solid #424242;
     padding-top: 1.5rem;
     clear: both;
 }
@@ -390,7 +390,7 @@
 .carousel-title {
     font-size: 1.1rem;
     font-weight: 500;
-    color: #1e293b;
+    color: #f1f5f9;
     margin: 0 0 1rem 0;
 }
 
@@ -406,7 +406,7 @@
 
 .conference-readmore-container {
     margin-top: 1.5rem;
-    border-top: 2px solid #f0f0f0;
+    border-top: 2px solid #424242;
     padding-top: 1.5rem;
 }
 
@@ -461,13 +461,13 @@
 
 .conference-modal-content {
     position: relative;
-    background: white;
+    background: #2d2d2d;
     max-width: 800px;
     margin: 2rem auto;
     border-radius: 24px;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
     animation: modalSlideIn 0.3s ease;
-    border: 1px solid #e5e7eb;
+    border: 1px solid #424242;
 }
 
 @keyframes modalSlideIn {
@@ -486,13 +486,13 @@
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 2rem;
-    border-bottom: 2px solid #f0f0f0;
+    border-bottom: 2px solid #424242;
 }
 
 .conference-modal-title {
     font-size: 1.8rem;
     font-weight: 600;
-    color: #1e293b;
+    color: #f1f5f9;
     margin: 0;
     border-left: 4px solid #ffff00;
     padding-left: 1rem;
@@ -501,7 +501,7 @@
 .conference-modal-close {
     background: none;
     border: none;
-    color: #6b7280;
+    color: #9ca3af;
     cursor: pointer;
     padding: 0.5rem;
     display: flex;
@@ -512,7 +512,7 @@
 }
 
 .conference-modal-close:hover {
-    background: #f3f4f6;
+    background: #424242;
     color: #ffff00;
     transform: rotate(90deg);
 }
@@ -526,8 +526,8 @@
     gap: 2rem;
     margin-bottom: 2rem;
     padding-bottom: 1rem;
-    border-bottom: 2px solid #f0f0f0;
-    color: #6b7280;
+    border-bottom: 2px solid #424242;
+    color: #cdcdcd;
     font-size: 1rem;
 }
 
@@ -544,7 +544,7 @@
 
 .conference-modal-text h3 {
     font-size: 1.4rem;
-    color: #1e293b;
+    color: #f1f5f9;
     margin: 1.5rem 0 1rem 0;
     display: inline-block;
     border-bottom: 2px solid #06b6d4;
@@ -556,7 +556,7 @@
 }
 
 .conference-modal-text p {
-    color: #334155;
+    color: #e9e9e9;
     line-height: 1.8;
     margin-bottom: 1.2rem;
     font-size: 1.05rem;
@@ -564,7 +564,7 @@
 
 .conference-modal-gallery h3 {
     font-size: 1.4rem;
-    color: #1e293b;
+    color: #f1f5f9;
     margin: 2rem 0 1rem 0;
     display: inline-block;
     border-bottom: 2px solid #ec4899;
@@ -692,82 +692,6 @@
 
 .gallery-item:hover {
     opacity: 0.7;
-}
-
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-    .timeline-card {
-        background: #2d2d2d;
-        border-color: #424242;
-    }
-    
-    .conference-title {
-        color: #f1f5f9;
-    }
-    
-    .conference-description {
-        color: #e9e9e9;
-    }
-    
-    .conference-meta {
-        color: #cdcdcd;
-    }
-    
-    .conference-header,
-    .conference-carousel,
-    .conference-readmore-container {
-        border-color: #424242;
-    }
-    
-    .timeline-line {
-        background: linear-gradient(180deg, yellow 0%, magenta 100%);
-    }
-    
-    .conference-readmore-container {
-        border-top-color: #424242;
-    }
-    
-    .conference-modal-content {
-        background: #2d2d2d;
-        border-color: #424242;
-    }
-    
-    .conference-modal-header {
-        border-bottom-color: #424242;
-    }
-    
-    .conference-modal-title {
-        color: #f1f5f9;
-        border-left-color: #ffff00;
-    }
-    
-    .conference-modal-close {
-        color: #9ca3af;
-    }
-    
-    .conference-modal-close:hover {
-        background: #424242;
-        color: #ffff00;
-    }
-    
-    .conference-modal-meta {
-        border-bottom-color: #424242;
-        color: #cdcdcd;
-    }
-    
-    .conference-modal-text h3 {
-        color: #f1f5f9;
-        border-bottom-color: #06b6d4;
-    }
-    
-    .conference-modal-text p {
-        color: #e9e9e9;
-    }
-    
-    .conference-modal-gallery h3 {
-        color: #f1f5f9;
-        border-bottom-color: #ec4899;
-    }
 }
 
 /* Responsive adjustments */
