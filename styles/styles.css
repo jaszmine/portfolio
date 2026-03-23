@@ -13,18 +13,30 @@
     --magenta-color: #ff00ff;
     --yellow-color: #ffff00;
 
-    /* Navbar Page Colors (in order) */
-    --color-orange: #f16c06;    /* Orange - Projects */
-    --color-purple: #ac07ce; /* Purple - Interesting */
     
-    /* Accent Colors */
-    --color-accent: var(--red-color);  /* Default to home color */
+    /* Accent Colors - default to home color for now */
+    /* --color-accent: var(--red-color); */
     
-    /* Derived Colors (automatically calculated) */
+    /* Derived Colors */
     --color-dark-light: rgba(32, 32, 32, 0.8);
     --color-cream-dark: #d4caa8;
     --color-cream-light: #f5f0e0;
 }
+
+.logo img {
+    width: 110px;
+    height: auto; /* keeps aspect ratio */
+    margin-right: clamp(1rem, 3vw, 3rem); /* gap btwn logo and nav elmnts schrinks on smaller screens */
+    display: block; /* rmvs default line height from a.logo */
+}
+
+/* original logo-text styling */
+/* .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-cream);
+    text-decoration: none;
+} */
 
 * {
     margin: 0;
@@ -75,18 +87,11 @@ body {
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    margin-top: 0.75rem;
+    /* margin-top: 0.75rem; */
     padding: 1rem 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--color-cream);
-    text-decoration: none;
 }
 
 .nav-links a {
@@ -228,7 +233,6 @@ body {
 }
 
 /* Common responsive breakpoints */
-/* Common responsive breakpoints */
 @media (max-width: 768px) {
     /* Adjust navbar for mobile */
     .navbar {
@@ -239,7 +243,7 @@ body {
     
     .nav-container {
         flex-wrap: wrap;
-        position: relative; /* Add this for proper positioning */
+        position: relative; 
     }
     
     /* Hamburger menu button styles */
@@ -793,16 +797,12 @@ a:visited {
     transition: all 0.3s ease;
 }
 
-/* .content-link:visited {
-    color: var(--cyan-color); 
-} */
-
 .content-link:hover {
     text-decoration-color: currentColor;
 }
 
 /* ============================================= */
-/* GALLERY STYLES - Used across multiple pages */
+/*                 GALLERY STYLES                */
 /* ============================================= */
 
 /* Gallery grid - 2 columns */

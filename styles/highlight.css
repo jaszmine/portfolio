@@ -1,0 +1,103 @@
+/* highlight.css — layered chromatic misregistration effect */
+/* Status: IN-PROGRESS */
+
+.highlight-blur {
+    color: white;
+    position: relative;
+    display: inline-block;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.highlight-blur::before,
+.highlight-blur::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Cyan + Blue — offset top-right */
+.highlight-blur::before {
+    color: transparent;
+    text-shadow:
+        -2px -2px 0px #00ffff,
+        -4px -4px 0px #0000ff;
+    mix-blend-mode: screen;
+}
+
+/* Red + Yellow — offset bottom-left */
+.highlight-blur::after {
+    color: transparent;
+    text-shadow:
+        2px 2px 0px #ff0000,
+        4px 4px 0px #ffff00;
+    mix-blend-mode: screen;
+}
+
+.highlight-blur:hover::before,
+.highlight-blur:hover::after {
+    opacity: 1;
+}
+
+.highlight-blur:hover::before {
+    /* animation: chroma-cyan 0.85s cubic-bezier(0.23, 1, 0.32, 1) forwards;  */
+    animation: chroma-cyan 1s ease-in-out(0.23, 1, 0.32, 1) forwards;
+}
+
+.highlight-blur:hover::after {
+    /* animation: chroma-red 0.85s cubic-bezier(0.23, 1, 0.32, 1) forwards; */
+    animation: chroma-red 1s ease-in-out(0.23, 1, 0.32, 1) forwards;
+}
+
+@keyframes chroma-cyan {
+    0% {
+        text-shadow:
+            0px 0px 0px #00ffff,
+            0px 0px 0px #0000ff;
+    }
+    /* 60% {
+        text-shadow:
+            -4px 4px 0px #00ffff,
+            -7px 7px 0px #0000ff;
+    } */
+    100% {
+        text-shadow:
+            -2px -2px 0px #00ffff,
+            -4px -4px 0px #0000ff;
+    }
+}
+
+/* @keyframes ANIMATE-RED {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(4px, 4px); }
+}
+
+@keyframes ANIMATE-BLUE {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-4px, -4px); }
+} */
+
+@keyframes chroma-red {
+    0% {
+        text-shadow:
+            0px 0px 0px #ff0000,
+            0px 0px 0px #ffff00;
+    }
+    /* 60% {
+        text-shadow:
+            4px -4px 0px #ff0000,
+            7px -7px 0px #ffff00;
+    } */
+    100% {
+        text-shadow:
+            2px 2px 0px #ff0000,
+            4px 4px 0px #ffff00;
+    }
+}

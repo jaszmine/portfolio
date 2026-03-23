@@ -219,6 +219,7 @@
 .timeline-container {
     position: relative;
     padding: 2rem 0;
+    overflow: hidden;
 }
 
 .timeline-line {
@@ -235,6 +236,7 @@
 .timeline-item {
     position: relative;
     width: 100%;
+    box-sizing: border-box;
     margin-bottom: 4rem;
     display: flex;
     align-items: flex-start;
@@ -245,11 +247,11 @@
 }
 
 .timeline-left {
-    padding-right: calc(50% + 30px);
+    padding-right: calc(50% + 40px);
 }
 
 .timeline-right {
-    padding-left: calc(50% + 30px);
+    padding-left: calc(50% + 40px);
 }
 
 .timeline-card {
@@ -259,6 +261,8 @@
     box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1), 0 5px 15px -5px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid rgba(0, 0, 0, 0.05);
+    min-width: 300px; 
+    font-size: 1rem;
 }
 
 .timeline-card:hover {
@@ -279,6 +283,23 @@
     box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
     left: 50%;
     transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+    .timeline-line {
+        left: 20px;
+    }
+
+    .timeline-item::before {
+        left: 20px;
+        transform: translateX(-15%);
+    }
+
+    .timeline-left,
+    .timeline-right {
+        padding-left: 50px;
+        padding-right: 0;
+    }
 }
 
 .conference-header {
