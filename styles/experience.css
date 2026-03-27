@@ -1,3 +1,17 @@
+:root {
+    --green1: #16a34a;
+    --green2: #15803d;
+    --green3: #16a34a;
+    --green4: #16a34a;
+    
+    /* Origignal Blue color scheme
+    --green1: #2563eb;
+    --green2: #1d4ed8;
+    --green3: #60a5fa;
+    --green4: #2663eb;
+     */
+}
+
 /* Experience page specific styles */
 .experience-grid {
     display: flex;
@@ -41,13 +55,13 @@
 }
 
 .experience-org-link {
-    color: #2563eb;
+    color: var(--green1);
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
 .experience-org-link:hover {
-    color: #1d4ed8;
+    color: var(--green2);
     text-decoration: underline;
 }
 
@@ -64,7 +78,7 @@
 .experience-employer {
     font-size: 1.2rem;
     font-weight: 500;
-    color: #2563eb;
+    color: var(--green1);
     margin-bottom: 0.5rem;
 }
 
@@ -123,8 +137,8 @@
 
 .experience-dropdown-toggle:hover {
     background-color: #f1f5f9;
-    border-color: #2563eb;
-    color: #2563eb;
+    border-color: var(--green1);
+    color: var(--green1);
 }
 
 .experience-dropdown-text {
@@ -200,7 +214,7 @@
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
-    background-color: #2563eb;
+    background-color: var(--green1);
     color: white;
     padding: 0.85rem 2rem;
     border-radius: 50px;
@@ -213,7 +227,7 @@
 }
 
 .experience-pdf-button:hover {
-    background-color: #1d4ed8;
+    background-color: var(--green2);
     transform: translateY(-2px);
     box-shadow: 0 6px 10px -1px rgba(0, 0, 0, 0.3);
 }
@@ -294,7 +308,7 @@
 
 .experience-carousel-btn:hover {
     background-color: #ffffff;
-    color: #2563eb;
+    color: var(--green1);
     transform: translateY(-50%) scale(1.1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -332,7 +346,7 @@
 }
 
 .experience-indicator.active {
-    background-color: #2563eb;
+    background-color: var(--green1);
     width: 24px;
     border-radius: 12px;
 }
@@ -342,7 +356,7 @@
     bottom: 0;
     left: 0;
     height: 3px;
-    background-color: #2563eb;
+    background-color: var(--green1);
     transition: width 0.1s linear;
 }
 
@@ -372,7 +386,7 @@
 
 .experience-thumbnail.active {
     opacity: 1;
-    border-color: #2563eb;
+    border-color: var(--green1);
 }
 
 .experience-carousel-grid {
@@ -394,7 +408,7 @@
 .experience-carousel-grid-item:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-color: #2563eb;
+    border-color: var(--green1);
 }
 
 .experience-carousel-grid-icon {
@@ -413,17 +427,17 @@
 
 .experience-carousel-grid-link {
     display: inline-block;
-    color: #2563eb;
+    color: var(--green1);
     text-decoration: none;
     font-size: 0.85rem;
     padding: 0.25rem 0.75rem;
-    border: 1px solid #2563eb;
+    border: 1px solid var(--green1);
     border-radius: 4px;
     transition: all 0.2s ease;
 }
 
 .experience-carousel-grid-link:hover {
-    background-color: #2563eb;
+    background-color: var(--green1);
     color: white;
 }
 
@@ -453,7 +467,7 @@
     
     .experience-carousel-btn:hover {
         background-color: #1e293b;
-        color: #60a5fa;
+        color: var(--green3);
     }
     
     .experience-carousel-image {
@@ -469,7 +483,7 @@
     }
     
     .experience-indicator.active {
-        background-color: #60a5fa;
+        background-color: var(--green3);
     }
 }
 
@@ -534,16 +548,16 @@
 /* Experience page specific link colors */
 .experience-page .content-link,
 .experience-org-link {
-    color: #2663eb; /* Hardcode the specific blue */
+    color: var(--green4); /* Hardcode the specific blue */
 }
 
 .experience-page .content-link:visited,
 .experience-org-link:visited {
-    color: #2663eb; /* Stays this blue */
+    color: var(--green4); /* Stays this blue */
 }
 
 .experience-page .content-link:hover,
 .experience-org-link:hover {
-    color: #2663eb;
-    text-shadow: 0 0 8px #2663eb; /* Match the shadow to the link color */
+    color: var(--green4);
+    text-shadow: 0 0 8px var(--green4); /* Match the shadow to the link color */
 }

@@ -17,6 +17,7 @@
     <link rel="icon" type="image/png" href="assets/logo/v3-jd-square.png">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/about.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -30,12 +31,15 @@
                 <img src="assets/logo/v3-jd-colors.png" alt="Jaszmine DeFranco Portfolio Logo">
             </a>
             <div class="nav-links">
-                <a href="index.html" class="active home">Home</a>
-                <a href="about.html" class="about">About</a>
-                <a href="experiences.html" class="experience">Experience</a>
-                <a href="projects.html" class="projects">Projects</a>
-                <a href="photography.html" class="photography">Photography</a>
-                <a href="misc.html" class="misc">Misc.</a>
+                <a href="index.html" class="active red">Home</a>
+                <!-- <a href="about.html" class="about">About</a> -->
+                <a href="experiences.html" class="green">Experience</a>
+                <a href="projects.html" class="blue">Projects</a>
+                <a href="photography.html" class="cyan">Photography</a>
+                <a href="misc.html" class="magenta">Misc.</a>
+                <a href="assets/Resume.pdf" target="_blank" rel="noopener noreferrer" class="yellow" title="Resume PDF">
+                    <i class="fas fa-file-pdf"></i> Resume
+                </a>
             </div>
             <button class="menu-toggle" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
@@ -66,6 +70,65 @@
                 </div>
             </div>
         </section>
+
+        <!-- Main about section with grid container -->
+    <section class="about-section">
+        <!-- Text content (left column) -->
+        <div class="about-text">
+            <h1 class="about-title"><span class="highlight" data-text="Hello!">Hello!</span></h1>
+            <br>
+            <p>
+                I am a recent computer science graduate from The University of Texas at Dallas. I'm passionate about transforming innovative 
+                ideas into functional, real-world solutions that matter. Equipped with a strong 
+                foundation in software development and systems thinking, I am actively seeking opportunities 
+                to contribute to meaningful projects.
+            </p>
+            <br>
+            <p>
+                My drive stems from a core love of building things and a mindset of continuous learning. 
+                I'm currently focused on expanding my skills in full-stack development, machine learning, and more. 
+                From launching rockets in the desert, to exploring quantum computing theory, I've always 
+                enjoyed making what may seem like the impossible, possible. 
+            </p>
+            <br>
+            <p>
+                Beyond the screen, I recharge by hiking Austin's trails and capturing moments through 
+                photography. I'm always planning my next adventure, whether that means exploring a new national 
+                park or visiting a new city!
+            </p>
+        </div>
+
+        <!-- Photo (right column) -->
+        <div class="about-photo">
+            <div class="photo-container">
+                <img src="assets/about-headshot.jpeg" 
+                    alt="about-headshot" 
+                    class="profile-photo">
+            </div>
+        </div>
+
+        <!-- Highlights (full width below) -->
+        <!-- <div class="about-below">
+            <div class="about-highlights">
+                <div class="highlight-item">
+                    <span class="highlight-icon">🎓</span>
+                    <span>Computer Science Graduate</span>
+                </div>
+                <div class="highlight-item">
+                    <span class="highlight-icon">⚛️</span>
+                    <span>Quantum Computing Enthusiast</span>
+                </div>
+                <div class="highlight-item">
+                    <span class="highlight-icon">🚀</span>
+                    <span>Innovative Technologies</span>
+                </div>
+                <div class="highlight-item">
+                    <span class="highlight-icon">📷</span>
+                    <span>Photography</span>
+                </div>
+            </div>
+        </div> -->
+    </section>
 
         <!-- icons: atom, code, briefcase, camera -->
         <!-- https://fontawesome.com/v4/icons/ -->
@@ -118,7 +181,7 @@
 
     <footer class="footer">
         <p>© 2026 Jaszmine DeFranco.</p>
-        <p>✦ Built with ‪‪❤︎‬</p>
+        <p>Built with ‪‪❤︎‬</p>
     </footer>
 
     <script src="script.js"></script>

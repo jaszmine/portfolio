@@ -115,57 +115,57 @@ body {
     transition: transform 0.4s ease;
 }
 
-/* Home */
-.nav-links a.home::after {
+/* Red - Home */
+.nav-links a.red::after {
     background: linear-gradient(90deg, var(--red-color), rgba(255, 0, 0, 0.7));
 }
 
-.nav-links a.home.active {
+.nav-links a.red.active {
     color: color-mix(in srgb, var(--red-color) 70%, white);
 }
 
-/* About */
-.nav-links a.about::after {
+/* Green - About */
+.nav-links a.green::after {
     background: linear-gradient(90deg, var(--green-color), rgba(0, 255, 0, 0.7));
 }
 
-.nav-links a.about.active {
+.nav-links a.green.active {
     color: color-mix(in srgb, var(--green-color) 70%, white);
 }
 
-/* Experiences */
-.nav-links a.experience::after {
+/* Blue - Experiences */
+.nav-links a.blue::after {
     background: linear-gradient(90deg, var(--blue-color), rgba(0, 0, 255, 0.7));
 }
 
-.nav-links a.experience.active {
+.nav-links a.blue.active {
     color: color-mix(in srgb, var(--blue-color) 70%, white);
 }
 
-/* Projects */
-.nav-links a.projects::after {
+/* Cyan - Projects */
+.nav-links a.cyan::after {
     background: linear-gradient(90deg, var(--cyan-color), rgba(0, 255, 255, 0.7));
 }
 
-.nav-links a.projects.active {
+.nav-links a.cyan.active {
     color: color-mix(in srgb, var(--cyan-color) 70%, white);
 }
 
-/* Photography */
-.nav-links a.photography::after {
+/* Magenta - Photography */
+.nav-links a.magenta::after {
     background: linear-gradient(90deg, var(--magenta-color), rgba(255, 0, 255, 0.7));
 }
 
-.nav-links a.photography.active {
+.nav-links a.magenta.active {
     color: color-mix(in srgb, var(--magenta-color) 70%, white);
 }
 
-/* Misc */
-.nav-links a.misc::after {
+/* Yellow - Misc */
+.nav-links a.yellow::after {
     background: linear-gradient(90deg, var(--yellow-color), rgba(255, 255, 0, 0.7));
 }
 
-.nav-links a.misc.active {
+.nav-links a.yellow.active {
     color: color-mix(in srgb, var(--yellow-color) 70%, white);
 }
 
@@ -385,51 +385,51 @@ body {
         transition: transform 0.4s ease;
     }
     
-    .nav-links a.home::after {
+    .nav-links a.red::after {
         background: linear-gradient(90deg, var(--red-color), rgba(255, 0, 0, 0.7));
     }
     
-    .nav-links a.about::after {
+    .nav-links a.green::after {
         background: linear-gradient(90deg, var(--green-color), rgba(0, 255, 0, 0.7));
     }
     
-    .nav-links a.experience::after {
+    .nav-links a.blue::after {
         background: linear-gradient(90deg, var(--blue-color), rgba(0, 0, 255, 0.7));
     }
     
-    .nav-links a.projects::after {
+    .nav-links a.cyan::after {
         background: linear-gradient(90deg, var(--cyan-color), rgba(0, 255, 255, 0.7));
     }
     
-    .nav-links a.photography::after {
+    .nav-links a.magenta::after {
         background: linear-gradient(90deg, var(--magenta-color), rgba(255, 0, 255, 0.7));
     }
     
-    .nav-links a.misc::after {
+    .nav-links a.yellow::after {
         background: linear-gradient(90deg, var(--yellow-color), rgba(255, 255, 0, 0.7));
     }
     
-    .nav-links a.home.active {
+    .nav-links a.red.active {
         color: color-mix(in srgb, var(--red-color) 70%, white);
     }
     
-    .nav-links a.about.active {
+    .nav-links a.green.active {
         color: color-mix(in srgb, var(--green-color) 70%, white);
     }
     
-    .nav-links a.experience.active {
+    .nav-links a.blue.active {
         color: color-mix(in srgb, var(--blue-color) 70%, white);
     }
     
-    .nav-links a.projects.active {
+    .nav-links a.cyan.active {
         color: color-mix(in srgb, var(--cyan-color) 70%, white);
     }
     
-    .nav-links a.photography.active {
+    .nav-links a.magenta.active {
         color: color-mix(in srgb, var(--magenta-color) 70%, white);
     }
     
-    .nav-links a.misc.active {
+    .nav-links a.yellow.active {
         color: color-mix(in srgb, var(--yellow-color) 70%, white);
     }
     

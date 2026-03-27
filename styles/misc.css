@@ -1,4 +1,13 @@
-/* Misc page specific styles */
+:root{
+    --magenta1: #ff00ff; 
+    --magenta2: #d946ef;
+    --magenta3: #c026d3;
+    
+    /* 
+    --yellow1: #ffff00; 
+    --yellow2: #06b6d4;
+    */
+}
 
 /* Map Integration */
 .map-intro {
@@ -167,7 +176,7 @@
 }
 
 .misc-card-title i {
-    color: var(--yellow-color);
+    color: var(--magenta-color);
 }
 
 .misc-card-description {
@@ -212,7 +221,7 @@
     transform: translateX(-50%);
     width: 60px;
     height: 3px;
-    background: #ffff00;
+    background: var(--magenta1);
     border-radius: 2px;
 }
 
@@ -227,7 +236,7 @@
     left: 50%;
     transform: translateX(-50%);
     width: 3px;
-    background: linear-gradient(180deg, yellow 0%, magenta 100%);
+    background: linear-gradient(180deg, magenta 0%, yellow 100%);
     border-radius: 3px;
     top: 30px;
     height: calc(100% - 60px);
@@ -276,8 +285,8 @@
     top: 30px;
     width: 16px;
     height: 16px;
-    background: cyan;
-    border: 3px solid cyan;
+    background: magenta;
+    border: 3px solid magenta;
     border-radius: 50%;
     z-index: 2;
     box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
@@ -330,7 +339,7 @@
 }
 
 .conference-meta i {
-    color: #ffff00;
+    color: var(--magenta1);
     width: 16px;
 }
 
@@ -433,7 +442,7 @@
 
 .conference-readmore-arrow {
     transition: transform 0.3s ease;
-    color: #ffff00;
+    color: var(--magenta1);
 }
 
 .conference-readmore-btn:hover .conference-readmore-arrow {
@@ -494,7 +503,7 @@
     font-weight: 600;
     color: #f1f5f9;
     margin: 0;
-    border-left: 4px solid #ffff00;
+    border-left: 4px solid var(--magenta1);
     padding-left: 1rem;
 }
 
@@ -513,7 +522,7 @@
 
 .conference-modal-close:hover {
     background: #424242;
-    color: #ffff00;
+    color: var(--magenta1);
     transform: rotate(90deg);
 }
 
@@ -538,7 +547,7 @@
 }
 
 .conference-modal-meta i {
-    color: #ffff00;
+    color: var(--magenta1);
     width: 18px;
 }
 
@@ -547,7 +556,7 @@
     color: #f1f5f9;
     margin: 1.5rem 0 1rem 0;
     display: inline-block;
-    border-bottom: 2px solid #06b6d4;
+    border-bottom: 2px solid var(--magenta2);
     padding-bottom: 0.25rem;
 }
 
@@ -599,7 +608,7 @@
     margin: 20px auto 30px;
     padding: 20px;
     background-color: rgba(0, 255, 255, 0.05);
-    border-left: 4px solid cyan;
+    border-left: 4px solid var(--magenta1);
     border-radius: 0 8px 8px 0;
     line-height: 1.6;
     display: none;
@@ -809,14 +818,14 @@
 
 /* Misc page specific link colors */
 .misc-page .content-link {
-    color: var(--yellow-color);
+    color: var(--magenta-color);
 }
 
 .misc-page .content-link:visited {
-    color: var(--yellow-color); /* Stays yellow */
+    color: var(--magenta-color); /* Stays yellow */
 }
 
 .misc-page .content-link:hover {
     color: #ffffff;
-    text-shadow: 0 0 8px rgba(255, 255, 0, 0.5);
+    text-shadow: 0 0 8px rgba(255, 0, 255, 0.5);
 }

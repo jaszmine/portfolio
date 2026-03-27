@@ -680,14 +680,14 @@
 
 /* Photography page specific link colors */
 .photography-page .content-link {
-    color: var(--magenta-color);
+    color: var(--cyan-color);
 }
 
 .photography-page .content-link:visited {
-    color: var(--magenta-color); /* Stays magenta */
+    color: var(--cyan-color); 
 }
 
 .photography-page .content-link:hover {
     color: #ffffff;
-    text-shadow: 0 0 8px rgba(255, 0, 255, 0.5);
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
 }
