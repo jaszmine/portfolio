@@ -46,6 +46,42 @@
             
             <!-- project grid thumbnails & titles -->
             <div class="projects-grid">
+
+                <!-- Project Card 0: Park Compass -->
+                <div class="project-card" onclick="openModal('modal0')">
+                    <div class="project-image-container">
+                        <img src="assets/projects/04pc.png" alt="Park Compass" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">(In-Progress) Park Compass</h3>
+                        <p class="project-description">An interactive web app featuring personalized AI-generated park itineraries, dashboards, and trip documentation.</p>
+                        <!-- Logo Icons -->
+                        <div class="project-logos">
+                            <div class="project-logo-item" title="React">
+                                <img src="/assets/tech-logos/react-logo.png" alt="React">
+                            </div>
+                            <div class="project-logo-item" title="Vite">
+                                <img src="/assets/tech-logos/vite-logo.png" alt="Vite">
+                            </div>
+                            <div class="project-logo-item" title="Tailwind">
+                                <img src="/assets/tech-logos/tailwind-logo.png" alt="Tailwind">
+                            </div>
+                            <div class="project-logo-item" title="Supabase">
+                                <img src="/assets/tech-logos/supabase-logo.png" alt="Supabase">
+                            </div>
+                            <div class="project-logo-item" title="Postman">
+                                <img src="/assets/tech-logos/postman-logo.png" alt="Postman">
+                            </div>
+                            <div class="project-logo-item" title="Mapbox">
+                                <img src="/assets/tech-logos/mapbox-logo.png" alt="Mapbox">
+                            </div>
+                            <div class="project-logo-item plus-logo" title="+3 more technologies">
+                                <span class="plus-text">+12</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Project Card 1: QML -->
                 <div class="project-card" onclick="openModal('modal1')">
                     <div class="project-image-container">
@@ -138,41 +174,6 @@
                             </div>
                             <div class="project-logo-item" title="OpenRocket">
                                 <img src="/assets/tech-logos/openrocket-logo.png" alt="OpenRocket">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project Card 4: HackUTD XII, Park Compass -->
-                <div class="project-card" onclick="openModal('modal4')">
-                    <div class="project-image-container">
-                        <img src="assets/projects/04pc.png" alt="Park Compass" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Coming Soon: Park Compass</h3>
-                        <p class="project-description">An interactive web app featuring personalized AI-generated park itineraries, dashboards, and trip documentation.</p>
-                        <!-- Logo Icons -->
-                        <div class="project-logos">
-                            <div class="project-logo-item" title="React">
-                                <img src="/assets/tech-logos/react-logo.png" alt="React">
-                            </div>
-                            <div class="project-logo-item" title="Vite">
-                                <img src="/assets/tech-logos/vite-logo.png" alt="Vite">
-                            </div>
-                            <div class="project-logo-item" title="Tailwind">
-                                <img src="/assets/tech-logos/tailwind-logo.png" alt="Tailwind">
-                            </div>
-                            <div class="project-logo-item" title="Supabase">
-                                <img src="/assets/tech-logos/supabase-logo.png" alt="Supabase">
-                            </div>
-                            <div class="project-logo-item" title="Postman">
-                                <img src="/assets/tech-logos/postman-logo.png" alt="Postman">
-                            </div>
-                            <div class="project-logo-item" title="Mapbox">
-                                <img src="/assets/tech-logos/mapbox-logo.png" alt="Mapbox">
-                            </div>
-                            <div class="project-logo-item plus-logo" title="+3 more technologies">
-                                <span class="plus-text">+3</span>
                             </div>
                         </div>
                     </div>
@@ -327,6 +328,540 @@
             </div>
 
             <!-- Modals -->
+             
+            <!-- Modal 0: Park Compass -->
+            <div id="modal0" class="project-modal">
+                <div class="modal-content">
+                    <span class="modal-close" onclick="closeModal('modal0')">&times;</span>
+                    
+                    <!-- <div class="modal-header">
+                        <h1 class="modal-title">Park Compass</h1>
+                        <p>March 2026 - Present <b>|</b> Personal Project</p>
+                        <img src="assets/projects/mod0/tree-icon.png" alt="Park Compass Logo">
+                    </div> -->
+
+                    <div class="modal-header" style="position: relative;">
+                        <h1 class="modal-title">Park Compass</h1>
+                        <p>April 2026 - Present <b>|</b> Personal Project</p>
+                        <img 
+                            src="assets/projects/mod0/tree-icon.png" 
+                            alt="Park Compass Logo"
+                            style="position: absolute; top: 0; right: 2rem; height: 100%; width: auto; object-fit: contain;"
+                        >
+                    </div>
+                    
+                    <div class="modal-body">
+
+                        <h2>Overview</h2>
+                        <p>Park Compass is an interactive webapp that helps you discover, plan, and experience America's national parks with intelligent itineraries tailored to your travel style.</p>
+                        
+                        <h2>Inspiration</h2>
+                        <ul>
+                            <li>It has been my dream to visit all of the national parks someday! I noticed there were similar pieces of information needed to put together each unique trip itinerary and thought it would be useful if I had a tool that helped streamline the planning process, ensuring all the little details were always taken care of.</li>
+                            <li>So then when I was thinking about what might make this tool better than already-existing tools, for example, why not just ask a chatbot? Well, sometimes people don't know all of the details they should be planning for, whereas this tool formats itinerary's based on both currently available/suggested itinerarys on the official nation parks website, as well as personal experience, and suggestions from actual travel agents and park volunteers, allowing me to add as many possible details I thought could be useful and necessary when planning a trip like this. Additionally, existing AI assistants are often too generic and require several messages back and forth to get closer to some sort of list/timeline. This tool not only streamlines the process, but also organizes information in a visually appealing, easy-to-navigate alternative while still allowing you to edit and customize your trip details as you go. </li>
+                            <li>I have a couple family members familliar with/working in the travel industry, and we've had several conversations about the entire travel agent industry and how to an inexperienced traveler, there's absolutely a need for a streamlined platform to help with the planning process. </li>
+                            <li>I originally had this idea at my last hackathon (HackUTDXII) but had initially only gotten a semi-functional prototype working. I liked this idea so much (and actually want to use it) that I decided to turn it into a fully-fledged tool/resource anyone could use!</li>
+                            <li>Lastly, I've been wanting to keep up with my technical skills while continuing to learn new things and keep up with the industry. This project provided a perfect scenerio to do so!</li>
+                        </ul>
+
+                        <h2>Tech Stack</h2>
+                        <table style="width: 100%;" border="1">
+                        <tr> 
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <th>Frontend</th>
+                            <td>
+                                <div class="project-logos-modal">
+                                    <a href="https://react.dev/" target="_blank" class="project-logo-item" title="React">
+                                        <img src="/assets/tech-logos/react-logo.png" alt="React">
+                                    </a>
+                                    <a href="https://vite.dev/" target="_blank" class="project-logo-item" title="Vite">
+                                        <img src="/assets/tech-logos/vite-logo.png" alt="Vite">
+                                    </a>
+                                    <a href="https://tailwindcss.com/" target="_blank" class="project-logo-item" title="TailwindCSS">
+                                        <img src="/assets/tech-logos/tailwind-logo.png" alt="TailwindCSS">
+                                    </a>
+                                </div>
+                                <div class="project-logos-modal">
+                                    <a href="https://leafletjs.com/" target="_blank" class="project-logo-item" title="Leflet">
+                                        <img src="/assets/tech-logos/leaflet-logo.png" alt="Leaflet">
+                                    </a>
+                                    <p style="display: table-cell; vertical-align: middle; margin: 0;">- Mapping: starting with lightweight rendering</p>
+                                </div>
+                                <div class="project-logos-modal">
+                                    <a href="https://www.mapbox.com/" target="_blank" class="project-logo-item" title="Mapbox">
+                                        <img src="/assets/tech-logos/mapbox-logo.png" alt="Mapbox">
+                                    </a>
+                                    <p style="display: table-cell; vertical-align: middle; margin: 0;">- Mapping: Eventually to switching for more detail later</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr> 
+                            <th>Backend & <br> Services</th>
+                            <td>
+                                <div class="project-logos-modal">
+                                    <a href="https://supabase.com" target="_blank" class="project-logo-item" title="Supabase">
+                                        <img src="/assets/tech-logos/supabase-logo.png" alt="Supabase">
+                                    </a>
+                                    <p style="display: table-cell; vertical-align: middle; margin: 0;">- BaaS: database, auth, storage</p>
+                                </div>
+                                <div class="project-logos-modal">
+                                    <a href="https://docs.cloud.google.com/docs/authentication" target="_blank" class="project-logo-item" title="Google Cloud Authentication">
+                                        <img src="/assets/tech-logos/gcloudauth-logo.png" alt="Google Cloud OAuth">
+                                    </a>
+                                    <p style="display: table-cell; vertical-align: middle; margin: 0;">Authentication / GCP Identity Platform </p>
+                                </div>
+                                <div class="project-logos-modal">
+                                    <a href="https://openrouter.ai/" target="_blank" class="project-logo-item" title="OpenRouter">
+                                        <img src="/assets/tech-logos/openrouter-logo.jpeg" alt="OpenRouter">
+                                    </a>
+                                    <p style="display: table-cell; vertical-align: middle; margin: 0;">LLM gateway</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr> 
+                            <th>AI & <br> Model Layer</th>
+                            <td>
+                                <div class="project-logos-modal">
+                                    <a href="https://qwen.ai/apiplatform" target="_blank" class="project-logo-item" title="Qwen">
+                                        <img src="/assets/tech-logos/qwen-logo.png" alt="Qwen">
+                                    </a>
+                                    <p style="display: table-cell; vertical-align: middle; margin: 0;">Qwen3-32B (primary model)</p>
+                                </div>
+                                <p style="display: table-cell; vertical-align: middle; margin: 0;">&ensp; Other Models/Currently Benchmarking: </p>
+                                <div class="project-logos-modal">
+                                    <a href="https://openai.com/api/" target="_blank" class="project-logo-item" title="OpenAI">
+                                        <img src="/assets/tech-logos/openai-logo.png" alt="OpenAI">
+                                    </a>
+                                    <a href="https://ai.google.dev/gemini-api/docs" target="_blank" class="project-logo-item" title="Gemini">
+                                        <img src="/assets/tech-logos/gemini-logo.png" alt="Gemini">
+                                    </a>
+                                    <a href="https://platform.claude.com/docs/en/home" target="_blank" class="project-logo-item" title="Claude">
+                                        <img src="/assets/tech-logos/claude-logo.png" alt="Claude">
+                                    </a>
+                                    <a href="https://api-docs.deepseek.com/" target="_blank" class="project-logo-item" title="Deepseek">
+                                        <img src="/assets/tech-logos/deepseek-logo.png" alt="Deepseek">
+                                    </a>
+                                    <a href="https://mistral.ai/" target="_blank" class="project-logo-item" title="Mistral">
+                                        <img src="/assets/tech-logos/mistral-logo.png" alt="Mistral">
+                                    </a>
+                                    <a href="https://platform.moonshot.ai/" target="_blank" class="project-logo-item" title="Kimi">
+                                        <img src="/assets/tech-logos/kimi-logo.png" alt="Kimi">
+                                    </a>
+                                </div>
+                                <div class="project-logos-modal">
+                                    <a href="https://www.postman.com/" target="_blank" class="project-logo-item" title="Postman">
+                                        <img src="/assets/tech-logos/postman-logo.png" alt="Postman">
+                                    </a>
+                                    <p style="display: table-cell; vertical-align: middle; margin: 0;">Benchmarking API Platform</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr> 
+                            <th style="padding: 1rem;">Infrastructure <br> & Deployment</th>
+                            <td>
+                                <div class="project-logos-modal">
+                                    <a href="https://vercel.com/docs" target="_blank" class="project-logo-item" title="Vercel">
+                                        <img src="/assets/tech-logos/vercel-logo.png" alt="Vercel">
+                                    </a>
+                                    <p style="display: table-cell; vertical-align: middle; margin: 0;">Frontend Hosting </p>
+                                </div>
+                            </td>
+                        </tr>
+                        </table>
+                        <br>
+
+                        <h3>A couple notes on the Tech Stack: </h3>
+                        <ul>
+                            <li><strong>Where does the data go & who can see it? </strong>  
+                                All user data is stored securely in Supabase (a cloud-based PostgreSQL database). Each user's personal 
+                                information and itineraries are private to them only. Data is never shared with third parties or other users.</li>
+                                <ul>
+                                    <li><b>What's stored:</b> </li>
+                                    <ul>
+                                        <li>User profile info (email, avatar, name)</li>
+                                        <li>Saved itineraries (trip plans you choose to save)</li>
+                                        <li>Trip preferences (transportation, budget, accommodation)</li>
+                                    </ul>
+                                    <li><b>Who can see it:</b> </li>
+                                    <ul>
+                                        <li>You - Only you can access your own saved itineraries.</li>
+                                        <li>Park Compass developers - Cannot see individual user data (only anonymous usage analytics). For example, I can see how many trips were planned for Big Bend National Park, but I can't see which user planned it, nor the trip dates, interests, etc.</li>
+                                        <li>Other users - Cannot see your data at all, though I do plan to add a community feature that allows users to follow each other, where they will eventually be able to see your public profile.</li>
+                                    </ul>
+                                    <li><b>What's NOT stored:</b> </li>
+                                    <ul>
+                                        <li>AI-generated itineraries that you don't explicitly save are <b>automatically deleted</b> when you leave the page.</li>
+                                        <li>Your OpenRouter AI requests are processed in real-time but not stored permanently.</li>
+                                    </ul>
+                                </ul>
+                            <li><strong>What about security? </strong> Park Compass uses Supabase Row Level Security (RLS) to ensure users 
+                                can only access their own data. Here's how it works: </li>
+                                <ul>
+                                    <li><b>Authentication:</b> </li>
+                                    <ul>
+                                        <li>Email/Password or Google OAuth 2.0 for secure login</li>
+                                        <li>Passwords are hashed using bcrypt (industry standard)</li>
+                                        <li>JWT tokens expire and require refresh</li>
+                                    </ul>
+                                    <li><b>Row Level Security Policies (example SQL query):</b> </li>
+                                        <pre>
+    <code>
+        -- Example: Users can only see their OWN itineraries
+        CREATE POLICY "Users can view own itineraries"
+        ON itineraries FOR SELECT
+        USING (auth.uid() = user_id);
+    </code>
+                                        </pre>
+
+                                    <li><b>Additional Security Measures:</b> </li>
+                                    <ul>
+                                        <li>All API requests require a valid session token</li>
+                                        <li>HTTPS encryption for all data transmission</li>
+                                        <li>Environment variables for API keys (never exposed to client)</li>
+                                        <li>Supabase Edge Functions act as a proxy to OpenRouter (API key hidden from frontend)</li>
+                                        <li>CORS policies restrict unauthorized domains</li>
+                                    </ul>
+
+                                    <li><b>In simple terms:</b> You can only see and edit your own trips. No one else can access your data, not even by guessing URLs.</li>
+                                </ul>
+
+                            <li><strong>AI Model - Is my data training the AI? </strong> 
+                                <br>
+                                <b>Short answer:</b> No, your data is NOT training the AI model.
+                                <br>
+                                <b>Long answer:</b> Park Compass uses OpenRouter to access the Qwen 3-32B model. Here's the truth about AI training:
+                                <br><br>
+                                <table style="width: 100%;" border="1">
+                                    <tr> 
+                                        <th>Platform</th>
+                                        <th>Trains on your data?</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Park Compass (OpenRouter)</td>
+                                        <td>NO - Your data is NOT used for training</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ChatGPT (free tier)</td>
+                                        <td>YES - Can use your conversations for training</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ChatGPT (paid/API)</td>
+                                        <td>NO - API data is not used for training</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Claude (free)</td>
+                                        <td>Yes, with opt-out options</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gemini (free)</td>
+                                        <td>Yes, with privacy settings</td>
+                                    </tr>
+                                </table>
+                                <br>
+                                What this means for you:
+                                <ul>
+                                    <li>The park information, dates, and preferences you enter are sent ONLY to generate your itinerary.</li>
+                                    <li>OpenRouter's API policy states: "We do not use API inputs and outputs to train our models"</li>
+                                    <li>Your data is processed in real-time and not retained for model improvement</li>
+                                </ul>
+                                Lastly, the above table refers to my own model benchmarking. The actual deployed version of Park Compass (what you
+                                have access to as a user) is currently using the Qwen model. In the future, I'm thinking about adding a feature that
+                                allows users to choose which model they want to use to generate their itinerary, but that's definitely a long-term stretch goal for now.
+                                <br><br>
+                                <b>Important disclaimer:</b> While Park Compass protects your data, be cautious with any online tool. 
+                                Never enter sensitive information like credit cards, social security numbers, or passwords into ANY AI chatbot 
+                                - even "secure" ones can have vulnerabilities.
+                                <br><br>
+                            </li>
+
+                            <li><strong>Information Accuracy? - How do I trust the AI? </strong> 
+                                Honest answer: AI models can make mistakes or provide outdated information. Park Compass is designed to be a 
+                                starting point for trip planning, not the final authority.
+                                <br>
+                                How we're improving accuracy:
+                                <ul>
+                                    <li><b>Coming soon:</b> Embedded links to official sources (NPS websites, reservation pages, activity details) so you can verify information with one click.</li>
+                                    <li><b>Coming soon:</b> References at the bottom of each section showing exactly where information came from, including full url links for printed pdf option.</li>
+                                </ul>
+                                <b>Your responsibility as a traveler:</b>
+                                <ul>
+                                    <li>Use Park Compass as an inspiration and planning tool</li>
+                                    <li>Always verify operating hours, fees, and reservation requirements on official park websites</li>
+                                    <li>Check current weather, trail conditions, and alerts before your trip</li>
+                                    <li>Call ahead for accommodations and activity availability</li>
+                                </ul>
+                                <b>Why this approach?</b><br>
+                                This is YOUR trip. No AI can replace your own research, local knowledge, and personal preferences. 
+                                Think of Park Compass as a knowledgeable friend who suggests ideas, but you're still the expert on what works best for you.
+                                
+                                <br><br><b>The golden rule of AI trip planning:</b><br>
+                                Never rely on one tool solely to do the work for you. Use AI to generate ideas, then verify with official sources.
+                            </li>
+                        </ul>
+
+                        <h2>Planning Phase/Hackathon Notes</h2>
+                        As I mentioned earlier, this project was originally a hackathon idea. Here are some of the original planning steps I took while brainstorming:
+                        <br><br>
+                        <!-- Media Carousel -->
+                        <div class="carousel-container">
+                            <div class="carousel-image-wrapper">
+                                <!-- Carousel Track -->
+                                <div class="carousel-track" id="carousel02">
+                                    <!-- Slides -->
+                                    <div class="carousel-slide"> <img src="/assets/projects/mod0/carousel02/slide1.png" alt="Slide1" class="carousel-image"> <p class="carousel-caption">Systems Architecture</p></div>
+                                    <div class="carousel-slide"> <img src="/assets/projects/mod0/carousel02/slide2.png" alt="Slide2" class="carousel-image"> <p class="carousel-caption">Happy Flow User Journey</p></div>
+                                    <div class="carousel-slide"> <img src="/assets/projects/mod0/carousel02/slide3.png" alt="Slide3" class="carousel-image"> <p class="carousel-caption">In-Depth User Flow</p></div>
+                                    <div class="carousel-slide"> <img src="/assets/projects/mod0/carousel02/slide4.png" alt="Slide4" class="carousel-image"> <p class="carousel-caption">Info Architecture</p></div>
+                                    <div class="carousel-slide"> <img src="/assets/projects/mod0/carousel02/slide5.png" alt="Slide5" class="carousel-image"> <p class="carousel-caption">Landing Page Wireframes</p></div>
+                                    <div class="carousel-slide"> <img src="/assets/projects/mod0/carousel02/slide6.jpg" alt="Slide6" class="carousel-image"> <p class="carousel-caption">Planning Page Wireframes</p></div>
+                                    <div class="carousel-slide"> <img src="/assets/projects/mod0/carousel02/slide7.png" alt="Slide7" class="carousel-image"> <p class="carousel-caption">Hackathon Presentation - Slide 1</p></div>
+                                    <div class="carousel-slide"> <img src="/assets/projects/mod0/carousel02/slide8.png" alt="Slide8" class="carousel-image"> <p class="carousel-caption">Hackathon Presentation - Slide 2</p></div>
+                                    <div class="carousel-slide"> <img src="/assets/projects/mod0/carousel02/slide9.png" alt="Slide9" class="carousel-image"> <p class="carousel-caption">Hackathon Presentation - Slide 3</p></div>
+                                    <div class="carousel-slide"> <img src="/assets/projects/mod0/carousel02/slide10.png" alt="Slide10" class="carousel-image"> <p class="carousel-caption">Hackathon Presentation - Slide 4</p></div>
+                                    <div class="carousel-slide"> <img src="/assets/projects/mod0/carousel02/slide11.png" alt="Slide11" class="carousel-image"> <p class="carousel-caption">Hackathon Presentation - Slide 5</p></div>
+                                    <div class="carousel-slide"> <img src="/assets/projects/mod0/carousel02/slide12.png" alt="Slide12" class="carousel-image"> <p class="carousel-caption">Hackathon Presentation - Slide 6</p></div>
+                                    <div class="carousel-slide"> <img src="/assets/projects/mod0/carousel02/slide13.png" alt="Slide13" class="carousel-image"> <p class="carousel-caption">Hackathon Presentation - Slide 7</p></div>
+                                    <div class="carousel-slide"> <img src="/assets/projects/mod0/carousel02/slide14.png" alt="Slide14" class="carousel-image"> <p class="carousel-caption">Hackathon Presentation - Slide 8</p></div>
+                                </div>
+
+                                <!-- Navigation Buttons -->
+                                <button class="carousel-btn carousel-prev" onclick="moveCarousel('carousel02', -1)">❮</button>
+                                <button class="carousel-btn carousel-next" onclick="moveCarousel('carousel02', 1)">❯</button>
+                            </div>
+
+                            <!-- Indicators -->
+                            <div class="carousel-indicators" id="indicators02">
+                                <span class="carousel-indicator active" onclick="jumpToSlide('carousel02', 0)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel02', 1)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel02', 2)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel02', 3)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel02', 4)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel02', 5)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel02', 6)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel02', 7)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel02', 8)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel02', 9)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel02', 10)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel02', 11)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel02', 12)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel02', 13)"></span>
+                            </div>
+                        </div>
+                        
+                        
+                        <h2>Version Iterations</h2>
+                        <p><b>Checkout the current version of the site: </b> <a href="https://park-compass.vercel.app/" target="_blank" class="content-link" class="project-advisor-link"><i>https://park-compass.vercel.app/</i></a></p>
+                        <h3>Version 1</h3>
+                        <!-- Media Carousel -->
+                        <div class="carousel-container">
+                            <!-- Carousel Track -->
+                            <div class="carousel-track" id="carousel0">
+                                <!-- Slides -->
+                                <div class="carousel-slide"> <img src="/assets/projects/mod0-slides/v1-pg01.png" alt="Slide1" class="carousel-image"> <!-- <p>Caption</p>--></div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod0-slides/v1-pg02.png" alt="Slide2" class="carousel-image"> </div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod0-slides/v1-pg03.png" alt="Slide3" class="carousel-image"> </div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod0-slides/v1-pg04.png" alt="Slide4" class="carousel-image"> </div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod0-slides/v1-pg05.png" alt="Slide5" class="carousel-image"> </div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod0-slides/v1-pg06.png" alt="Slide6" class="carousel-image"> </div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod0-slides/v1-pg07.png" alt="Slide7" class="carousel-image"> </div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod0-slides/v1-pg08.png" alt="Slide8" class="carousel-image"> </div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod0-slides/v1-pg09.png" alt="Slide9" class="carousel-image"> </div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod0-slides/v1-pg10.png" alt="Slide10" class="carousel-image"> </div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod0-slides/v1-pg11.png" alt="Slide11" class="carousel-image"> </div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod0-slides/v1-pg12.png" alt="Slide12" class="carousel-image"> </div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod0-slides/v1-pg13.png" alt="Slide13" class="carousel-image"> </div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod0-slides/v1-pg14.png" alt="Slide14" class="carousel-image"> </div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod0-slides/v1-pg15.png" alt="Slide15" class="carousel-image"> </div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod0-slides/v1-pg16.png" alt="Slide16" class="carousel-image"> </div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod0-slides/v1-pg17.png" alt="Slide17" class="carousel-image"> </div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod0-slides/v1-pg18.png" alt="Slide18" class="carousel-image"> </div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod0-slides/v1-pg19.png" alt="Slide19" class="carousel-image"> </div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod0-slides/v1-pg20.png" alt="Slide20" class="carousel-image"> </div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod0-slides/v1-pg21.png" alt="Slide21" class="carousel-image"> </div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod0-slides/v1-pg22.png" alt="Slide22" class="carousel-image"> </div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod0-slides/v1-pg23.png" alt="Slide23" class="carousel-image"> </div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod0-slides/v1-pg24.png" alt="Slide24" class="carousel-image"> </div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod0-slides/v1-pg25.png" alt="Slide25" class="carousel-image"> </div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod0-slides/v1-pg26.png" alt="Slide26" class="carousel-image"> </div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod0-slides/v1-pg27.png" alt="Slide27" class="carousel-image"> </div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod0-slides/v1-pg28.png" alt="Slide28" class="carousel-image"> </div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod0-slides/v1-pg29.png" alt="Slide29" class="carousel-image"> </div>
+                            </div>
+
+                            <!-- Navigation Buttons -->
+                            <button class="carousel-btn carousel-prev" onclick="moveCarousel('carousel0', -1)">❮</button>
+                            <button class="carousel-btn carousel-next" onclick="moveCarousel('carousel0', 1)">❯</button>
+
+                            <!-- Indicators -->
+                            <div class="carousel-indicators" id="indicators0">
+                                <span class="carousel-indicator active" onclick="jumpToSlide('carousel0', 0)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel0', 1)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel0', 2)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel0', 3)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel0', 4)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel0', 5)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel0', 6)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel0', 7)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel0', 8)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel0', 9)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel0', 10)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel0', 11)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel0', 12)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel0', 13)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel0', 14)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel0', 15)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel0', 16)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel0', 17)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel0', 18)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel0', 19)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel0', 20)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel0', 21)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel0', 22)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel0', 23)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel0', 24)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel0', 25)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel0', 26)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel0', 27)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel0', 28)"></span>
+                            </div>
+                        </div>
+
+                        <h2>Limitations</h2>
+                        <br>
+                        <table style="width: 100%;" border="1">
+                            <tr> 
+                                <th>Limitation</th>
+                                <th>Why</th>
+                                <th>Impact</th>
+                            </tr>
+                            <tr>
+                                <th>Token limits</th>
+                                <td>OpenRouter free tier caps response length</td>
+                                <td>Trips >12 days may truncate</td>
+                            </tr>
+                            <tr>
+                                <th>Latency</th>
+                                <td>Qwen model + free API tier</td>
+                                <td>15-45 second generation time</td>
+                            </tr>
+                            <tr>
+                                <th>Rate limiting</th>
+                                <td>Shared API resources</td>
+                                <td>May queue during peak usage</td>
+                            </tr>
+                            <tr>
+                                <th>Storage</th>
+                                <td>Supabase free tier (500MB)</td>
+                                <td>~50 saved itineraries per user</td>
+                            </tr>
+                        </table>
+                        <br>
+                        <b>Current Solutions: </b>
+                        <ul>
+                            <li>Warning system for trips >14 days</li>
+                            <li>Fallback itineraries when truncation occurs</li>
+                            <li>Progress indicators to manage expectations</li>
+                            <li>Save reminders so you don't lose work</li>
+                        </ul>
+                        
+                        <h2>Next Steps</h2>
+                        <br>
+                        <table style="width: 100%;" border="1">
+                            <tr> 
+                                <th>Ongoing</th>
+                                <th>Major Features</th>
+                                <th>Pages</th>
+                                <th>Stretch Goals</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li>Updating the UI relevant to the major features being worked on.</li>
+                                        <li>Model Benchmarking</li>
+                                        <li><b>Itinerary Improvement:</b> Including Embedded links to external resources referenced to in the generated itinerarys.</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li><b>Itinerary Page: </b>Share option</li>
+                                        <li><b>Itinerary Page: </b>PDF download</li>
+                                        <li><b>Itinerary Page: </b>Edit/typable</li>
+                                        <li><b>Itinerary Page: </b>Chatbot on the side to assist in editing</li>
+                                        <li><b>Dashboard Page: </b>Delete/Archive/Filter/Visited? Indicator</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Templates</li>
+                                        <li>Resources</li>
+                                        <li>Community</li>
+                                        <li>FAQ</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>Weather API</li>
+                                        <li>Expanding to state parks</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        <br>
+                        <h2>Conclusion/Broader Impact</h2>
+                        <p>Not only do I think this is a fun project to work on in general, but I genuinely believe this can be a meaningul tool
+                            with a broader impact. By making national parks more <b>accessible</b>, Park Compass aims to cultivate interest, 
+                            <b>engagement</b>, and a deeper <i>public appreciation</i> for these natural treasures. This increased engagement
+                            helps foster a culture of stewardship, inspiring greater support aimed at <b>preserving</b> America's natural
+                            sanctuaries for our future generations. As I continue building this tool, I'll be updating the "Versions" section of 
+                            this project, so be sure to check in and follow along if you too would like to use Park Compass for future trip planning!
+                        </p>
+                    </div>
+
+                    <!-- PDF Link Button -->
+                    <div class="modal-pdf-section">
+                        <a href="https://park-compass.vercel.app/" target="_blank" class="modal-pdf-button">
+                            <span>Check out the current version of Park Compass here</span>
+                            <svg class="modal-pdf-arrow" viewBox="0 0 24 24" width="20" height="20">
+                                <path fill="currentColor" d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <br><br>
+                    <div class="modal-skills">
+                            <!-- Frontend -->
+                            <span class="modal-skill-tag">React</span>
+                            <span class="modal-skill-tag">Vite</span>
+                            <span class="modal-skill-tag">TailwindCSS</span>
+                            <span class="modal-skill-tag">Leaflet</span>
+                            <span class="modal-skill-tag">Mapbox</span>
+    
+                            <!-- Backend & Services -->
+                            <span class="modal-skill-tag">Supabase</span>
+                            <span class="modal-skill-tag">Google Cloud Authentication</span>
+                            <span class="modal-skill-tag">OpenRouter</span>
+                            
+                            <!-- AI & Model Layer -->
+                            <span class="modal-skill-tag">Qwen3-32B</span>
+                            <span class="modal-skill-tag">OpenAI</span>
+                            <span class="modal-skill-tag">Gemini</span>
+                            <span class="modal-skill-tag">Claude</span>
+                            <span class="modal-skill-tag">Deepseek</span>
+                            <span class="modal-skill-tag">Mistral</span>
+                            <span class="modal-skill-tag">Kimi</span>
+                            <span class="modal-skill-tag">Postman</span>
+                            
+                            <!-- Infrastructure & Deployment -->
+                            <span class="modal-skill-tag">Github</span>
+                            <span class="modal-skill-tag">Vercel</span>
+                        </div>
+                </div>
+            </div>
+
             <!-- Modal 1: Quantum Machine Learning for Leukemia Genomics -->
             <div id="modal1" class="project-modal">
                 <div class="modal-content">

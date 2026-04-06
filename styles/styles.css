@@ -530,6 +530,10 @@ body {
     box-sizing: border-box;
 }
 
+.carousel-image-wrapper {
+    position: relative;
+}
+
 /* Carousel Image */
 .carousel-image {
     width: 100%;
@@ -544,8 +548,8 @@ body {
 /* Carousel Caption */
 .carousel-caption {
     text-align: center;
-    margin-top: 0.75rem;
-    margin-bottom: 0.75rem;
+    margin-top: 0.75rem !important;
+    margin-bottom: 0 !important;
     color: #6b7280;
     font-size: 0.9rem;
     font-style: italic;
@@ -554,7 +558,8 @@ body {
 /* Carousel Navigation Buttons */
 .carousel-btn {
     position: absolute;
-    top: 50%;
+    /* top: 50%; */
+    top: calc(50% - 1.2rem);
     transform: translateY(-50%);
     background-color: rgba(255, 255, 255, 0.9);
     color: #4b5563;
@@ -580,11 +585,11 @@ body {
 }
 
 .carousel-prev {
-    left: 15px;
+    left: 5px;
 }
 
 .carousel-next {
-    right: 15px;
+    right: 5px;
 }
 
 /* Carousel Indicators (dots) */
