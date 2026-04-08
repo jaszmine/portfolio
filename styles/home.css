@@ -2,8 +2,8 @@
     display: flex;
     align-items: center;
     min-height: calc(100vh - 80px);
-    padding: 60px 60px;
-    gap: 60px;
+    padding: 60px 30px;
+    gap: 70px;
     flex-wrap: wrap;
     /* justify-content: space-between; */
 }
@@ -302,4 +302,332 @@ canvas {
 
 .contact-link:hover {
     transform: translateY(-4px) scale(1.05);
+}
+
+/* ========== ===================== ========== */
+/* ========== Home Hexagon Timeline ========== */
+/* ========== ===================== ========== */
+
+/* 
+   Alternates hexagons left / right of a centre spine.
+   Each item:  hex  →  connector (dot + line)  →  label
+*/
+ 
+/* ── Section wrapper ──────────────────────────────────────── */
+.hex-timeline {
+  padding: 80px 24px;
+  /* Reduced max-width pulls the labels and hexes closer to center */
+  max-width: 800px; 
+  margin: 0 auto;
+  color: #fff;
+  overflow-x: hidden; /* Prevents slight scroll issues with negative margins */
+}
+
+.hex-timeline__heading {
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+}
+
+/* ── Track ────────────────────────────────────────────────── */
+.hex-timeline__track {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── Individual timeline item ─────────────────────────────── */
+.hex-timeline__item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  
+  /* Controls vertical interlocking. 
+     A more negative value (e.g., -40px) makes them touch more. */
+  margin-top: -15px; 
+}
+
+.hex-timeline__side {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  min-width: 0; /* Prevents flex items from overflowing */
+}
+
+/* CENTERING LOGIC:
+   use negative margins to pull the hexagons toward the center line
+*/
+
+
+/* Left Side Items: Label is in the left-side container */
+.hex-timeline__item[data-side="left"] .hex-timeline__side--left {
+  justify-content: flex-end;
+}
+
+/* Right Side Items: Label is in the right-side container */
+.hex-timeline__item[data-side="right"] .hex-timeline__side--right {
+  justify-content: flex-start;
+}
+
+
+/* ── Hexagon ─────────────────────────────────────────────── */
+.hex-timeline__hex-link {
+  flex-shrink: 0;
+  z-index: 2;
+  margin: 0 10px; /* Small horizontal gap between hexes if needed */
+}
+
+/* Shift LEFT items slightly to the right of center */
+.hex-timeline__item[data-side="left"] .hex-timeline__hex-link {
+  margin-right: -25px; /* Half of the hexagon's overlap width */
+  margin-left: 25px;
+}
+
+/* Shift RIGHT items slightly to the left of center */
+.hex-timeline__item[data-side="right"] .hex-timeline__hex-link {
+  margin-left: -40px; /* Half of the hexagon's overlap width */
+  margin-right: 40px;
+}
+
+.hex-timeline__hex {
+  width: 110px;
+  height: 126px;
+  background: #ddd;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  overflow: hidden;
+  /* This creates a thin "outline" around the clipped shape */
+  filter: drop-shadow(0 0 2px #fff);
+}
+
+.hex-timeline__hex img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease-in-out;
+  filter: grayscale(100%); /* Make this image black and white */
+}
+
+.hex-timeline__item:hover .hex-timeline__hex img,
+.hex-timeline__hex-link:hover .hex-timeline__hex img {
+  transform: scale(1.2);
+  filter: grayscale(0%); /* Turns back to color on hover */
+}
+
+.hex-timeline__item:hover .hex-timeline__hex {
+  filter: brightness(1.1);
+  transition: filter 0.3s ease;
+}
+
+
+.hex-img-utd {
+    /* Shows the whole logo instead of cropping it */
+    object-fit: contain !important;     /* Shows the whole logo instead of cropping it */
+    background: #e87503;             /* Adds a background if the logo is transparent */
+    padding: 0px;                 /* Shrinks the logo slightly so it doesn't touch the edges */
+}
+
+.hex-img-rr {
+    /* Shows the whole logo instead of cropping it */
+    object-fit: contain !important;     /* Shows the whole logo instead of cropping it */
+    background: #aad3e0;             /* Adds a background if the logo is transparent */
+    padding: 0px;                 /* Shrinks the logo slightly so it doesn't touch the edges */
+}
+
+.hex-img-qml {
+    /* Shows the whole logo instead of cropping it */
+    object-fit: contain !important;     /* Shows the whole logo instead of cropping it */
+    background: white;             /* Adds a background if the logo is transparent */
+    padding: 0px;                 /* Shrinks the logo slightly so it doesn't touch the edges */
+}
+
+.hex-img-asl {
+    /* Shows the whole logo instead of cropping it */
+    object-fit: scale-down !important;     /* Shows the whole logo instead of cropping it */
+    background: #f18912;             /* Adds a background if the logo is transparent */
+    padding: 0px;                 /* Shrinks the logo slightly so it doesn't touch the edges */
+}
+
+.hex-img-bp {
+    /* Shows the whole logo instead of cropping it */
+    object-fit: scale-down !important;     
+    background: white;             /* Adds a background if the logo is transparent */
+    padding: 0px;                 /* Shrinks the logo slightly so it doesn't touch the edges */
+}
+
+/* ── Connector (The Line and Dot) ────────────────────────── */
+.hex-timeline__connector {
+  display: flex;
+  align-items: center;
+  /* Controls the horizontal distance to the text */
+  width: 90px; 
+  flex-shrink: 0;
+}
+
+/* Left item: [Label] [Dot--Line] [Hex] */
+.hex-timeline__item[data-side="left"] .hex-timeline__connector {
+  flex-direction: row;
+  margin-right: 10px; /* INCREASE this (e.g., 20px) to push text away from dot */
+  margin-left: 15px; /* btwn dot and text */
+}
+
+/* Right item: [Hex] [Line--Dot] [Label] */
+.hex-timeline__item[data-side="right"] .hex-timeline__connector {
+  flex-direction: row;
+  margin-left: 10px;  /* INCREASE this (e.g., 20px) to push text away from dot */
+  margin-right: 15px; /* btwn dot and text */
+}
+
+.hex-timeline__dot {
+  width: 8px;
+  height: 8px;
+  background: currentColor;
+  border-radius: 50%;
+  opacity: 0.8;
+  flex-shrink: 0;
+}
+
+.hex-timeline__line {
+  height: 2px;
+  background: currentColor;
+  opacity: 0.3;
+  flex-grow: 1;
+}
+
+/* ── Label ───────────────────────────────────────────────── */
+.hex-timeline__label {
+  text-decoration: none;
+  color: inherit;
+  /* Lower width brings the whole layout tighter to center */
+  width: 200px; 
+}
+
+.hex-timeline__item[data-side="left"] .hex-timeline__label {
+  text-align: right;
+  margin-right: 12px;
+}
+
+.hex-timeline__item[data-side="right"] .hex-timeline__label {
+  text-align: left;
+  margin-left: 12px;
+}
+
+.hex-timeline__year {
+    display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  opacity: 0.5;
+}
+
+.hex-timeline__title {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .hex-timeline__item,
+  .hex-timeline__item[data-side="left"],
+  .hex-timeline__item[data-side="right"] {
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 0 !important;
+    margin-top: 20px;
+    text-align: center !important;
+  }
+
+  .hex-timeline__connector {
+    flex-direction: column !important;
+    width: 2px;
+    height: 40px;
+    margin: 10px 0;
+  }
+
+  .hex-timeline__line {
+    width: 2px;
+    height: 100%;
+  }
+
+  .hex-timeline__label {
+    text-align: center !important;
+    margin: 0 !important;
+  }
+}
+
+/* Container for the two hexagons */
+.hex-timeline__center-pair {
+  display: flex;
+  gap: 4px; /* Space between the two hexagons on the same row */
+  flex-shrink: 0;
+  z-index: 2;
+  /* Adjust this to align with the staggered hexagons above/below */
+  margin: 0 -28px; 
+}
+
+/* Adjust the double row behavior */
+.hex-timeline__item--double {
+  justify-content: center;
+}
+
+/* Ensure the labels in a double row align correctly */
+.hex-timeline__item--double .hex-timeline__side--left {
+  justify-content: flex-end;
+}
+
+.hex-timeline__item--double .hex-timeline__side--right {
+  justify-content: flex-start;
+}
+
+/* If you want the double hexagons to interlock with a single hexagon below it: */
+.hex-timeline__item--double + .hex-timeline__item:not(.hex-timeline__item--double) {
+  margin-top: -38px;
+}
+
+/* */
+
+.hex-timeline__tooltip {
+  position: fixed;
+  z-index: 9999;
+  pointer-events: none; /* Crucial: prevents the tooltip from blocking the hover */
+  background: rgba(20, 20, 20, 0.95);
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  max-width: 250px;
+  line-height: 1.4;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  border: 1px solid rgba(255,255,255,0.1);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.hex-timeline__tooltip.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* */
+
+.timeline-icon-header {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;
+  margin-bottom: 20px;    /* Space between icon and the first hexagon */
+  width: 100%;
+}
+
+.timeline-icon-header .hex-tooltip-trigger {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: help;
+  padding: 10px;          /* Makes the "hover" area larger and easier to hit */
+  font-size: 1.5rem;      /* Adjust icon size here */
+  color: rgba(255, 255, 255, 0.6); /* Match your timeline theme */
+  transition: color 0.3s ease;
+}
+
+.timeline-icon-header .hex-tooltip-trigger:hover {
+  color: #fff;            /* Brightens on hover */
 }

@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
+
 <body class="home-page">
 
     <!-- Navigation -->
@@ -49,6 +51,7 @@
 
     <!-- Main Content -->
     <main class="container">
+        <!-- LANDING SECTION -->
         <section class="hero">
             <div class="hero-content">
                 <h1 class="hero-title">Hello, I'm <span class="highlight" data-text="Jaszmine DeFranco">Jaszmine DeFranco</span></h1>
@@ -71,7 +74,7 @@
             </div>
         </section>
 
-        <!-- Main about section with grid container -->
+    <!-- ABOUT SECTION w/ grid container -->
     <section class="about-section">
         <!-- Text content (left column) -->
         <div class="about-text">
@@ -106,28 +109,6 @@
                     class="profile-photo">
             </div>
         </div>
-
-        <!-- Highlights (full width below) -->
-        <!-- <div class="about-below">
-            <div class="about-highlights">
-                <div class="highlight-item">
-                    <span class="highlight-icon">🎓</span>
-                    <span>Computer Science Graduate</span>
-                </div>
-                <div class="highlight-item">
-                    <span class="highlight-icon">⚛️</span>
-                    <span>Quantum Computing Enthusiast</span>
-                </div>
-                <div class="highlight-item">
-                    <span class="highlight-icon">🚀</span>
-                    <span>Innovative Technologies</span>
-                </div>
-                <div class="highlight-item">
-                    <span class="highlight-icon">📷</span>
-                    <span>Photography</span>
-                </div>
-            </div>
-        </div> -->
     </section>
 
         <!-- icons: atom, code, briefcase, camera -->
@@ -163,8 +144,219 @@
             </div>
         </section> -->
 
+        <!-- SUMMARY TIMELINE SECTION -->
+    
+        <section class="hex-timeline" id="timeline">
+            <h1 class="section-title"><span class="highlight" data-text="My Journey">My Journey</span></h1>
+            <div class="timeline-icon-header">
+                <span class="hex-tooltip-trigger" data-desc="Work Experience">
+                    <i class="fas fa-briefcase"></i>
+                </span>
+                <span class="hex-tooltip-trigger" data-desc="Student-Org Projects">
+                    <i class="fas fa-rocket"></i>
+                </span>
+                <span class="hex-tooltip-trigger" data-desc="Course Projects">
+                    <i class="fas fa-graduation-cap"></i>
+                </span>
+            </div>
+            <br><br>
+
+            <div class="hex-timeline__track">
+
+                <!-- <div class="hex-timeline__item hex-timeline__item--double">
+    
+                        <div class="hex-timeline__side hex-timeline__side--left">
+                            <a class="hex-timeline__label" href="#">
+                            <span class="hex-timeline__year">2024</span>
+                            <span class="hex-timeline__title">Project A</span>
+                            </a>
+                            <div class="hex-timeline__connector">
+                            <span class="hex-timeline__dot"></span>
+                            <span class="hex-timeline__line"></span>
+                            </div>
+                        </div>
+
+                        <div class="hex-timeline__center-pair">
+                            <a class="hex-timeline__hex-link" href="#"><div class="hex-timeline__hex"></div></a>
+                            <a class="hex-timeline__hex-link" href="#"><div class="hex-timeline__hex"></div></a>
+                        </div>
+
+                        <div class="hex-timeline__side hex-timeline__side--right">
+                            <div class="hex-timeline__connector">
+                            <span class="hex-timeline__line"></span>
+                            <span class="hex-timeline__dot"></span>
+                            </div>
+                            <a class="hex-timeline__label" href="#">
+                            <span class="hex-timeline__year">2024</span>
+                            <span class="hex-timeline__title">Project B</span>
+                            </a>
+                        </div>
+                    </div> -->
+
+    <!-- anqc --------------------------------------------------------------- -->
+
+                <div class="hex-timeline__item" data-side="left">
+                    <div class="hex-timeline__side hex-timeline__side--left">
+                        <a class="hex-timeline__label" href="experiences.html#anqc" 
+                        data-desc="Conducted Entanglement Assisted Quantum Error Correction Research - Published 2026.">
+                            <span class="hex-timeline__year">2025</span>
+                            <i class="fas fa-briefcase"></i>
+                            <span class="hex-timeline__title">&nbsp;Undergraduate Researcher — UTD Computer Science</span>
+                        </a>
+                        <div class="hex-timeline__connector">
+                            <span class="hex-timeline__dot"></span>
+                            <span class="hex-timeline__line"></span>
+                        </div>
+                    </div>
+
+                    <a class="hex-timeline__hex-link" href="experiences.html#anqc" aria-label="Undergraduate Researcher">
+                        <div class="hex-timeline__hex">
+                            <img src="assets/home-timeline/utd.png" class="hex-img-utd" alt="UTD Logo" loading="lazy" />
+                        </div>
+                    </a>
+
+                    <div class="hex-timeline__side hex-timeline__side--right"></div>
+                </div>
+
+    <!-- rr --------------------------------------------------------------- -->
+
+                <div class="hex-timeline__item" data-side="right">
+                    <div class="hex-timeline__side hex-timeline__side--left"></div>
+
+                    <a class="hex-timeline__hex-link" href="projects.html#rr" aria-label="Risk Radar: Tweet Analysis for Disaster Crisis Response">
+                        <div class="hex-timeline__hex">
+                            <img src="assets/home-timeline/rr.png" class="hex-img-rr" alt="Risk Radar Heatmap" loading="lazy" />
+                        </div>
+                    </a>
+
+                    <div class="hex-timeline__side hex-timeline__side--right">
+                        <div class="hex-timeline__connector">
+                            <span class="hex-timeline__line"></span>
+                            <span class="hex-timeline__dot"></span>
+                        </div>
+                        <a class="hex-timeline__label" href="projects.html#rr" 
+                        data-desc="Developed a near real-time crisis detection system using the Bluesky API, benchmarking LLMs to classify 25K+ disaster-related posts.">
+                            <span class="hex-timeline__year">Fall 2025</span>
+                            <i class="fas fa-graduation-cap"></i>
+                            <span class="hex-timeline__title">&nbsp;Data Science Lead - Tweet Analysis for Disaster Crisis Response</span>
+                        </a>
+                    </div>
+                </div>
+
+    <!-- qml --------------------------------------------------------------- -->
+
+                <div class="hex-timeline__item" data-side="left">
+                    <div class="hex-timeline__side hex-timeline__side--left">
+                        <a class="hex-timeline__label" href="projects.html#qml" 
+                        data-desc="Engineered quantum and classical ML models to classify leukemia subtypes from gene-expression data.">
+                            <span class="hex-timeline__year">Fall 2025</span>
+                            <i class="fas fa-graduation-cap"></i>
+                            <span class="hex-timeline__title">&nbsp;Project Lead - Quantum Machine Learning for Leukemia Genomics</span>
+                        </a>
+                        <div class="hex-timeline__connector">
+                            <span class="hex-timeline__dot"></span>
+                            <span class="hex-timeline__line"></span>
+                        </div>
+                    </div>
+
+                    <a class="hex-timeline__hex-link" href="projects.html#qml" aria-label="Quantum Machine Learning for Leukemia Genomics">
+                        <div class="hex-timeline__hex">
+                            <img src="assets/home-timeline/qml.png" class="hex-img-qml" alt="Quantum Machine Learning for Leukemia Genomics" loading="lazy" />
+                        </div>
+                    </a>
+
+                    <div class="hex-timeline__side hex-timeline__side--right"></div>
+                </div>
+
+    <!-- asl --------------------------------------------------------------- -->
+
+                <div class="hex-timeline__item" data-side="right">
+                    <div class="hex-timeline__side hex-timeline__side--left"></div>
+
+                    <a class="hex-timeline__hex-link" href="experiences.html#asl" aria-label="Communications Specialist">
+                        <div class="hex-timeline__hex">
+                            <img src="assets/experience/asl-logo.png" class="hex-img-asl" alt="Art Sci Lab Logo" loading="lazy" />
+                        </div>
+                    </a>
+
+                    <div class="hex-timeline__side hex-timeline__side--right">
+                        <div class="hex-timeline__connector">
+                            <span class="hex-timeline__line"></span>
+                            <span class="hex-timeline__dot"></span>
+                        </div>
+                        <a class="hex-timeline__label" href="experiences.html#asl" 
+                        data-desc="Drove Lab engagement via strategic marketing, event coordination, and data-driven proposals.">
+                            <span class="hex-timeline__year">2024-25</span>
+                            <i class="fas fa-briefcase"></i>
+                            <span class="hex-timeline__title">&nbsp;Communications Specialist - UTD Art Sci Lab</span>
+                        </a>
+                    </div>
+                </div>
+
+    <!-- rck --------------------------------------------------------------- -->
+
+                <div class="hex-timeline__item" data-side="left">
+                    <div class="hex-timeline__side hex-timeline__side--left">
+                        <a class="hex-timeline__label" href="projects.html#rck" 
+                        data-desc="Designed & launched a high-powered rocket, leading flight simulations and 6-DOF analyses 
+                        to optimize performance at the 2024 IREC competition at Spaceport America.">
+                            <span class="hex-timeline__year">2024</span>
+                            <i class="fas fa-rocket"></i>
+                            <span class="hex-timeline__title">&nbsp;Simulation Lead - Comet Rocketry</span>
+                        </a>
+                        <div class="hex-timeline__connector">
+                            <span class="hex-timeline__dot"></span>
+                            <span class="hex-timeline__line"></span>
+                        </div>
+                    </div>
+
+                    <a class="hex-timeline__hex-link" href="projects.html#rck" aria-label="Simulation Lead">
+                        <div class="hex-timeline__hex">
+                            <img src="assets/home-timeline/rck.png" alt="Comet Rocketry" loading="lazy" />
+                        </div>
+                    </a>
+
+                    <div class="hex-timeline__side hex-timeline__side--right"></div>
+                </div>
+
+    <!-- bp --------------------------------------------------------------- -->
+
+                <div class="hex-timeline__item" data-side="right">
+                    <div class="hex-timeline__side hex-timeline__side--left"></div>
+
+                    <a class="hex-timeline__hex-link" href="experiences.html#bp" aria-label="EQCI Intern - bp/QxQ">
+                        <div class="hex-timeline__hex">
+                            <img src="assets/home-timeline/bp.png" class="hex-img-bp" alt="bp logo" loading="lazy" />
+                        </div>
+                    </a>
+
+                    <div class="hex-timeline__side hex-timeline__side--right">
+                        <div class="hex-timeline__connector">
+                            <span class="hex-timeline__line"></span>
+                            <span class="hex-timeline__dot"></span>
+                        </div>
+                        <a class="hex-timeline__label" href="experiences.html#bp" 
+                        data-desc="Implemented key algorithms (QKD, Grover's, QAOA, VQE), and collaborated with bp to explore hybrid quantum-classical solutions for energy optimization.">
+                            <span class="hex-timeline__year">Summer 2023</span>
+                            <i class="fas fa-briefcase"></i>
+                            <span class="hex-timeline__title">&nbsp;SWE/EQCI Intern - bp/QxQ</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="hex-timeline__tooltip" id="hexTooltip" aria-hidden="true"></div>
+ 
+ 
+ 
+
+
+
+        <!-- CONTACT SECTION -->
         <section class="section" id="contact">
-            <h2 class="section-title">Get In Touch</h2>
+            <h2 class="section-title"><span class="highlight" data-text="Get In Touch">Get In Touch</span></h2>
             <div class="contact-links">
                 <a href="https://www.linkedin.com/in/jaszmine-defranco/" target="_blank" class="contact-link cyan">
                     <i class="fab fa-linkedin"></i> LinkedIn
@@ -202,6 +394,76 @@
                 "name": "University of Texas at Dallas"
             }
         }
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+  const tooltip = document.getElementById('hexTooltip');
+  if (!tooltip) return;
+
+  /**
+   * 1. SELECT ALL TRIGGERS
+   * Includes hexagons, labels, and your new icon class
+   */
+  const triggers = document.querySelectorAll(
+    '.hex-timeline__label, .hex-timeline__hex-link, .hex-tooltip-trigger'
+  );
+
+  triggers.forEach(trigger => {
+    
+    // This helper finds the description string based on which part is hovered
+    const getDescription = (el) => {
+      // Priority 1: Direct data-desc (for icons and labels)
+      if (el.getAttribute('data-desc')) {
+        return el.getAttribute('data-desc');
+      }
+      
+      // Priority 2: Hexagon hover (find the description in the same row)
+      const parentItem = el.closest('.hex-timeline__item');
+      if (parentItem) {
+        const label = parentItem.querySelector('.hex-timeline__label');
+        return label ? label.getAttribute('data-desc') : '';
+      }
+      
+      return '';
+    };
+
+    const descText = getDescription(trigger);
+
+    // Only attach events if there is actually text to show
+    if (descText) {
+      trigger.addEventListener('mouseenter', () => {
+        tooltip.textContent = descText;
+        tooltip.classList.add('is-visible');
+      });
+
+      trigger.addEventListener('mousemove', (e) => {
+        const offset = 15;
+        let x = e.clientX + offset;
+        let y = e.clientY + offset;
+
+        // Prevention: Tooltip going off the right side of the screen
+        const tw = tooltip.offsetWidth;
+        if (x + tw > window.innerWidth - 10) {
+          x = e.clientX - tw - offset;
+        }
+
+        // Prevention: Tooltip going off the bottom of the screen
+        const th = tooltip.offsetHeight;
+        if (y + th > window.innerHeight - 10) {
+          y = e.clientY - th - offset;
+        }
+
+        tooltip.style.left = `${x}px`;
+        tooltip.style.top = `${y}px`;
+      });
+
+      trigger.addEventListener('mouseleave', () => {
+        tooltip.classList.remove('is-visible');
+      });
+    }
+  });
+});
     </script>
 </body>
 </html>
