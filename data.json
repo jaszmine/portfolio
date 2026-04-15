@@ -1,0 +1,112 @@
+[
+    {
+        "endDate": "2026-04-01",
+        "yearText": "Present",
+        "title": "&nbsp;Park Compass",
+        "hexHref": "projects.html#pc",
+        "imgSrc": "assets/home-timeline/pc.png",
+        "imgClass": "hex-img-pc",
+        "imgAlt": "Park Compass",
+        "dataDesc": "An interactive web app featuring personalized AI-generated park itineraries, dashboards, and trip documentation.",
+        "icon": "fas fa-paper-plane"
+    },
+    {
+        "endDate": "2025-12-20",
+        "yearText": "2025",
+        "title": "&nbsp;Undergraduate Researcher — UTD Computer Science",
+        "hexHref": "experiences.html#anqc",
+        "imgSrc": "assets/home-timeline/utd.png",
+        "imgClass": "hex-img-utd",
+        "imgAlt": "UTD logo",
+        "dataDesc": "Conducted Entanglement Assisted Quantum Error Correction Research - arXiv Preprint 2026.",
+        "icon": "fas fa-briefcase"
+    },
+    {
+        "endDate": "2025-12-19",
+        "yearText": "Fall 2025",
+        "title": "Data Science Lead - Tweet Analysis for Disaster Crisis Response",
+        "hexHref": "projects.html#rr",
+        "imgSrc": "assets/home-timeline/rr.png",
+        "imgClass": "hex-img-rr",
+        "imgAlt": "Risk Radar Heatmap",
+        "dataDesc": "Developed a near real-time crisis detection system using the Bluesky API, benchmarking LLMs to classify 25K+ disaster-related posts.",
+        "icon": "fas fa-graduation-cap"
+    },
+    {
+        "endDate": "2025-12-18",
+        "yearText": "Fall 2025",
+        "title": "Project Lead - Quantum Machine Learning for Leukemia Genomics",
+        "hexHref": "projects.html#qml",
+        "imgSrc": "assets/home-timeline/qml.png",
+        "imgClass": "hex-img-qml",
+        "imgAlt": "Quantum Machine Learning for Leukemia Genomics",
+        "dataDesc": "Engineered quantum and classical ML models to classify leukemia subtypes from gene-expression data.",
+        "icon": "fas fa-graduation-cap"
+    },
+    {
+        "endDate": "2025-12-17",
+        "yearText": "September 2025",
+        "title": "Inaugural Texas Quantum Summit",
+        "hexHref": "misc.html#tqs",
+        "imgSrc": "assets/home-timeline/tqs.png",
+        "imgClass": "",
+        "imgAlt": "2025 Texas Quantum Summit",
+        "dataDesc": "Attended the first ever Texas Quantum Summit, engaging with senators, startup founders, and researchers on quantum's role in driving economic growth, especially with regards to cross-sector collaboration in response to Texas Senate Bill 2827 which went into effect September 1, 2025.",
+        "icon": "fas fa-compass"
+    },
+    {
+        "endDate": "2025-12-16",
+        "yearText": "2024-25",
+        "title": "Communications Specialist - UTD Art Sci Lab",
+        "hexHref": "experiences.html#asl",
+        "imgSrc": "assets/home-timeline/asl.png",
+        "imgClass": "hex-img-asl",
+        "imgAlt": "Art Sci Lab Logo",
+        "dataDesc": "Drove Lab engagement via strategic marketing, event coordination, and data-driven proposals.",
+        "icon": "fas fa-briefcase"
+    },
+    {
+        "endDate": "2024-07-01",
+        "yearText": "2024",
+        "title": "Simulation Lead - Comet Rocketry",
+        "hexHref": "projects.html#rck",
+        "imgSrc": "assets/home-timeline/rck.png",
+        "imgClass": "hex-img-rck",
+        "imgAlt": "Comet Rocketry",
+        "dataDesc": "Designed & launched a high-powered rocket, leading flight simulations and 6-DOF analyses to optimize performance at the 2024 IREC competition at Spaceport America.",
+        "icon": "fas fa-rocket"
+    },
+    {
+        "endDate": "2024-02-11",
+        "yearText": "February 2024",
+        "title": "Solidworks: 3DEXPERIENCE World 2024",
+        "hexHref": "misc.html#sld",
+        "imgSrc": "assets/home-timeline/sld.png",
+        "imgClass": "hex-img-rck",
+        "imgAlt": "Comet Rocketry",
+        "dataDesc": "Attended 3DEXPERIENCE World 2024 as a member of UTD's AIAA group, showcasing student projects at an EDU booth engaging with engineers and designers.",
+        "icon": "fas fa-compass"
+    },
+    {
+        "endDate": "2023-09-17",
+        "yearText": "September 2023",
+        "title": "IEEE Quantum Week",
+        "hexHref": "misc.html#ieee",
+        "imgSrc": "assets/misc/3ieee.png",
+        "imgClass": "hex-img-rck",
+        "imgAlt": "IEEE Quantum Week",
+        "dataDesc": "Attended my first conference, IEEE Quantum Week, as a UTD Quantum Connect program participant, engaging with researchers, engineers, and entrepreneurs while exploring quantum algorithms, simulations, networking, hardware, and more.",
+        "icon": "fas fa-compass"
+    },
+    {
+        "endDate": "2023-08-01",
+        "yearText": "Summer 2023",
+        "title": "SWE/EQCI Intern - bp/QxQ",
+        "hexHref": "experiences.html#bp",
+        "imgSrc": "assets/home-timeline/bp.png",
+        "imgClass": "hex-img-rbpk",
+        "imgAlt": "bp logo",
+        "dataDesc": "Implemented key algorithms (QKD, Grover's, QAOA, VQE), and collaborated with bp to explore hybrid quantum-classical solutions for energy optimization.",
+        "icon": "fas fa-briefcase"
+    }
+]

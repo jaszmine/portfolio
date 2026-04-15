@@ -308,6 +308,92 @@ canvas {
 /* ========== Home Hexagon Timeline ========== */
 /* ========== ===================== ========== */
 
+/* ── New Grid Logic ── */
+.hex-grid-container {
+  --s: 140px;  /* Size of hexagon */
+  --g: 20px;   /* Gap between hexagons */
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--g);
+  
+  /* Enough width for 2 hexes + the staggered offset */
+  width: calc(2.5 * var(--s) + var(--g)); 
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.hex-item {
+  width: var(--s);
+  position: relative;
+  /* Nest rows vertically */
+  margin-bottom: calc(var(--s) / -4); 
+}
+
+/* Apply the honeycomb stagger to Row 2, 4, 6... */
+.hex-item:nth-child(4n+3),
+.hex-item:nth-child(4n+4) {
+  transform: translateX(calc(var(--s) / 2 + var(--g) / 2));
+}
+
+/* Hexagon Styling */
+.hex-timeline__hex {
+  width: var(--s);
+  aspect-ratio: cos(30deg); /* Maintains hexagon proportions */
+  background: #ddd;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  filter: drop-shadow(0 0 2px #fff);
+  overflow: hidden;
+  transition: filter 0.3s ease;
+}
+
+/* Label styling to work within the grid */
+.hex-label {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 150px;
+  pointer-events: none;
+  z-index: 5;
+  margin-top: -20px; /* Pull text closer to the hexagon */
+}
+
+.hex-year {
+  display: block;
+  font-weight: 700;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+.hex-title {
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+/* Image & Hover effects */
+.hex-timeline__hex img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease-in-out;
+  filter: grayscale(100%);
+}
+
+.hex-item:hover .hex-timeline__hex img {
+  transform: scale(1.2);
+  filter: grayscale(0%);
+}
+
+.hex-img-utd {
+    /* Shows the whole logo instead of cropping it */
+    object-fit: contain !important;
+    background: #e87503;             /* Adds a background if the logo is transparent */
+    padding: 0px;                 /* Shrinks the logo slightly so it doesn't touch the edges */
+}
+
 /* 
    Alternates hexagons left / right of a centre spine.
    Each item:  hex  →  connector (dot + line)  →  label
@@ -418,42 +504,6 @@ canvas {
   transition: filter 0.3s ease;
 }
 
-
-.hex-img-utd {
-    /* Shows the whole logo instead of cropping it */
-    object-fit: contain !important;     /* Shows the whole logo instead of cropping it */
-    background: #e87503;             /* Adds a background if the logo is transparent */
-    padding: 0px;                 /* Shrinks the logo slightly so it doesn't touch the edges */
-}
-
-.hex-img-rr {
-    /* Shows the whole logo instead of cropping it */
-    object-fit: contain !important;     /* Shows the whole logo instead of cropping it */
-    background: #aad3e0;             /* Adds a background if the logo is transparent */
-    padding: 0px;                 /* Shrinks the logo slightly so it doesn't touch the edges */
-}
-
-.hex-img-qml {
-    /* Shows the whole logo instead of cropping it */
-    object-fit: contain !important;     /* Shows the whole logo instead of cropping it */
-    background: white;             /* Adds a background if the logo is transparent */
-    padding: 0px;                 /* Shrinks the logo slightly so it doesn't touch the edges */
-}
-
-.hex-img-asl {
-    /* Shows the whole logo instead of cropping it */
-    object-fit: scale-down !important;     /* Shows the whole logo instead of cropping it */
-    background: #f18912;             /* Adds a background if the logo is transparent */
-    padding: 0px;                 /* Shrinks the logo slightly so it doesn't touch the edges */
-}
-
-.hex-img-bp {
-    /* Shows the whole logo instead of cropping it */
-    object-fit: scale-down !important;     
-    background: white;             /* Adds a background if the logo is transparent */
-    padding: 0px;                 /* Shrinks the logo slightly so it doesn't touch the edges */
-}
-
 /* ── Connector (The Line and Dot) ────────────────────────── */
 .hex-timeline__connector {
   display: flex;
@@ -559,7 +609,7 @@ canvas {
   gap: 4px; /* Space between the two hexagons on the same row */
   flex-shrink: 0;
   z-index: 2;
-  /* Adjust this to align with the staggered hexagons above/below */
+  /* Adjust to align with the staggered hexagons above/below */
   margin: 0 -28px; 
 }
 
@@ -577,7 +627,7 @@ canvas {
   justify-content: flex-start;
 }
 
-/* If you want the double hexagons to interlock with a single hexagon below it: */
+/* double hexagons interlock with a single hexagon below it */
 .hex-timeline__item--double + .hex-timeline__item:not(.hex-timeline__item--double) {
   margin-top: -38px;
 }
@@ -587,7 +637,7 @@ canvas {
 .hex-timeline__tooltip {
   position: fixed;
   z-index: 9999;
-  pointer-events: none; /* Crucial: prevents the tooltip from blocking the hover */
+  pointer-events: none; /* prevents the tooltip from blocking the hover */
   background: rgba(20, 20, 20, 0.95);
   color: #fff;
   padding: 12px 16px;
@@ -624,10 +674,226 @@ canvas {
   cursor: help;
   padding: 10px;          /* Makes the "hover" area larger and easier to hit */
   font-size: 1.5rem;      /* Adjust icon size here */
-  color: rgba(255, 255, 255, 0.6); /* Match your timeline theme */
+  color: rgba(255, 255, 255, 0.6); /* Matches timeline theme */
   transition: color 0.3s ease;
 }
 
 .timeline-icon-header .hex-tooltip-trigger:hover {
   color: #fff;            /* Brightens on hover */
+}
+
+/*
+*
+*
+*
+*/
+
+/* UPDATED/IMPROVED hex timeline */
+
+.hex-test {
+  --s: 120px;  /* size  */
+  --g: 20px;   /* gap */
+  
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--g);
+  
+  /* widen the container slightly to account for the offset shift */
+  width: calc(2.5 * var(--s) + var(--g)); 
+  margin: 0 auto;
+  /* padding-left: calc(var(--s) / 4);  */
+  counter-reset: num;
+  overflow: visible;
+}
+
+.hex-test > * {
+  width: var(--s);
+  aspect-ratio: cos(30deg);
+  /* border-radius: 50% / 25%;
+  corner-shape: bevel;
+  overflow: visible; /* lets the label escape the clip */
+  margin-bottom: calc(var(--s) / -4);
+  position: relative;
+  z-index: 1;
+  /* filter: drop-shadow(0 0 2px #fff); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Offset every 3rd and 4th hexagon (second row) */
+/* staggered honeycomb effect */
+.hex-test > div:nth-child(4n+3),
+.hex-test > div:nth-child(4n+4) {
+  transform: translateX(calc(var(--s) / 2 + var(--g) / 2));
+}
+
+/* hex image/bg sits inside separate inner div so clip-path only clips that */
+.hex-test__inner {
+  width: 100%;
+  height: 100%;
+  position: absolute; /* Ensures it fills the parent exactly */
+  top: 0;
+  left: 0;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background: #ddd;
+  z-index: 2; /* Sits under the labels or over*/
+  
+}
+
+.hex-test__inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: transform 0.4s ease;
+  filter: grayscale(100%); /* Makes image black and white */
+}
+
+.hex-test > *:hover .hex-test__inner img {
+  transform: scale(1.2);
+  filter: grayscale(0%);
+  filter: brightness(1.1);
+  z-index: 10; /* Bring hovered hex and its label to the front */
+}
+
+
+/* Label extending to the LEFT */
+.hex-test__label--left {
+  position: absolute;
+  right: calc(100% + 8px); /* 8px = dot width + small gap */
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0;
+  /* white-space: nowrap; */
+  white-space: normal;
+  pointer-events: none;
+  z-index: 11; /* Ensure labels stay above the hexagon shapes */
+
+  
+}
+
+/* Label extending to the RIGHT */
+.hex-test__label--right {
+  position: absolute;
+  left: calc(100% + 8px);
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0;
+  /* white-space: nowrap; */
+  white-space: normal;
+  pointer-events: none;
+  z-index: 11; /* Ensure labels stay above the hexagon shapes */
+
+  
+}
+
+.hex-test__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.8;
+  flex-shrink: 0;
+}
+
+.hex-test__line {
+  width: 60px;
+  height: 2px;
+  background: #fff;
+  opacity: 0.3;
+  flex-shrink: 0;
+}
+
+.hex-test__text {
+  color: #fff;
+  text-decoration: none;
+  pointer-events: all;
+
+  /* Force wrapping for long titles */
+  white-space: normal; 
+  word-wrap: break-word;
+  width: 250px; 
+  /* display: block; */
+  display: flex;
+  flex-direction: column;
+  /* flex: 1;  */
+}
+
+/* Left label: text → line → dot → [hex] */
+.hex-test__label--left .hex-test__text { order: 1; margin-right: 10px; text-align: right; }
+.hex-test__label--left .hex-test__line { order: 2; }
+.hex-test__label--left .hex-test__dot  { order: 3; margin-right: 10px;}
+
+/* Right label: [hex] → dot → line → text */
+.hex-test__label--right .hex-test__dot  { order: 1; margin-left: 10px;}
+.hex-test__label--right .hex-test__line { order: 2; }
+.hex-test__label--right .hex-test__text { order: 3; margin-left: 10px; text-align: left; }
+
+.hex-test__year {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  opacity: 0.5;
+}
+
+/* favicon icon */
+.hex-test__year i {
+  font-size: 0.95rem;
+}
+
+.hex-test__title {
+  display: block;
+  font-size: 1.17rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+
+/*
+*
+*
+*
+*/
+
+.hex-img-utd {
+    /* Shows the whole logo instead of cropping it */
+    object-fit: contain !important;     /* Shows the whole logo instead of cropping it */
+    background: #e87503;             /* Adds a background if the logo is transparent */
+    padding: 0px;                 /* Shrinks the logo slightly so it doesn't touch the edges */
+}
+
+.hex-img-rr {
+    object-fit: contain !important;
+    background: #aad3e0;
+    padding: 0px;
+}
+
+.hex-img-qml {
+    object-fit: contain !important;
+    background: white;
+    padding: 0px;
+}
+
+.hex-img-asl {
+    object-fit: scale-down !important;
+    background: #f18912;
+    padding: 0px;
+}
+
+.hex-img-bp {
+    object-fit: scale-down !important;     
+    background: white;
+    padding: 0px;
+}
+
+.hex-img-pc {
+    object-fit: scale-down !important;     
+    background: #e2e0be;      
+    padding: 0px;  
 }
