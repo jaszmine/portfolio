@@ -36,15 +36,16 @@ This is the code for my personal portfolio.
 ## Color Scheme:
 
 /* Base Colors */
-- Red: `#ff0000;` - Home page, primaryButtons1
-- Green: `#00ff00;` - Experience page, primaryButtons2
-- Blue: `#0000ff;` - Projects page, primaryButtons3
-- Cyan: `#00ffff;` - Photography page, secondaryButtons1
-- Magenta: `#ff00ff;` - Misc. page, secondaryButtons2
-- Yellow: `#ffff00;` - Resume page, secondaryButtons3
+- ![#ff0000](https://placehold.co/12x12/ff0000/ff0000.png) Red: `#ff0000` - Home page, primaryButtons1
+- ![#00ff00](https://placehold.co/12x12/00ff00/00ff00.png) Green: `#00ff00` - Experience page, primaryButtons2
+- ![#0000ff](https://placehold.co/12x12/0000ff/0000ff.png) Blue: `#0000ff` - Projects page, primaryButtons3
+- ![#00ffff](https://placehold.co/12x12/00ffff/00ffff.png) Cyan: `#00ffff` - Photography page, secondaryButtons1
+- ![#ff00ff](https://placehold.co/12x12/ff00ff/ff00ff.png) Magenta: `#ff00ff` - Misc. page, secondaryButtons2
+- ![#ffff00](https://placehold.co/12x12/ffff00/ffff00.png) Yellow: `#ffff00` - Resume page, secondaryButtons3
 
 <br>
 
 ## License
 
-The software/code in this repository is licensed under the **MIT License**. However, all graphical assets, photographs, and written bio content are **All Rights Reserved** and may not be reproduced without express written permission.
+> [!NOTE]
+> The software/code in this repository is licensed under the **MIT License**. However, all graphical assets, photographs, and written bio content are **All Rights Reserved** and may not be reproduced without express written permission.
