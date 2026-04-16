@@ -2,7 +2,7 @@
 
 This is the code for my personal portfolio. 
 
-
+<br>
 ## Tech Stack
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
@@ -10,6 +10,7 @@ This is the code for my personal portfolio.
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 
+<br>
 ## Main Pages
 
 - Home (index.html)
@@ -19,6 +20,7 @@ This is the code for my personal portfolio.
 - Misc. 
 - Resume
 
+<br>
 ## Some Cool Features
 
 - **Vox Animation**: the animation on the home page 
@@ -26,7 +28,7 @@ This is the code for my personal portfolio.
 - **Hexagon Timeline**: inspired by 
    - Temani Afif's article: [Responsive Hexagon Grid Using Modern CSS](https://css-tricks.com/responsive-hexagon-grid-using-modern-css/#top-of-site)
 
-
+<br>
 ## Color Scheme:
 
 /* Base Colors */
@@ -37,7 +39,7 @@ This is the code for my personal portfolio.
 - Magenta: `#ff00ff;` - Misc. page, secondaryButtons2
 - Yellow: `#ffff00;` - Resume page, secondaryButtons3
 
-
+<br>
 ## License
 
 The software/code in this repository is licensed under the **MIT License**. However, all graphical assets, photographs, and written bio content are **All Rights Reserved** and may not be reproduced without express written permission.
