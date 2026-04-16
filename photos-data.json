@@ -10,7 +10,7 @@
       "description": "This is the south wing of the bioengineering building at UT Dallas. I once stress tested a few versions of 3D-printed rocket fins here with a friend (by throwing them off the top of the stairs of course).",
       "date": "",
       "location": "",
-      "camera": "Kodak 800 35mm Disposable Film"
+      "camera": "🎞️ Kodak 800 35mm Disposable Film"
     },
     {
       "id": "recent2",
@@ -22,7 +22,7 @@
       "description": "Austin Texas's iconic Sail Tower at night.",
       "date": "",
       "location": "",
-      "camera": "Canon EOS Rebel T6 DSLR"
+      "camera": "📸 Popeye the Sailor Man's Canon EOS Rebel T6 DSLR"
     },
     {
       "id": "recent3",
@@ -34,7 +34,7 @@
       "description": "Another iconic building in Austin, the Paramount Theatre was built in 1915 and still shows films, performances, concerts, and more every week.",
       "date": "",
       "location": "",
-      "camera": "Lady Bird Lake's Loch Ness Monster's Canon EOS Rebel T6 DSLR"
+      "camera": "📸 Lady Bird Lake's Loch Ness Monster's Canon EOS Rebel T6 DSLR"
     },
     {
       "id": "recent4",
@@ -46,7 +46,7 @@
       "description": "Hallway in the Sciences building at UT Dallas. This facility holds a Gold LEED certification.",
       "date": "",
       "location": "",
-      "camera": "Canon EOS Rebel T6 DSLR"
+      "camera": "📸 Canon EOS Rebel T6 DSLR"
     },
     {
       "id": "recent5",
@@ -57,8 +57,8 @@
       "title": "Lake",
       "description": "The Canyon Lake Dam was built by the U.S. Army Corps of Engineers between 1958-1964 to help control floods on the Guadalupe River.",
       "date": "",
-      "location": "",
-      "camera": "Canon EOS R8, full-frame mirrorless"
+      "location": "Canyon Lake Dam - Guadalupe River in Comal County, TX",
+      "camera": "📸 Canon EOS R8, full-frame mirrorless"
     },
     {
       "id": "recent6",
@@ -70,7 +70,7 @@
       "description": "Projector light often tricks camera sensors into seeing purple due to underexposure and metamerism (where near-UV light activates red pixels). High-contrast scenes can also cause chromatic aberration that adds purple fringing around bright blues.",
       "date": "",
       "location": "",
-      "camera": "Canon EOS Rebel T6 DSLR"
+      "camera": "📸 Canon EOS Rebel T6 DSLR"
     },
     {
       "id": "recent7",
@@ -94,7 +94,7 @@
       "description": "Truck",
       "date": "",
       "location": "",
-      "camera": "Canon EOS Rebel T6 DSLR"
+      "camera": "📸 Canon EOS Rebel T6 DSLR"
     },
     {
       "id": "recent9",
@@ -106,7 +106,7 @@
       "description": "Completely unedited btw 🙌",
       "date": "",
       "location": "",
-      "camera": "Canon EOS Rebel T6 DSLR"
+      "camera": "📸 Canon EOS Rebel T6 DSLR"
     },
     {
       "_comment_1": " ",
@@ -122,10 +122,10 @@
       "src": "photography/people/people1.jpg",
       "alt": "Groovy",
       "title": "Groovy",
-      "description": "",
+      "description": "🎵 You should be dancing, yeah 🎸",
       "date": "",
-      "location": "",
-      "camera": "Canon EOS R8, full-frame mirrorless"
+      "location": "Pease Park - Austin, TX",
+      "camera": "📸 The Bee Gees' Canon EOS R8 💃🪩🕺"
     },
     {
       "id": "people2",
@@ -134,10 +134,10 @@
       "src": "photography/people/people2.jpg",
       "alt": "Wedding!!",
       "title": "Wedding!!",
-      "description": "",
+      "description": "MY FRANDS GOT MARRIED WOOOOOO YAAA",
       "date": "",
       "location": "",
-      "camera": "Canon EOS R8"
+      "camera": "📸 The Flower Girl's Canon EOS R8 🥹"
     },
     {
       "id": "people3",
@@ -148,8 +148,8 @@
       "title": "Omni",
       "description": "Om nom nom nom",
       "date": "",
-      "location": "",
-      "camera": "Canon EOS R8"
+      "location": "Omni Dallas Hotel",
+      "camera": "📸 Canon EOS R8"
     },
     {
       "id": "people4",
@@ -158,10 +158,10 @@
       "src": "photography/people/people4.jpg",
       "alt": "Sandy",
       "title": "Sandy",
-      "description": "",
+      "description": "Got to stop by White Sands National Park after the 2024 IREC competition at Spaceport America!",
       "date": "",
-      "location": "",
-      "camera": "Canon EOS R8"
+      "location": "White Sands National Park",
+      "camera": "📸 Dune's Shai-Hulud's 🏜️ Canon EOS R8"
     },
     {
       "id": "people5",
@@ -170,10 +170,10 @@
       "src": "photography/people/people5.jpg",
       "alt": "Grad",
       "title": "Grad",
-      "description": "UTDone",
+      "description": "Hashtag retweet 🎓UTDone",
       "date": "",
-      "location": "",
-      "camera": "Canon EOS R8"
+      "location": "ECSW Building - UTD",
+      "camera": "📸 The Dean's Canon EOS R8"
     },
     {
       "id": "people6",
@@ -184,8 +184,8 @@
       "title": "Greenhouse",
       "description": "",
       "date": "",
-      "location": "",
-      "camera": "Fujifilm Quicksnap Flash 400"
+      "location": "Calloway's Nursery - Plano, TX",
+      "camera": "🎞️ Fujifilm Quicksnap Flash 400"
     },
     {
       "_comment_1": " ",
@@ -204,7 +204,7 @@
       "description": "The term “blood moon” refers to its reddish orange appearance, occurring during a total lunar eclipse. When the earth passes between the sun and moon, the little sunlight not blocked by the earth managing to reach the lunar surface is filtered through the edges of the Earth’s atmosphere. 🌎 While Earth’s air molecules scatter most of the blue (shorter) wavelengths of light, reddish tones (longer wavelengths) are left behind reflecting off of the moon and casting a red glow that makes it appear red.",
       "date": "March 14, 2025",
       "location": "",
-      "camera": "📸 The moon godess’s Canon EOS Rebel t6 🌒"
+      "camera": "📸 The Moon Godess’s Canon EOS Rebel t6 🌒"
     },
     {
       "id": "outdoors02",
@@ -213,10 +213,10 @@
       "src": "photography/outdoors/outdoors02.jpg",
       "alt": "Growth",
       "title": "Growth",
-      "description": "",
+      "description": "American Wisteria; typically blooms in late spring.",
       "date": "",
       "location": "",
-      "camera": "Canon EOS Rebel t6"
+      "camera": "📸 Canon EOS Rebel t6"
     },
     {
       "id": "outdoors03",
@@ -225,10 +225,10 @@
       "src": "photography/outdoors/outdoors03.jpg",
       "alt": "White Sands",
       "title": "White Sands",
-      "description": "1 of the 2 national parks in New Mexico.",
+      "description": "1 of the 2 national parks in New Mexico. White Sands interestingly is one of the few deserts in the world with gypsum sand, a rare type of sand that's water soluble. Even more rare is finding gypsum sand in the form of dunes such as those found at our beloved national park!",
       "date": "",
-      "location": "",
-      "camera": "Canon EOS R8"
+      "location": "White Sands National Park, NM - The Chihuahuan Desert",
+      "camera": "📸 Paul Atreides's Canon EOS R8"
     },
     {
       "id": "outdoors04",
@@ -237,10 +237,10 @@
       "src": "photography/outdoors/outdoors04.jpg",
       "alt": "Eclipse",
       "title": "Eclipse",
-      "description": "",
-      "date": "",
+      "description": "This total solar eclipse's path of totality actually ended up passing through ~15 different states! The next time the U.S. will see a total solar eclipse will be in 2044 & 2045 (other than the one Alaska will get to see in 2033).",
+      "date": "April 8, 2024",
       "location": "",
-      "camera": "Canon EOS Rebel t6, 75-300mm Lens"
+      "camera": "📸 The Sun God's 🌞 Canon EOS Rebel t6, 75-300mm Lens"
     },
     {
       "id": "outdoors05",
@@ -249,10 +249,10 @@
       "src": "photography/outdoors/outdoors05.jpg",
       "alt": "Bridge",
       "title": "Bridge",
-      "description": "",
+      "description": "Riddle me three~",
       "date": "",
       "location": "",
-      "camera": "Canon EOS Rebel t6"
+      "camera": "📸 The Bridge Troll's Canon EOS Rebel t6"
     },
     {
       "id": "outdoors06",
@@ -261,10 +261,10 @@
       "src": "photography/outdoors/outdoors06.jpg",
       "alt": "Tracks",
       "title": "Tracks",
-      "description": "Lincoln National Forest",
+      "description": "This area of land was originally inhabited by the Mescalero Apache for thousands of years, before Spanish and later American settlers introduced ranching, mining, and logging in the 16th–19th centuries. During the late 1800s, the expansion of railroads in southern New Mexico accelerated large-scale logging in the region, as timber was harvested to supply railroad construction and nearby mining operations. It was formally established in 1902 as the Lincoln Forest Reserve and later expanded and consolidated into a single national forest through federal actions between 1908 and 1917.",
       "date": "",
-      "location": "",
-      "camera": "Canon EOS Rebel t6"
+      "location": "Lincoln National Forest, NM",
+      "camera": "📸 Theodore Roosevelt's 🌲 Canon EOS Rebel t6"
     },
     {
       "id": "outdoors07",
@@ -273,22 +273,22 @@
       "src": "photography/outdoors/outdoors07.jpg",
       "alt": "Downtime",
       "title": "Downtime",
-      "description": "",
+      "description": "A quick pic of the road out to the rocket rails at the IREC 2024 competition.",
       "date": "",
-      "location": "",
-      "camera": "Fujifilm Quicksnap Flash 400"
+      "location": "Spaceport America - Just outside of Truth or Consequences, NM (yes that is the real city name).",
+      "camera": "🎞️ Fujifilm Quicksnap Flash 400"
     },
     {
       "id": "outdoors08",
       "category": "outdoors",
       "order": 8,
       "src": "photography/outdoors/outdoors08.jpg",
-      "alt": "Eclips 2",
+      "alt": "Eclipse 2",
       "title": "Eclipse 2",
-      "description": "",
-      "date": "",
+      "description": "This is another pic of the 2024 total solar eclipse. Despite being a little blurry (that's the farthest my camera at the time could zoom), I wanted to include this picture because you can see just a few hints of the solar prominences. These are brief flashes of red light appearing on the rim of the moon which are actually these massive loops (typically ~35x larger than earth) of plasma shooting out from the sun's surface. They appear red because their hot hydrogen gas emits light at a specific red wavelength (called H-alpha) when its electrons lose energy. You usually can't see them because of how bright the sun is, but with the moon masking the photosphere, this is a rare and special moment where you can actually see them with the naked eye. ",
+      "date": "April 8, 2024",
       "location": "",
-      "camera": "Canon EOS Rebel t6, 75-300mm Lens"
+      "camera": "📸 Ra's ☀️ Canon EOS Rebel t6, 75-300mm Lens"
     },
     {
       "id": "outdoors09",
@@ -297,10 +297,10 @@
       "src": "photography/outdoors/outdoors09.jpg",
       "alt": "Forest",
       "title": "Forest",
-      "description": "Lincoln National Forest",
+      "description": "Another shot of the Lincoln National Forest. The 2001 Roadless Rule established prohibitions on road construction, road reconstruction, and timber harvesting in nearly 60 million acres inventoried roadless areas, including the Lincoln National Forest (USDA Forest Service). In January and March of 2025, Executive Order 14192 (Prosperity Through Deregulation) and Executive Order 14225 (Immediate Expansion of American Timber Production) were passed. From a high-level overview, Executive Order 14192 basically told agencies they must give up 10 regulations if they want to issue 1 new one. One stipulation is that all new rules must cost 'significantly less than zero,' so (Cost of New Rules Passed) - (Savings from Old Rules Deleted) = Total, which must be a large negative number. This incentivizes agencies to include 'costly' rules to be cut, or rather, rules that could potentially make a lot of money. Many experts identify the Roadless Rule to be one of the rules likely to be cut as its protections on logging has the potential to make the logging industry millions of dollars, despite the rule actually currently saving the government money by not having to construct and maintain more roads, among other things. Additionally, Executive Order 14225 orders the rescission of any policies that burden timber production and authorizing 'categorical exclusions' to bypass environmental reviews, which would lead to immediate road construction and industrial logging in previously untouched wilderness. While these bills must first go through a formal public process to fully repeal the 2001 Roadless Rules, they represent intent and mechanism for future destruction. The actual physical logging of these forests would only begin after the Forest Service completes the lengthy legal process of rescinding the rule. Stay informed!!",
       "date": "",
-      "location": "",
-      "camera": "Canon EOS Rebel t6"
+      "location": "Lincoln National Forest, NM",
+      "camera": "📸 Theodore Roosevelt's (currently rolling in his grave) Canon EOS Rebel t6"
     },
     {
       "id": "outdoors10",
@@ -311,8 +311,8 @@
       "title": "Enchanted",
       "description": "Rock",
       "date": "",
-      "location": "",
-      "camera": "Canon EOS Rebel t6"
+      "location": "Fredericksburg, TX",
+      "camera": "📸 Canon EOS Rebel t6"
     },
     {
       "_comment_1": " ",
