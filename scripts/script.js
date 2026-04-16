@@ -129,7 +129,7 @@ const MobileNav = {
 };
 
 // ============================================
-// HERO SECTION - MATRIX ANIMATION
+// HOME PAGE - MATRIX ANIMATION
 // ============================================
 
 const MatrixAnimation = (function() {
@@ -291,7 +291,7 @@ const ExperienceCarousel = {
         this.currentSlides['carousel2'] = 0;
         this.update('carousel2');
         
-        // Add more carousels as needed by uncommenting:
+        // if need more carousels, uncomment:
         // this.currentSlides['carousel1'] = 0;
         // this.update('carousel1');
     },
@@ -415,100 +415,6 @@ const ProjectModals = {
         }
     }
 };
-
-// // ============================================
-// // PROJECTS SECTION - GALLERY LIGHTBOX
-// // ============================================
-
-// const ProjectGallery = {
-//     init: function() {
-//         // Only initialize if gallery elements exist on the page
-//         if (!document.querySelector('.gallery-item')) return;
-        
-//         this.galleryLightbox = document.getElementById('gallery-lightbox');
-//         this.galleryLightboxImg = document.getElementById('gallery-lightbox-img');
-//         this.galleryCaption = document.getElementById('gallery-caption');
-//         this.galleryCloseBtn = document.querySelector('.gallery-close-btn');
-        
-//         // If lightbox elements don't exist, create them
-//         if (!this.galleryLightbox) {
-//             this.createLightboxElements();
-//         }
-        
-//         this.setupEventListeners();
-//     },
-    
-//     createLightboxElements: function() {
-//         // Create lightbox container
-//         const lightbox = document.createElement('div');
-//         lightbox.id = 'gallery-lightbox';
-//         lightbox.className = 'gallery-lightbox';
-//         lightbox.innerHTML = `
-//             <span class="gallery-close-btn">&times;</span>
-//             <img class="gallery-lightbox-content" id="gallery-lightbox-img">
-//             <div id="gallery-caption"></div>
-//         `;
-//         document.body.appendChild(lightbox);
-        
-//         // Update references
-//         this.galleryLightbox = document.getElementById('gallery-lightbox');
-//         this.galleryLightboxImg = document.getElementById('gallery-lightbox-img');
-//         this.galleryCaption = document.getElementById('gallery-caption');
-//         this.galleryCloseBtn = document.querySelector('.gallery-close-btn');
-//     },
-    
-//     setupEventListeners: function() {
-//         // Get all gallery images
-//         const galleryItems = document.querySelectorAll('.gallery-item');
-        
-//         // Open lightbox when image clicked
-//         galleryItems.forEach(item => {
-//             item.addEventListener('click', (e) => {
-//                 this.open(e.target.src, e.target.alt);
-//             });
-//         });
-        
-//         // Close lightbox when X clicked
-//         if (this.galleryCloseBtn) {
-//             this.galleryCloseBtn.addEventListener('click', () => {
-//                 this.close();
-//             });
-//         }
-        
-//         // Close lightbox when clicking outside the image
-//         if (this.galleryLightbox) {
-//             this.galleryLightbox.addEventListener('click', (e) => {
-//                 if (e.target === this.galleryLightbox) {
-//                     this.close();
-//                 }
-//             });
-//         }
-        
-//         // Close with Escape key - uses existing keydown listener pattern
-//         document.addEventListener('keydown', (e) => {
-//             if (e.key === 'Escape' && this.galleryLightbox && 
-//                 this.galleryLightbox.style.display === 'block') {
-//                 this.close();
-//             }
-//         });
-//     },
-    
-//     open: function(imgSrc, imgAlt) {
-//         if (!this.galleryLightbox || !this.galleryLightboxImg || !this.galleryCaption) return;
-        
-//         this.galleryLightboxImg.src = imgSrc;
-//         this.galleryCaption.innerHTML = imgAlt || '';
-//         this.galleryLightbox.style.display = 'block';
-//         Utils.lockScroll(); // Reuse your existing lockScroll utility
-//     },
-    
-//     close: function() {
-//         if (!this.galleryLightbox) return;
-        
-//         this.galleryLightbox.style.display = 'none';
-//         Utils.unlockScroll(); // Reuse your existing unlockScroll utility
-//     }
-// };
 
 // ============================================
 // PROJECTS SECTION - GALLERY LIGHTBOX

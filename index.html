@@ -8,6 +8,25 @@
     <title>Jaszmine DeFranco | Portfolio</title>
     <meta name="description" content="Official portfolio of Jaszmine DeFranco. Explore my projects, photography, and professional experiences in design and development.">
     <link rel="canonical" href="https://jaszmine-defranco-portfolio.vercel.app/">
+    <meta name="author" content="Jaszmine DeFranco">
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Jaszmine DeFranco",
+            "url": "https://jaszmine-defranco-portfolio.vercel.app/",
+            "sameAs": [
+                "https://www.linkedin.com/in/jaszmine-defranco/",
+                "https://github.com/jaszmine"
+            ],
+            "jobTitle": "Computer Science Graduate",
+            "alumniOf": {
+                "@type": "CollegeOrUniversity",
+                "name": "The University of Texas at Dallas"
+            }
+        }
+    </script>
 
     <meta property="og:title" content="Jaszmine DeFranco | Portfolio">
     <meta property="og:description" content="Explore my projects, photography, and professional experiences.">
@@ -15,7 +34,7 @@
     <meta property="og:type" content="website">
 
     <link rel="icon" type="image/png" href="assets/logo/v3-jd-square.png">
-    <link rel="preload" href="data.json" as="fetch" crossorigin="anonymous">
+    <link rel="preload" href="data/hex-timeline-data.json" as="fetch" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/home.css">
     <link rel="stylesheet" href="styles/about.css">
@@ -34,7 +53,6 @@
             </a>
             <div class="nav-links">
                 <a href="index.html" class="active red">Home</a>
-                <!-- <a href="about.html" class="about">About</a> -->
                 <a href="experiences.html" class="green">Experience</a>
                 <a href="projects.html" class="blue">Projects</a>
                 <a href="photography.html" class="cyan">Photography</a>
@@ -61,10 +79,6 @@
                     <span class="keyword green"><a href="projects.html">Projects</a></span> | 
                     <span class="keyword blue"><a href="photography.html">Photography</a></span>
                 </p>
-                <!-- <div class="hero-buttons">
-                    <a href="projects.html" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                </div> -->
             </div>
             <div class="hero-image">
                 <!-- Voxel Matrix Morph Animation -->
@@ -152,184 +166,7 @@
             </div> 
             <br>
 
-            <div class="hex-test">
-
-            <!-- ANQC --------------------------------------------------------------- -->
-                <!-- Left-side label (odd row, left hex) -->
-                <div>
-                    <a class="hex-test__hex-link" href="experiences.html#anqc">
-                        <div class="hex-test__inner">
-                            <img src="assets/home-timeline/utd.png" class="hex-img-utd" alt="UTD logo" />
-                        </div>
-                    </a>
-                    <div class="hex-test__label--left">
-                        <a class="hex-test__text" href="experiences.html#anqc" 
-                            data-desc="Conducted Entanglement Assisted Quantum Error Correction Research - Published 2026.">
-                            <span class="hex-test__year">
-                                <i class="fas fa-briefcase"></i> 2025
-                            </span>
-                            <span class="hex-test__title">
-                                <!-- <i class="fas fa-briefcase"></i> -->
-                                &nbsp;Undergraduate Researcher — UTD Computer Science</span>
-                        </a>
-                        <span class="hex-test__line"></span>
-                        <span class="hex-test__dot"></span>
-                    </div>
-                </div>
-
-            <!-- RISK RADAR --------------------------------------------------------------- -->
-                <!-- Right-side label (odd row, right hex) -->
-                <div>
-                    <a class="hex-test__hex-link" href="projects.html#rr">
-                        <div class="hex-test__inner">
-                            <img src="assets/home-timeline/rr.png" class="hex-img-rr" alt="Risk Radar Heatmap" />
-                        </div>
-                    </a>
-                    <div class="hex-test__label--right">
-                        <span class="hex-test__dot"></span>
-                        <span class="hex-test__line"></span>
-                        <a class="hex-test__text" href="projects.html#rr"
-                            data-desc="Developed a near real-time crisis detection system using the Bluesky API, benchmarking LLMs to classify 25K+ disaster-related posts.">
-                            <span class="hex-test__year">
-                                <i class="fas fa-graduation-cap"></i>
-                                Fall 2025
-                            </span>
-                            <span class="hex-test__title">Data Science Lead - Tweet Analysis for Disaster Crisis Response</span>
-                        </a>
-                    </div>
-                </div>
-
-            <!-- QML --------------------------------------------------------------- -->
-                <!-- Even row hexes (shifted right by the grid) -->
-                <div>
-                    <a class="hex-test__hex-link" href="projects.html#qml">
-                        <div class="hex-test__inner">
-                            <img src="assets/home-timeline/qml.png" class="hex-img-qml" alt="Quantum Machine Learning for Leukemia Genomics" />
-                        </div>
-                    </a>
-                    <div class="hex-test__label--left">
-                        <a class="hex-test__text" href="projects.html#qml"
-                            data-desc="Engineered quantum and classical ML models to classify leukemia subtypes from gene-expression data.">
-                            <span class="hex-test__year">
-                                <i class="fas fa-graduation-cap"></i>
-                                Fall 2025
-                            </span>
-                            <span class="hex-test__title">Project Lead - Quantum Machine Learning for Leukemia Genomics</span>
-                        </a>
-                        <span class="hex-test__line"></span>
-                        <span class="hex-test__dot"></span>
-                    </div>
-                </div>
-
-            <!-- ASL --------------------------------------------------------------- -->
-                <div>
-                    <a class="hex-test__hex-link" href="experiences.html#asl">
-                        <div class="hex-test__inner">
-                            <img src="assets/home-timeline/asl.png" class="hex-img-asl" alt="Art Sci Lab Logo" />
-                        </div>
-                    </a>
-                    <div class="hex-test__label--right">
-                        <span class="hex-test__dot"></span>
-                        <span class="hex-test__line"></span>
-                        <a class="hex-test__text" href="experiences.html#asl">
-                            <span class="hex-test__year">
-                                <i class="fas fa-briefcase"></i>
-                                2024-25
-                            </span>
-                            <span class="hex-test__title">Communications Specialist - UTD Art Sci Lab</span>
-                        </a>
-                    </div>
-                </div>
-
-            <!-- ROCKETRY --------------------------------------------------------------- -->
-                <!-- Left-side label (odd row, left hex) -->
-                <div>
-                    <a class="hex-test__hex-link" href="projects.html#rck">
-                        <div class="hex-test__inner">
-                            <img src="assets/home-timeline/rck.png" class="hex-img-rck" alt="Comet Rocketry" />
-                        </div>
-                    </a>
-                    <div class="hex-test__label--left">
-                        <a class="hex-test__text" href="projects.html#rck" 
-                            data-desc="Designed & launched a high-powered rocket, leading flight simulations and 6-DOF analyses 
-                            to optimize performance at the 2024 IREC competition at Spaceport America.">
-                            <span class="hex-test__year">
-                                <i class="fas fa-rocket"></i> 2024
-                            </span>
-                            <span class="hex-test__title">
-                                <!-- <i class="fas fa-briefcase"></i> -->
-                                Simulation Lead - Comet Rocketry</span>
-                        </a>
-                        <span class="hex-test__line"></span>
-                        <span class="hex-test__dot"></span>
-                    </div>
-                </div>
-
-            <!-- BP --------------------------------------------------------------- -->
-                <!-- Right-side label (odd row, right hex) -->
-                <div>
-                    <a class="hex-test__hex-link" href="experiences.html#bp">
-                        <div class="hex-test__inner">
-                            <img src="assets/home-timeline/bp.png" class="hex-img-bp" alt="bp logo" />
-                        </div>
-                    </a>
-                    <div class="hex-test__label--right">
-                        <span class="hex-test__dot"></span>
-                        <span class="hex-test__line"></span>
-                        <a class="hex-test__text" href="experiences.html#bp"
-                            data-desc="Implemented key algorithms (QKD, Grover's, QAOA, VQE), and collaborated with bp to explore hybrid quantum-classical solutions for energy optimization.">
-                            <span class="hex-test__year">
-                                <i class="fas fa-graduation-cap"></i>
-                                Summer 2023
-                            </span>
-                            <span class="hex-test__title">SWE/EQCI Intern - bp/QxQ</span></span>
-                        </a>
-                    </div>
-                </div>
-
-            <!-- HEX7 --------------------------------------------------------------- -->
-                <!-- Even row hexes (shifted right by the grid) -->
-                <!-- <div>
-                    <a class="hex-test__hex-link" href="projects.html#qml">
-                        <div class="hex-test__inner">
-                            <img src="assets/home-timeline/qml.png" class="hex-img-qml" alt="Quantum Machine Learning for Leukemia Genomics" />
-                        </div>
-                    </a>
-                    <div class="hex-test__label--left">
-                        <a class="hex-test__text" href="projects.html#qml"
-                            data-desc="Engineered quantum and classical ML models to classify leukemia subtypes from gene-expression data.">
-                            <span class="hex-test__year">
-                                <i class="fas fa-graduation-cap"></i>
-                                Fall 2025
-                            </span>
-                            <span class="hex-test__title">Project Lead - Quantum Machine Learning for Leukemia Genomics</span>
-                        </a>
-                        <span class="hex-test__line"></span>
-                        <span class="hex-test__dot"></span>
-                    </div>
-                </div> -->
-
-            <!-- HEX8 --------------------------------------------------------------- -->
-                <!-- <div>
-                    <a class="hex-test__hex-link" href="experiences.html#asl">
-                        <div class="hex-test__inner">
-                            <img src="assets/home-timeline/asl.png" class="hex-img-asl" alt="Art Sci Lab Logo" />
-                        </div>
-                    </a>
-                    <div class="hex-test__label--right">
-                        <span class="hex-test__dot"></span>
-                        <span class="hex-test__line"></span>
-                        <a class="hex-test__text" href="experiences.html#asl">
-                            <span class="hex-test__year">
-                                <i class="fas fa-briefcase"></i>
-                                2024-25
-                            </span>
-                            <span class="hex-test__title">Communications Specialist - UTD Art Sci Lab</span>
-                        </a>
-                    </div>
-                </div> -->
-
-            </div>
+            <div class="hex-test"></div>
         </section>
 
         <div class="hex-timeline__tooltip" id="hexTooltip" aria-hidden="true"></div>
@@ -352,29 +189,11 @@
         </section>
     </main>
 
+    <script src="scripts/script.js"></script>
+    <script src="scripts/hex-timeline.js"></script>
     <footer class="footer">
         <p>© 2026 Jaszmine DeFranco.</p>
         <p>Built with ‪‪❤︎‬</p>
     </footer>
-
-    <script src="scripts/script.js"></script>
-    <script src="scripts/hex-timeline.js"></script>
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Person",
-            "name": "Jaszmine DeFranco",
-            "url": "https://jaszmine-defranco-portfolio.vercel.app/",
-            "sameAs": [
-                "https://www.linkedin.com/in/jaszmine-defranco/",
-                "https://github.com/jaszmine"
-            ],
-            "jobTitle": "Computer Science Graduate",
-            "alumniOf": {
-                "@type": "CollegeOrUniversity",
-                "name": "University of Texas at Dallas"
-            }
-        }
-    </script>
 </body>
 </html>

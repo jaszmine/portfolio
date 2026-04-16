@@ -8,13 +8,16 @@ document.addEventListener('DOMContentLoaded', () => {
     loadTimeline();
 });
 
-async function loadTimeline() {
+async function loadTimeline(retries=3) {
     const container = document.querySelector('.hex-test');
     if (!container) return;
 
     try {
         // 1. Fetch the data
-        const response = await fetch('data/hex-timeline-data'); // Ensure path matches file structure
+        const response = await fetch('data/hex-timeline-data.json'); // Ensure path matches file structure
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
         let data = await response.json();
 
         // 2. Sort by date (Newest first)

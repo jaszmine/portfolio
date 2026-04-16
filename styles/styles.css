@@ -15,12 +15,20 @@
 
     
     /* Accent Colors - default to home color for now */
-    /* --color-accent: var(--red-color); */
+    /* - purple: #A886FB */
+    /* - light blueish purple: #bbbfff */
+    /* --color-accent: var(--red-color);
+    --color-yellow: #f7ca0c;         
+    --color-orange: #f16c06;   
+    --color-red: #f60828; 
+    --color-red: #f10606; 
+    --color-purple: #ac07ce; 
+    --color-blue: #5100bc;   */
     
     /* Derived Colors */
-    --color-dark-light: rgba(32, 32, 32, 0.8);
+    /* --color-dark-light: rgba(32, 32, 32, 0.8);
     --color-cream-dark: #d4caa8;
-    --color-cream-light: #f5f0e0;
+    --color-cream-light: #f5f0e0; */
 }
 
 .logo img {
