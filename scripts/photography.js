@@ -20,7 +20,7 @@ async function initializePhotographyPage() {
     
     try {
         // Load photo data from JSON file
-        const response = await fetch('photos-data.json');
+        const response = await fetch('data/photos-data.json');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }

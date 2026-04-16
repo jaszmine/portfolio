@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 });
 
 async function loadTravelData() {
-    const response = await fetch('map-data.json');
+    const response = await fetch('data/map-data.json');
     travelData = await response.json();
     console.log(`✅ Loaded ${travelData.areas?.length || 0} areas and ${travelData.locations?.length || 0} locations`);
     return travelData;

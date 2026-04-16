@@ -14,7 +14,7 @@ async function loadTimeline() {
 
     try {
         // 1. Fetch the data
-        const response = await fetch('data.json'); // Ensure path matches file structure
+        const response = await fetch('data/hex-timeline-data'); // Ensure path matches file structure
         let data = await response.json();
 
         // 2. Sort by date (Newest first)
