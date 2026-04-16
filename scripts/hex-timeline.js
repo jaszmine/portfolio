@@ -57,7 +57,13 @@ async function loadTimeline() {
         initHexTooltips();
 
     } catch (error) {
-        console.error("Error loading timeline:", error);
+        if (retries > 0) {
+            console.log(`Retrying load... (${retries} attempts left)`);
+            setTimeout(() => loadTimeline(retries - 1), 1000); // Wait 1 second and retry
+        } else {
+            console.error("Max retries reached. Loading failed:", error);
+            container.innerHTML = "<p>Failed to load timeline. Please refresh.</p>";
+        }
     }
 }
 
