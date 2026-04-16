@@ -35,7 +35,9 @@ This is the code for my personal portfolio.
 
 ## Color Scheme:
 
-/* Base Colors */
+### Base Colors
+- ![#000000](https://placehold.co/12x12/000000/000000.png) Black: `#000000` - Background
+- ![#fafafa](https://placehold.co/12x12/fafafa/fafafa.png) White-ish: `#fafafa` - Text
 - ![#ff0000](https://placehold.co/12x12/ff0000/ff0000.png) Red: `#ff0000` - Home page, primaryButtons1
 - ![#00ff00](https://placehold.co/12x12/00ff00/00ff00.png) Green: `#00ff00` - Experience page, primaryButtons2
 - ![#0000ff](https://placehold.co/12x12/0000ff/0000ff.png) Blue: `#0000ff` - Projects page, primaryButtons3
