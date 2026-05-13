@@ -46,7 +46,36 @@
             <!-- project grid thumbnails & titles -->
             <div class="projects-grid">
 
-                <!-- Project Card 0: Park Compass -->
+                <!-- Project Card 5: Photography Portfolio -->
+                <div class="project-card" onclick="openModal('modal5')" id="ph">
+                    <div class="project-image-container">
+                        <img src="assets/projects/mod5/05ph.png" alt="Professional Photography Portfolio" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Professional Photography Portfolio Website</h3>
+                        <p class="project-description">A web app featuring my professional photography portfolio.</p>
+                        <!-- Logo Icons -->
+                        <div class="project-logos">
+                            <div class="project-logo-item" title="React">
+                                <img src="/assets/tech-logos/react-logo.png" alt="React">
+                            </div>
+                            <div class="project-logo-item" title="JavaScript">
+                                <img src="/assets/tech-logos/javascript-logo.png" alt="JavaScript">
+                            </div>
+                            <div class="project-logo-item" title="Tailwind">
+                                <img src="/assets/tech-logos/tailwind-logo.png" alt="Tailwind">
+                            </div>
+                            <div class="project-logo-item" title="Vite">
+                                <img src="/assets/tech-logos/vite-logo.png" alt="Vite">
+                            </div>
+                            <div class="project-logo-item" title="Vercel">
+                                <img src="/assets/tech-logos/vercel-logo.png" alt="Vercel">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 4: Park Compass -->
                 <div class="project-card" onclick="openModal('modal0')" id="pc">
                     <div class="project-image-container">
                         <img src="assets/projects/04pc.png" alt="Park Compass" class="project-image">
@@ -81,7 +110,7 @@
                     </div>
                 </div>
 
-                <!-- Project Card 1: QML -->
+                <!-- Project Card 3: QML -->
                 <div class="project-card" onclick="openModal('modal1')" id="qml">
                     <div class="project-image-container">
                         <img src="assets/projects/01qml.png" alt="QML" class="project-image">
@@ -154,7 +183,7 @@
                     </div>
                 </div>
 
-                <!-- Project Card 3: Spaceport -->
+                <!-- Project Card 1: Spaceport -->
                 <div class="project-card" onclick="openModal('modal3')" id="rck">
                     <div class="project-image-container">
                         <img src="assets/projects/03rck.jpg" alt="L3 Rocket" class="project-image">
@@ -339,6 +368,120 @@
             </div>
 
             <!-- Modals -->
+
+            <!-- Modal 0: Park Compass -->
+            <div id="modal5" class="project-modal">
+                <div class="modal-content">
+                    <span class="modal-close" onclick="closeModal('modal5')">&times;</span>
+                    
+                    <!-- <div class="modal-header">
+                        <h1 class="modal-title">Park Compass</h1>
+                        <p>March 2026 - Present <b>|</b> Personal Project</p>
+                        <img src="assets/projects/mod0/tree-icon.png" alt="Park Compass Logo">
+                    </div> -->
+
+                    <div class="modal-header" style="position: relative;">
+                        <h1 class="modal-title">JD Photography</h1>
+                        <p>May 2026 <b>|</b> Personal Project</p>
+                        <img 
+                            src="assets/projects/mod5/jdp-logo-small.png" 
+                            alt="JD Photography Logo"
+                            style="position: absolute; top: 0; right: 2rem; height: 100%; width: auto; object-fit: contain;"
+                        >
+                    </div>
+                    
+                    <div class="modal-body">
+
+                        <h2>Overview</h2>
+                        <p>This website is home to my professional photography portfolio. 
+                            I wanted to make a website where anyone can view my portfolio, but I didn't want to pay for a website service, 
+                            so I made it myself! This also allowed me to get more practice in with React and Tailwind v4. 
+                        </p>
+
+                        <div class="video-button-container">
+                            <a href="https://jaszmine-defranco-photography.vercel.app/" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            class="ph-website-btn">
+                                Check out the website here!
+                            </a>
+                        </div>
+
+                        <br>
+
+                        <h2>Tech Stack</h2>
+                        <u style="text-decoration: none !important;">
+                            <li style="margin: 1rem; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                                <div class="project-logos-modal">
+                                    <a href="https://react.dev/" target="_blank" class="project-logo-item" title="React">
+                                        <img src="/assets/tech-logos/react-logo.png" alt="React">
+                                    </a>
+                                    <p style="vertical-align: middle; margin: 0;">&ensp; Frontend framework</p>
+                                </div>
+                            </li>
+                            <li style="margin: 1rem; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                                <div class="project-logos-modal">
+                                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="project-logo-item" title="JavaScript">
+                                        <img src="/assets/tech-logos/javascript-logo.png" alt="JavaScript">
+                                    </a>
+                                    <p style="vertical-align: middle; margin: 0;">&ensp; For scripting/functionality features</p>
+                                </div>
+                            </li>
+                            <li style="margin: 1rem; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                                <div class="project-logos-modal">
+                                    <a href="https://tailwindcss.com/" target="_blank" class="project-logo-item" title="TailwindCSS">
+                                        <img src="/assets/tech-logos/tailwind-logo.png" alt="TailwindCSS">
+                                    </a>
+                                    <p style="display: table-cell; vertical-align: middle; margin: 0;">&ensp; v4; Customized UI components</p>
+                                </div>
+                            </li>
+                            <li style="margin: 1rem; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                                <div class="project-logos-modal">
+                                    <a href="https://vite.dev/" target="_blank" class="project-logo-item" title="Vite">
+                                        <img src="/assets/tech-logos/vite-logo.png" alt="Vite">
+                                    </a>
+                                    <p style="display: table-cell; vertical-align: middle; margin: 0;">&ensp; Build tool; development server</p>
+                                </div>
+                            </li>
+                            <li style="margin: 1rem; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                                <div class="project-logos-modal">
+                                    <a href="https://vercel.com/docs" target="_blank" class="project-logo-item" title="Vercel">
+                                        <img src="/assets/tech-logos/vercel-logo.png" alt="Vercel">
+                                    </a>
+                                    <p style="display: table-cell; vertical-align: middle; margin: 0;">&ensp; Cloud-based deployment</p>
+                                </div>
+                            </li>
+                        </u>
+
+                    </div>
+
+                    <!-- Github Repo Button -->
+                    <div class="modal-pdf-section">
+                        <a href="https://github.com/jaszmine/photography-portfolio" target="_blank" class="modal-gh-repo-button">
+                            <span>Check out the github repo here</span>
+                            <svg class="modal-gh-repo-arrow" viewBox="0 0 24 24" width="20" height="20">
+                                <path fill="currentColor" d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <br><br>
+                    <div class="modal-skills">
+                            <!-- Tech Stack -->
+                            <span class="modal-skill-tag">React</span>
+                            <span class="modal-skill-tag">JavaScript</span>
+                            <span class="modal-skill-tag">TailwindCSS</span>
+                            <span class="modal-skill-tag">Vite</span>
+                            <span class="modal-skill-tag">Vercel</span>
+    
+                            <!-- Misc. -->
+                            <span class="modal-skill-tag">Photography</span>
+                            <span class="modal-skill-tag">Web Application</span>
+                            <span class="modal-skill-tag">Responsive Design</span>
+
+                        </div>
+                </div>
+            </div>
              
             <!-- Modal 0: Park Compass -->
             <div id="modal0" class="project-modal">

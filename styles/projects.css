@@ -117,6 +117,7 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
     padding-left: 1rem; 
+    text-decoration: none;
 }
 
 .project-logo-item {
@@ -356,6 +357,7 @@ a.project-logo-item {
 .modal-body p {
     margin: 0 0 1.5rem 0;
     font-size: 1.05rem;
+    text-decoration: none;
 }
 
 .modal-body ul {
@@ -415,6 +417,44 @@ a.project-logo-item {
 }
 
 .modal-pdf-button:hover .modal-pdf-arrow {
+    transform: translateX(4px);
+}
+
+.modal-gh-repo-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: #6b99b2;
+    /* color: #232323;  */
+    color: white;
+    padding: 0.85rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    border: none;
+    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.3);
+    transition: all 0.2s ease;
+}
+
+/* Override the global visited style for project PDF buttons */
+.modal-gh-repo-button:visited {
+    color: white !important; /* Keep the same dark color even when visited */
+}
+
+.modal-gh-repo-button:hover,
+.modal-gh-repo-button:visited:hover {
+    background-color: #86b4ae;
+    color: #232323; /* Keep dark text on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px -1px var(--blue3);
+}
+
+.modal-gh-repo-arrow {
+    transition: transform 0.2s ease;
+}
+
+.modal-gh-repo-button:hover .modal-pdf-arrow {
     transform: translateX(4px);
 }
 
@@ -528,6 +568,39 @@ a.project-logo-item {
     box-shadow: 0 4px 15px var(--blue6);
 }
 
+.ph-website-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    background: #6b99b2;
+    background-origin: border-box;
+    color: var(--color-dark);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px var(--blue7);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.ph-website-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px var(--blue4);
+    background: linear-gradient(135deg, #86b4ae, #6b99b2);
+    color: #232323;
+}
+
+.ph-website-btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px #86b4ae;
+}
+
 /* pulsing animation */
 @keyframes pulse-cyan {
     0% {
@@ -561,10 +634,25 @@ a.project-logo-item {
         width: auto;
         min-width: 250px;
     }
+
+    .ph-website-btn {
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
+        width: auto;
+        min-width: 250px;
+    }
 }
 
 @media (max-width: 480px) {
     .launch-video-btn {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.95rem;
+        min-width: 200px;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .ph-website-btn {
         padding: 0.75rem 1.25rem;
         font-size: 0.95rem;
         min-width: 200px;
