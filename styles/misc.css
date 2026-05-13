@@ -829,3 +829,240 @@
     color: #ffffff;
     text-shadow: 0 0 8px rgba(255, 0, 255, 0.5);
 }
+
+
+
+
+/* --------------------------------
+   1. BOOKSHELF GRID LAYOUT
+-------------------------------- */
+.bookshelf-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.bookshelf-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;      /* books sit on the same baseline */
+  justify-content: center;
+  gap: 0px;                   /* spines touch, like a real shelf */
+  padding-bottom: 1rem;
+}
+
+/* --------------------------------
+   2. INDIVIDUAL BOOK — SPINE VIEW
+-------------------------------- */
+.book {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer;
+  /* overflow: hidden; */
+
+  /* Default dimensions — overridable per-book via JS */
+  width: var(--book-width, 60px);
+  height: var(--book-height, 240px);
+  background-color: var(--book-color, #4a9eff);
+
+  /* 3D perspective tilt (matches screenshot) */
+  transform: perspective(800px) rotateY(-0deg);         /* tilt angle; 0deg = perfectly straight */
+  transform-origin: right center;                       /* which edge stays fixed during the tilt */
+  transition: transform 0.3s ease, filter 0.3s ease;
+
+  /* Spine edge shadow for depth */
+  box-shadow: inset -6px 0 12px rgba(0,0,0,0.25), 4px 6px 18px rgba(0,0,0,0.3);
+}
+
+/* Top cap of the book */
+.book::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background-color: color-mix(in srgb, var(--book-color, #4a9eff) 80%, white);
+  transform: perspective(800px) rotateX(45deg);
+  transform-origin: bottom;
+}
+
+/* Hover — straighten and lift */
+.book:hover {
+  transform: perspective(800px) rotateY(-2deg) translateY(-8px);
+  filter: brightness(1.08);
+  z-index: 10;
+}
+
+/* --------------------------------
+   3. BOOK INTERNALS
+-------------------------------- */
+
+/* Icon in the middle of the spine */
+.book-icon {
+    position: absolute;
+  width: 60%;
+  max-width: 55px;
+  aspect-ratio: 1;
+  object-fit: contain;
+  margin-bottom: 12.5rem;
+  margin-top: auto;
+  opacity: 0.9;
+  /* filter: brightness(0) invert(1);  */
+  /* white icon — remove if icons are colored */
+}
+
+/* Label rotated along the spine */
+.book-label {
+    writing-mode: sideways-lr;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.85);
+    margin-top: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.book-label-image {
+  transform: rotate(270deg);
+  width: 100%;
+  max-width: 100px;
+  object-fit: contain;
+  opacity: 0.9;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* --------------------------------
+   4. FOCUS / ACCESSIBILITY
+-------------------------------- */
+.book:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 3px;
+}
+
+/* --------------------------------
+   5. RESPONSIVE
+-------------------------------- */
+@media (max-width: 900px) {
+  .book {
+    --book-width: 50px;
+    --book-height: 200px;
+  }
+}
+
+@media (max-width: 640px) {
+  .bookshelf-grid {
+    gap: 0px;
+  }
+  .book {
+    --book-width: 42px;
+    --book-height: 170px;
+  }
+  .book-label {
+    font-size: 0.6rem;
+  }
+}
+
+
+
+/* --------------------------------
+   SHELF SECTIONS
+-------------------------------- */
+
+.shelf-section {
+  margin-bottom: 3.5rem;
+}
+
+/* The wooden board that runs under each row */
+.shelf-board {
+  position: relative;
+  width: 100%;
+  height: 22px;
+  background: linear-gradient(
+    180deg,
+    #c8933a 0%,
+    #a8722a 40%,
+    #8b5e1f 100%
+  );
+  border-radius: 3px;
+  box-shadow:
+    0 4px 10px rgba(0,0,0,0.35),
+    0 1px 0px rgba(255,255,255,0.08) inset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Wood grain texture via repeating noise lines */
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 40px,
+      rgba(0,0,0,0.04) 40px,
+      rgba(0,0,0,0.04) 41px
+    ),
+    linear-gradient(180deg, #c8933a 0%, #a8722a 40%, #8b5e1f 100%);
+}
+
+/* The shadow underneath the shelf board (depth illusion) */
+.shelf-board::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.25), transparent);
+  border-radius: 0 0 4px 4px;
+  pointer-events: none;
+}
+
+/* --------------------------------
+   SHELF PLAQUE
+-------------------------------- */
+
+.shelf-plaque {
+  position: relative;
+  padding: 3px 20px;
+  background: linear-gradient(
+    135deg,
+    #d4a843 0%,
+    #c8922e 30%,
+    #b07820 60%,
+    #c8922e 80%,
+    #d4a843 100%
+  );
+  border: 1px solid #e8c060;
+  border-radius: 3px;
+  box-shadow:
+    0 1px 4px rgba(0,0,0,0.4),
+    inset 0 1px 0 rgba(255,220,100,0.3),
+    inset 0 -1px 0 rgba(0,0,0,0.2);
+
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #3a1f00;
+  text-shadow: 0 1px 0 rgba(255,210,80,0.4);
+  white-space: nowrap;
+}
+
+/* Engraved look — subtle inner bevel on text */
+.shelf-plaque::before {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  border-radius: 2px;
+  border: 0.5px solid rgba(255,200,60,0.2);
+  pointer-events: none;
+}

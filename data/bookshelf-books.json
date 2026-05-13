@@ -1,0 +1,110 @@
+{
+  "shelves": [
+    {
+      "id": "leadershipGrid",
+      "label": "Leadership & Involvement"
+    },
+    {
+      "id": "speakingGrid",
+      "label": "Public Speaking & Panels"
+    },
+    {
+      "id": "additionalProjectsGrid",
+      "label": "Additional Projects & Awards"
+    }
+  ],
+  "books": [
+    {
+      "_comment_1": " "
+    },
+    {
+      "title": "ACM",
+      "shelf": "leadershipGrid",
+      "coverImage": "/assets/misc/books/acm.png",
+      "link": "https://acmutd.co/",
+      "external": true,
+      "iconSize": 55,
+      "spineColor": "#1a73e8",
+      "width": 90,
+      "height": 350,
+      "label": "Summer 2023",
+      "labelOffset": 30
+    },
+    {
+      "ACM_Projects": " "
+    },
+    {
+        "title": "ACM Projects",
+        "shelf": "leadershipGrid",
+        "coverImage": "/assets/misc/books/acm-projects-logo_white.png",
+        "labelImage": "/assets/misc/books/acm-projects-text_white.png",
+        "labelImageOffset": 65,
+        "iconSize": 55,
+        "labelImageSize": 220,
+        "spineColor": "#2e2d2d",
+        "width": 90,
+        "height": 340,
+        "label": ""
+    },
+    {
+      "ACM_Education": " "
+    },
+    {
+        "title": "ACM Education",
+        "shelf": "leadershipGrid",
+        "coverImage": "/assets/misc/books/acm-edu-logo_white.png",
+        "labelImage": "/assets/misc/books/acm-edu-text_white.png",
+        "labelImageOffset": 65,
+        "iconSize": 55,
+        "labelImageSize": 210,
+        "spineColor": "#2e2d2d",
+        "width": 90,
+        "height": 320,
+        "label": ""
+    },
+    {
+      "ACM_Community": " "
+    },
+    {
+        "title": "ACM Community",
+        "shelf": "leadershipGrid",
+        "coverImage": "/assets/misc/books/acm-comm-logo_white.png",
+        "labelImage": "/assets/misc/books/acm-comm-text_white.png",
+        "labelImageOffset": 65,
+        "iconSize": 55,
+        "labelImageSize": 210,
+        "spineColor": "#2e2d2d",
+        "width": 90,
+        "height": 350,
+        "label": ""
+    },
+    {
+      "_comment_1": " "
+    },
+    {
+      "title": "Meta",
+      "shelf": "speakingGrid",
+      "coverImage": "/assets/misc/books/meta.png",
+      "link": "https://meta.com/",
+      "external": true,
+      "spineColor": "#0082fb",
+      "width": 80,
+      "height": 320,
+      "label": "Smr 2022"
+    },
+    {
+      "_comment_1": " "
+    },
+    {
+      "title": "Meta",
+      "shelf": "speakingGrid",
+      "coverImage": "/assets/misc/books/meta.png",
+      "link": "https://meta.com/",
+      "external": true,
+      "spineColor": "#0082fb",
+      "width": 80,
+      "height": 320,
+      "label": "Smr 2022"
+    }
+  ]
+}
