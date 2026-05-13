@@ -1,6 +1,6 @@
 # Personal Portfolio
 
-This is the code for my personal portfolio. 
+This is the code for my personal portfolio. I thought it would be a fun little challenge to see how good I could get the site to look with just pure html/css/js. So far it's been a good opportunity to brush up on some webdev fundamentals. 
 
 <br>
 
