@@ -257,6 +257,28 @@
                 </div>
 
                 <!-- P06 = EQCI E91 QKD PROTOCOL -->
+                 <div class="project-card" onclick="openModal('modal06')" id="e91">
+                    <div class="project-image-container">
+                        <img src="assets/projects/mod06/slides/slide01.png" alt="E91 Cover" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">E91 QKD Protocol Implementation</h3>
+                        <p class="project-description">An implementation of the Ekert 91 Quantum Key Distribution Protocol.</p>
+
+                        <!-- Logo Icons -->
+                        <div class="project-logos">
+                            <div class="project-logo-item" title="Python">
+                                <img src="/assets/tech-logos/python-logo.png" alt="Python">
+                            </div>
+                            <div class="project-logo-item" title="Qiskit">
+                                <img src="/assets/tech-logos/qiskit-logo.jpg" alt="Qiskit">
+                            </div>
+                            <div class="project-logo-item" title="Jupyter Notebooks">
+                                <img src="/assets/tech-logos/jupyter-logo.png" alt="Jupyter Notebooks">
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <!-- P05 = Project Card 8: L1 Rocket -->
                 <!-- <div class="project-card" onclick="openModal('modal8')">
@@ -1830,6 +1852,163 @@
                             <span class="modal-skill-tag">Jupyter Notebooks</span>
                             <span class="modal-skill-tag">Computational Chemistry</span>
                             <span class="modal-skill-tag">Hybrid Quantum-Classical Algorithms</span>
+                    </div>
+                </div>
+                    
+            </div>
+
+            <!-- Modal 06: QxQ E91 Intern Project -->
+            <div id="modal06" class="project-modal">
+                <div class="modal-content">
+                    <span class="modal-close" onclick="closeModal('modal06')">&times;</span>
+                    
+                    <div class="modal-header">
+                    <h1 class="modal-title">QxQ Internship Project; Ekert 91 Quantum Key Distribution Implementation</h1>
+                        <p>May-Aug 2023 <b>|</b> Qubit x Qubit</p>
+                        <p><b>QxQ Advisor:</b> <i>Gabbbie Meis</i></p>
+                    </div>
+  
+                    <div class="modal-body">
+                        <h2>Overview</h2>
+                        <p>
+                            At the end of my Qubit by Qubit internship, the final project brought everything together: I worked in a small group during the 
+                            last week of classes to dive into an advanced quantum topic and build a working implementation from the ground up. The challenge 
+                            was to write clean, well-commented code for something like a protocol, simulation, or error correction scheme without relying on 
+                            pre-built quantum functions for that specific concept (e.g., no using Qiskit’s built-in VQE). Basic tools like gates, NumPy, and 
+                            random libraries were fine, which meant we focused on truly understanding the underlying math and logic.
+                        </p>
+                        <p>
+                            We capped off the week with a 10–15 minute presentation to our peers, explaining the concepts, walking through our code, 
+                            demonstrating a live solution to a concrete problem, and discussing what we would explore next with more time. It was a rigorous 
+                            but rewarding way to apply everything I learned during the internship.
+                        </p>
+                        <h2>Brief Explanation of the E91 QKD Protocol</h2>
+                        <p>The E91 protocol (Ekert, 1991) is a quantum key distribution scheme that uses entangled particle pairs to securely generate a 
+                            shared random key between two parties (Alice and Bob). Unlike BB84, security is based on Bell’s inequality:
+                        </p>
+                        <ul>
+                            <li>A source generates entangled qubits (e.g., Bell pairs) and sends one qubit to Alice, the other to Bob.</li>
+                            <li>Each party randomly measures their qubit in one of several bases (e.g., two or three different bases on the Bloch sphere).</li>
+                            <li>After the measurements, they publicly compare a subset of results to test for Bell inequality violations.</li>
+                            <li>If the violation matches predictions for quantum mechanics (no eavesdropping), they can be confident no third party (Charlie) has intercepted the qubits. The remaining measured bits become the secret key.</li>
+                            <li>If the inequality is not violated enough, an eavesdropper is present → discard key.</li>
+                        </ul>
+                        <p>
+                            Key advantage: E91 detects eavesdropping via fundamental quantum correlations rather than just basis mismatch, 
+                            offering a different security proof approach than prepare-and-measure protocols.
+                        </p>
+
+                        <h2>Final Presentation Slides</h2>
+
+                        <br>
+                        <!-- Media Carousel 06-1 -->
+                        <div class="carousel-container">
+                            <!-- Carousel Track -->
+                            <div class="carousel-track" id="carousel06-1">
+                                <!-- Slides -->
+                                <div class="carousel-slide"> <img src="/assets/projects/mod06/slides/slide01.png" alt="Slide1" class="carousel-image"></div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod06/slides/slide02.png" alt="Slide2" class="carousel-image"></div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod06/slides/slide03.png" alt="Slide3" class="carousel-image"></div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod06/slides/slide04.png" alt="Slide4" class="carousel-image"></div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod06/slides/slide05.png" alt="Slide5" class="carousel-image"></div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod06/slides/slide06.png" alt="Slide6" class="carousel-image"></div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod06/slides/slide07.png" alt="Slide7" class="carousel-image"></div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod06/slides/slide08.png" alt="Slide8" class="carousel-image"></div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod06/slides/slide09.png" alt="Slide9" class="carousel-image"></div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod06/slides/slide10.png" alt="Slide10" class="carousel-image"></div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod06/slides/slide11.png" alt="Slide11" class="carousel-image"></div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod06/slides/slide12.png" alt="Slide12" class="carousel-image"></div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod06/slides/slide13.png" alt="Slide13" class="carousel-image"></div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod06/slides/slide14.png" alt="Slide14" class="carousel-image"></div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod06/slides/slide15.png" alt="Slide15" class="carousel-image"></div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod06/slides/slide16.png" alt="Slide16" class="carousel-image"></div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod06/slides/slide17.png" alt="Slide17" class="carousel-image"></div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod06/slides/slide18.png" alt="Slide18" class="carousel-image"></div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod06/slides/slide19.png" alt="Slide19" class="carousel-image"></div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod06/slides/slide20.png" alt="Slide20" class="carousel-image"></div>
+                                <div class="carousel-slide"> <img src="/assets/projects/mod06/slides/slide21.png" alt="Slide21" class="carousel-image"></div>
+                            </div>
+
+                            <!-- Navigation Buttons -->
+                            <button class="carousel-btn carousel-prev" onclick="moveCarousel('carousel06-1', -1)">❮</button>
+                            <button class="carousel-btn carousel-next" onclick="moveCarousel('carousel06-1', 1)">❯</button>
+
+                            <!-- Indicators -->
+                            <div class="carousel-indicators" id="indicators06-1">
+                                <span class="carousel-indicator active" onclick="jumpToSlide('carousel06-1', 0)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel06-1', 1)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel06-1', 2)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel06-1', 3)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel06-1', 4)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel06-1', 5)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel06-1', 6)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel06-1', 7)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel06-1', 8)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel06-1', 9)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel06-1', 10)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel06-1', 11)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel06-1', 12)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel06-1', 13)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel06-1', 14)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel06-1', 15)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel06-1', 16)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel06-1', 17)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel06-1', 18)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel06-1', 19)"></span>
+                                <span class="carousel-indicator" onclick="jumpToSlide('carousel06-1', 20)"></span>
+                            </div>
+                        </div>
+                        <br>
+                        <h2>Tech Stack</h2>
+                        <u style="text-decoration: none !important;">
+                            <li style="margin: 1rem; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                                <div class="project-logos-modal">
+                                    <a href="https://docs.python.org/3/" target="_blank" class="project-logo-item" title="Python">
+                                        <img src="/assets/tech-logos/python-logo.png" alt="Python">
+                                    </a>
+                                    <p style="vertical-align: middle; margin: 0;">&ensp; Programming Language</p>
+                                </div>
+                            </li>
+                            <li style="margin: 1rem; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                                <div class="project-logos-modal">
+                                    <a href="https://quantum.cloud.ibm.com/docs/en/guides" target="_blank" class="project-logo-item" title="Qiskit">
+                                        <img src="/assets/tech-logos/qiskit-logo.jpg" alt="Qiskit">
+                                    </a>
+                                    <p style="vertical-align: middle; margin: 0;">&ensp; Quantum Python Library; <b>Qiskit Version: 2.2.1</b></p>
+                                </div>
+                            </li>
+                            <li style="margin: 1rem; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                                <div class="project-logos-modal">
+                                    <a href="https://docs.jupyter.org/en/latest/" target="_blank" class="project-logo-item" title="Jupyter Notebooks">
+                                        <img src="/assets/tech-logos/jupyter-logo.png" alt="Jupyter Notebooks">
+                                    </a>
+                                    <p style="display: table-cell; vertical-align: middle; margin: 0;">&ensp; Web-based IDE</p>
+                                </div>
+                            </li>
+                        </u>
+                    </div>
+
+                    <!-- Github Repo Button -->
+                    <div class="modal-pdf-section">
+                        <a href="https://github.com/jaszmine/eqci_e91-qkd-protocol/blob/main/e91.py" target="_blank" class="modal-pdf-button">
+                            <span>Check out the github repo here</span>
+                            <svg class="modal-pdf-arrow" viewBox="0 0 24 24" width="20" height="20">
+                                <path fill="currentColor" d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <br><br>
+                    <div class="modal-skills">
+                            <!-- Tech Stack -->
+                            <span class="modal-skill-tag">Ekert 91 Protocol</span>
+                            <span class="modal-skill-tag">BB84 QKD Protocol</span>
+                            <span class="modal-skill-tag">Quantum Key Distribution</span>
+                            <span class="modal-skill-tag">Qiskit</span>
+                            <span class="modal-skill-tag">Python</span>
+                            <span class="modal-skill-tag">Jupyter Notebooks</span>
+                            <span class="modal-skill-tag">Encryption and Decryption</span>
+                            <span class="modal-skill-tag">QKD Protocols and Algorithms</span>
                     </div>
                 </div>
                     
