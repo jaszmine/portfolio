@@ -1,4 +1,8 @@
 :root{
+    --cyan1: #00ffff;
+    --cyan2: #46d9ef;
+    --cyan3: #26c0d3;
+
     --magenta1: #ff00ff; 
     --magenta2: #d946ef;
     --magenta3: #c026d3;
@@ -196,6 +200,75 @@
     color: rgba(233, 222, 184, 0.6);
     margin-top: 0.5rem;
 }
+
+
+/* Related Articles */
+
+.articles-section {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 8rem;  /* padding so items don't touch edges */
+    font-family: "Google Sans", Helvetica, sans-serif;
+}
+
+/* ul container */
+.articles-section ul {
+    max-width: 600px;  /* limits width for better readability */
+    margin: 0 auto;    /* center list */
+    padding: 0;
+}
+
+/* each list item */
+.articles-section ul li {
+    padding: 0.1rem;  /* add spacing btwn items */
+    text-align: left;    /* keep text left-aligned */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);  /* subtle divider,, tbd might remove */
+}
+
+/* links */
+.articles-section ul li a {
+    display: inline-block;
+    color: var(--cyan1) !important;
+    text-decoration: none;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+    padding: 0.1rem 0;
+}
+
+/* visited state */
+.articles-section ul li a:visited {
+    color: var(--cyan1) !important;
+}
+
+/* hover state */
+.articles-section ul li a:hover {
+    color: #ffffff !important;
+    text-shadow: 0 0 8px var(--cyan3) !important;
+    transform: translateX(5px);  /* subtle slide effect */
+}
+
+/* article title styling */
+.articles-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: white;
+    position: relative;
+}
+
+.articles-title:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--cyan1) !important;
+    border-radius: 2px;
+}
+
 
 /* Conference Timeline */
 .conferences-timeline {
