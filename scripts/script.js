@@ -397,6 +397,21 @@ const ProjectModals = {
                 Utils.closeAllModals('.conference-modal.active');
             }
         });
+
+        // Handle close button clicks 
+        document.addEventListener('click', (event) => {
+            const closeBtn = event.target.closest('.modal-close');
+            if (closeBtn) {
+                // Stop the click from triggering the outside click handler
+                event.stopPropagation();
+                
+                // Find the parent modal
+                const modal = closeBtn.closest('.project-modal, .conference-modal');
+                if (modal) {
+                    this.close(modal.id);
+                }
+            }
+        });
     },
     
     open: function(modalId) {
