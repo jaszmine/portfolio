@@ -46,7 +46,42 @@
             <!-- project grid thumbnails & titles -->
             <div class="projects-grid">
 
-                <!-- P15 = LIBRARY SQL DATABASES PROJ -->
+                <!-- P16 = LIBRARY SQL DATABASES PROJ -->
+
+                <!-- P15 = AI BENCHMARK DIGEST -->
+                <div class="project-card" onclick="openModal('modal15')" id="ra">
+                    <div class="project-image-container">
+                        <img src="assets/projects/mod15/15ad-cover.png" alt="AI Benchmark Digest" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">(In-Progress) AI Benchmark Digest</h3>
+                        <p class="project-description">An experimental benchmark of a deterministic AI workflow against an autonomous ReAct agent.</p>
+                        <!-- Logo Icons -->
+                        <div class="project-logos">
+                            <div class="project-logo-item" title="Python">
+                                <img src="/assets/tech-logos/python-logo.png" alt="Python">
+                            </div>
+                            <div class="project-logo-item" title="LangGraph/LangChain">
+                                <img src="/assets/tech-logos/langgraph-logo.png" alt="LangGraph/LangChain">
+                            </div>
+                            <div class="project-logo-item" title="Chart.js">
+                                <img src="/assets/tech-logos/chartjs-logo.png" alt="Chart.js">
+                            </div>
+                            <div class="project-logo-item" title="OpenRouter">
+                                <img src="/assets/tech-logos/openrouterv2-logo.png" alt="OpenRouter">
+                            </div>
+                            <div class="project-logo-item" title="NVIDIA Nemotron 3 Super (LLM)">
+                                <img src="/assets/tech-logos/nvidia-logo.png" alt="NVIDIA Nemotron 3 Super (LLM)">
+                            </div>
+                            <div class="project-logo-item" title="Hugging Face Daily Papers REST API">
+                                <img src="/assets/tech-logos/huggingface-logo.png" alt="Hugging Face Daily Papers REST API">
+                            </div>
+                            <div class="project-logo-item plus-logo" title="+13 more technologies">
+                                <span class="plus-text">+7</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <!-- P14 = RECEIPT ANALYZER PROJECT -->
                 <div class="project-card" onclick="openModal('modal14')" id="ra">
@@ -444,6 +479,421 @@
             </div>
 
             <!-- Modals -->
+
+            <!-- Modal 15: AI Benchmark Digest -->
+            <div id="modal15" class="project-modal">
+                <div class="modal-content">
+                    <!-- <span class="modal-close" onclick="closeModal('modal14')">&times;</span> -->
+                    <button class="modal-close" aria-label="Close modal">
+                        <span class="close-x" aria-hidden="true">&times;</span>
+                    </button>
+
+                    <div class="modal-header" style="position: relative;">
+                        <h1 class="modal-title">AI Benchmark Digest</h1>
+                        <p>September 2026 <b>|</b> Personal Project</p>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <h2>Overview</h2>
+                        <p>This project benchmarks a deterministic AI workflow against an autonomous ReAct agent to evaluate whether 
+                            the operational latency, token overhead, and non-deterministic behavior of an agentic loop justifies its 
+                            deployment over structured heuristics.</p>
+        
+                        <!-- Dashboard Button -->
+                        <div class="modal-pdf-section">
+                            <a href="https://jaszmine.github.io/ai-benchmark-digest/index.html" target="_blank" class="modal-gh-repo-button">
+                                <span>Check out the Experimental Results Dashboard here</span>
+                                <svg class="modal-gh-repo-arrow" viewBox="0 0 24 24" width="20" height="20">
+                                    <path fill="currentColor" d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <br>
+
+                        <h2>Motivation</h2>
+                        <ul>
+                            <li><b>Hands-on Exploration:</b> Built to learn about, implement, and compare deterministic AI pipelines 
+                                and autonomous tool-calling agents from scratch.</li>
+                            <li><b>Applied Scientific Method:</b> Designed as an end-to-end demonstration of experimental design, control 
+                                variables, and data collection as an example I could show my little brother since he’s currently 
+                                working on his 7th grade science fair project.</li>
+                            <li><b>Curated Intelligence vs. Generic Feeds:</b> I also thought it would be interesting to see if using an 
+                                AI workflow to tailor my AI-related newsfeed would be more useful as opposed to just subscribing 
+                                to various newsletters. </li>
+                        </ul>
+
+                        <h2>Systems Architecture</h2>
+                        <div class="modal-diagram-container" style="text-align: center; margin: 2rem 0;">
+                            <img 
+                                src="assets/projects/mod15/Systems Overview (Conceptual).png" 
+                                alt="Systems Architecture Diagram (Conceptual View/Component Diagram)"
+                                style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.10);"
+                            >
+                            <p style="font-size: 0.95em; color: #757575; margin-top: 0.5rem;">
+                                <em>Systems Architecture Diagram</em>
+                            </p>
+                        </div>
+                        <div class="modal-diagram-container" style="text-align: center; margin: 2rem 0;">
+                            <img 
+                                src="assets/projects/mod15/Code Map (Implementation).png" 
+                                alt="Code Map - Systems Architecture Diagram (Implementation View/Data Flow Diagram)"
+                                style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.10);"
+                            >
+                            <p style="font-size: 0.95em; color: #757575; margin-top: 0.5rem;">
+                                <em>Code Map</em>
+                            </p>
+                        </div>
+                        
+                        <h2>Core Features & Telemetry Metrics</h2>
+                        <table style="border-collapse:collapse;width:100%;font-size:14px;color:#18181b;background:#ffffff;">
+                            <thead>
+                              <tr style="background:#f4f4f5;text-align:left;">
+                                <th style="padding:10px 12px;border:1px solid #d4d4d8;color:#18181b;">Metric / Dimension</th>
+                                <th style="padding:10px 12px;border:1px solid #d4d4d8;color:#18181b;">How It's Measured</th>
+                                <th style="padding:10px 12px;border:1px solid #d4d4d8;color:#18181b;">Analytical Purpose</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;"><strong style="color:#18181b;">Wall-Clock Latency</strong></td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">Monotonic execution timer (<code style="color:#18181b;background:#f4f4f5;padding:1px 4px;border-radius:3px;">time.perf_counter</code>)</td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">Compares deterministic batch completion time vs. multi-turn ReAct reasoning loops.</td>
+                              </tr>
+                              <tr style="background:#fafafa;">
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;"><strong style="color:#18181b;">Token Consumption by Category</strong></td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">Aggregated from API token metadata: Prompt, Completion, and Reasoning (Chain of Thought)</td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">Measures computational and financial overhead per pipeline execution.</td>
+                              </tr>
+                              <tr>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;"><strong style="color:#18181b;">Agent Search Efficiency</strong></td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;"><code style="color:#18181b;background:#f4f4f5;padding:1px 4px;border-radius:3px;">Track B Total Tokens / Agent Turns</code></td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">Tracks token utilization per exploratory turn to identify diminishing returns during search.</td>
+                              </tr>
+                              <tr style="background:#fafafa;">
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;"><strong style="color:#18181b;">Topical Diversity Bias</strong></td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">Category distribution tagged against preset domain buckets</td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">Evaluates whether the autonomous agent clusters around a single domain or preserves topic diversity.</td>
+                              </tr>
+                              <tr>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;"><strong style="color:#18181b;">Link Integrity Pass Rate</strong></td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">Asynchronous HTTP status code and anti-bot challenge auditing</td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">Quantifies hallucination or dead-link rates across generated references.</td>
+                              </tr>
+                              <tr style="background:#fafafa;">
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;"><strong style="color:#18181b;">Jaccard Semantic Convergence</strong></td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">Intersection over union of tokenized story titles between tracks</td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">Evaluates if deterministic and autonomous pipelines independently identify identical major news items.</td>
+                              </tr>
+                              <tr>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;"><strong style="color:#18181b;">Publication Age Delta</strong></td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">Difference between article published date and runtime execution timestamp</td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">Measures freshness and recency bias across sources surfaced by each pipeline.</td>
+                              </tr>
+                            </tbody>
+                        </table>
+                        <br>
+
+                        <h2>Tech Stack</h2>
+                        <table style="border-collapse:collapse;width:100%;font-family:system-ui,sans-serif;font-size:14px;color:#18181b;background:#ffffff;">
+                            <thead>
+                              <tr style="background:#f4f4f5;text-align:left;">
+                                <th style="padding:10px 12px;border:1px solid #d4d4d8;color:#18181b;">Layer / Category</th>
+                                <th style="padding:10px 12px;border:1px solid #d4d4d8;color:#18181b;">Technology / Tool</th>
+                                <th style="padding:10px 12px;border:1px solid #d4d4d8;color:#18181b;">Version / Identifier</th>
+                                <th style="padding:10px 12px;border:1px solid #d4d4d8;color:#18181b;">Purpose &amp; Role</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;"><strong style="color:#18181b;">Foundation Model</strong></td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">
+                                    <div class="project-logos-modal">
+                                        <a href="https://build.nvidia.com/nvidia/nemotron-3-super-120b-a12b/modelcard" target="_blank" class="project-logo-item" title="NVIDIA llm">
+                                            <img src="/assets/tech-logos/nvidia-logo.png" alt="NVIDIA llm">
+                                        </a>
+                                    </div>
+                                    NVIDIA Nemotron-3 Super</td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;"><code style="color:#18181b;background:#f4f4f5;padding:1px 4px;border-radius:3px;">nvidia/nemotron-3-super-120b-a12b:free</code></td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">Primary reasoning, summarization, and deep-dive LLM</td>
+                              </tr>
+                              <tr style="background:#fafafa;">
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;"><strong style="color:#18181b;">Model Gateway</strong></td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">
+                                    <div class="project-logos-modal">
+                                        <a href="https://openrouter.ai/docs/api_reference/overview" target="_blank" class="project-logo-item" title="OpenRouter API">
+                                            <img src="/assets/tech-logos/openrouterv2-logo.png" alt="OpenRouter API">
+                                        </a>
+                                    </div>
+                                    OpenRouter REST API</td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;"><code style="color:#18181b;background:#f4f4f5;padding:1px 4px;border-radius:3px;">v1</code></td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">Unified, rate-limited gateway routing prompts to the NVIDIA model</td>
+                              </tr>
+                              <tr>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;"><strong style="color:#18181b;">Agent Search Engine</strong></td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">
+                                    <div class="project-logos-modal">
+                                        <a href="https://www.tavily.com/" target="_blank" class="project-logo-item" title="Tavily">
+                                            <img src="/assets/tech-logos/tavily-logo.png" alt="Tavily">
+                                        </a>
+                                    </div>
+                                    Tavily Search REST API</td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;"><code style="color:#18181b;background:#f4f4f5;padding:1px 4px;border-radius:3px;">tavily-python (v0.4.0 / REST v1)</code></td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">Grounded real-time web search and content extraction for Track B</td>
+                              </tr>
+                              <tr style="background:#fafafa;">
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;"><strong style="color:#18181b;">Paper Ingestion API</strong></td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">
+                                    <div class="project-logos-modal">
+                                        <a href="https://huggingface.co/papers/date/2026-09-11" target="_blank" class="project-logo-item" title="Hugging Face Daily Papers">
+                                            <img src="/assets/tech-logos/huggingface-logo.png" alt="Hugging Face Daily Papers">
+                                        </a>
+                                    </div>
+                                    Hugging Face Daily Papers</td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;"><code style="color:#18181b;background:#f4f4f5;padding:1px 4px;border-radius:3px;">REST API (/api/daily_papers)</code></td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">Direct programmatic ingestion of top curated ML pre-prints for Track A</td>
+                              </tr>
+                              <tr>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;"><strong style="color:#18181b;">Email Delivery API</strong></td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">
+                                    <div class="project-logos-modal">
+                                        <a href="https://resend.com/home" target="_blank" class="project-logo-item" title="Resend REST API">
+                                            <img src="/assets/tech-logos/resend-black-logo.png" alt="Resend REST API">
+                                        </a>
+                                    </div>
+                                    Resend REST API</td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;"><code style="color:#18181b;background:#f4f4f5;padding:1px 4px;border-radius:3px;">resend-python (v2.43.0 / REST v1)</code></td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">Transactional delivery of compiled HTML news digests</td>
+                              </tr>
+                              <tr style="background:#fafafa;">
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;"><strong style="color:#18181b;">Runtime</strong></td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">
+                                    <div class="project-logos-modal">
+                                        <a href="https://www.python.org/downloads/release/python-3110/" target="_blank" class="project-logo-item" title="Python">
+                                            <img src="/assets/tech-logos/python-logo.png" alt="Python">
+                                        </a>
+                                    </div>
+                                    Python</td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;"><code style="color:#18181b;background:#f4f4f5;padding:1px 4px;border-radius:3px;">3.11</code></td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">Core execution environment and language runtime</td>
+                              </tr>
+                              <!-- <tr>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;"><strong style="color:#18181b;">Package Manager</strong></td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">uv (Astral)</td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;"><code style="color:#18181b;background:#f4f4f5;padding:1px 4px;border-radius:3px;">0.4.x</code></td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">Fast virtual environment isolation and deterministic lockfile resolution</td>
+                              </tr> -->
+                              <tr style="background:#fafafa;">
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;"><strong style="color:#18181b;">Agent Orchestration</strong></td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">
+                                    <div class="project-logos-modal">
+                                        <a href="https://www.langchain.com/langgraph" target="_blank" class="project-logo-item" title="LangGraph">
+                                            <img src="/assets/tech-logos/langgraph-logo.png" alt="LangGraph">
+                                        </a>
+                                        <a href="https://www.langchain.com/langchain" target="_blank" class="project-logo-item" title="LangChain">
+                                            <img src="/assets/tech-logos/langchain-logo.png" alt="LangChain" style="transform: scale(1.7);">
+                                        </a>
+                                    </div>
+                                    LangGraph &amp; LangChain Core</td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;"><code style="color:#18181b;background:#f4f4f5;padding:1px 4px;border-radius:3px;">0.2.76 / 0.3.86</code></td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">Stateful agent execution graph, tool calling, and turn tracking</td>
+                              </tr>
+                              <!-- <tr>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;"><strong style="color:#18181b;">Testing Framework</strong></td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">pytest &amp; pytest-asyncio</td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;"><code style="color:#18181b;background:#f4f4f5;padding:1px 4px;border-radius:3px;">8.x</code></td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">Async unit test coverage and pipeline assertions</td>
+                              </tr> -->
+                              <!-- <tr style="background:#fafafa;">
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;"><strong style="color:#18181b;">HTTP Transport</strong></td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">httpx</td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;"><code style="color:#18181b;background:#f4f4f5;padding:1px 4px;border-radius:3px;">0.27.x</code></td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">High-throughput asynchronous HTTP client for verification and API queries</td>
+                              </tr> -->
+                              <tr>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;"><strong style="color:#18181b;">HTML Parsing</strong></td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">
+                                    <div class="project-logos-modal">
+                                        <a href="https://pypi.org/project/beautifulsoup4/" target="_blank" class="project-logo-item" title="BeautifulSoup4">
+                                            <img src="/assets/tech-logos/beautifulsoup-logo.png" alt="BeautifulSoup4">
+                                        </a>
+                                    </div>
+                                    BeautifulSoup4</td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;"><code style="color:#18181b;background:#f4f4f5;padding:1px 4px;border-radius:3px;">4.15.0</code></td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">Publication date extraction, metadata discovery, and digest scraping</td>
+                              </tr>
+                              <!-- <tr style="background:#fafafa;">
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;"><strong style="color:#18181b;">JSON Healing</strong></td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">json-repair</td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;"><code style="color:#18181b;background:#f4f4f5;padding:1px 4px;border-radius:3px;">0.30.x</code></td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">Fault-tolerant parsing for schema-enforced LLM responses</td>
+                              </tr> -->
+                              <tr>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;"><strong style="color:#18181b;">Template Engine</strong></td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">
+                                    <div class="project-logos-modal">
+                                        <a href="https://jinja.palletsprojects.com/en/stable/" target="_blank" class="project-logo-item" title="Jinja2">
+                                            <img src="/assets/tech-logos/jinja-logo.png" alt="Jinja2" style="transform: scale(2.0);">
+                                        </a>
+                                    </div>
+                                    Jinja2</td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;"><code style="color:#18181b;background:#f4f4f5;padding:1px 4px;border-radius:3px;">3.1.6</code></td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">Compiles data and scorecards into responsive HTML email digests via <code>templates/digest_email.html.j2</code></td>
+                              </tr>
+                              <tr>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;"><strong style="color:#18181b;">Dashboard Frontend (Telemetry UI)</strong></td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">
+                                    <div class="project-logos-modal">
+                                        <a href="https://www.chartjs.org/" target="_blank" class="project-logo-item" title="Chart.js">
+                                            <img src="/assets/tech-logos/chartjs-logo.png" alt="Chart.js" style="transform: scale(1.5);">
+                                        </a>
+                                    </div>
+                                    Chart.js &amp; Vanilla CSS</td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;"><code style="color:#18181b;background:#f4f4f5;padding:1px 4px;border-radius:3px;">4.5.1</code></td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">Client-side JavaScript rendering of interactive line, bar, and radar telemetry charts in <code>index.html</code> for dashboard layout</td>
+                              </tr>
+                              <tr style="background:#fafafa;">
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;"><strong style="color:#18181b;">CI/CD &amp; Hosting</strong></td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">
+                                    <div class="project-logos-modal">
+                                        <a href="https://github.com/features/actions" target="_blank" class="project-logo-item" title="GitHub Actions & Pages">
+                                            <img src="/assets/tech-logos/githubactions-logo.png" alt="GitHub Actions & Pages"">
+                                        </a>
+                                    </div>
+                                    GitHub Actions &amp; GitHub Pages</td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">—</td>
+                                <td style="padding:10px 12px;border:1px solid #e4e4e7;vertical-align:top;color:#18181b;">Headless scheduled runs, zero-cost Pages deployment, and artifact persistence</td>
+                              </tr>
+                            </tbody>
+                        </table>
+                        <br>
+
+
+                        <h2>External Integrations & API Services</h2>
+                        <ul>
+                            <li><b>OpenRouter REST API:</b> Serves as the unified model gateway to invoke frontier LLMs 
+                                (e.g., nvidia/nemotron-3-super-120b-a12b:free).</li>
+                            <li><b>Tavily Search REST API:</b> Real-time search and content extraction engine optimized for autonomous LLM queries, 
+                                providing direct web grounding for Track B's iterative searches.</li>
+                            <li><b>Resend REST API:</b> Transactional email delivery service delivering rendered HTML 
+                                digests directly to verified recipients.</li>
+                            <li><b>GitHub REST API & Actions:</b> Orchestrates cron execution, runs test suites, manages repository artifacts 
+                                without merge conflicts, and publishes the static frontend to GitHub Pages.</li>
+                            <li><b>Hugging Face Daily Papers REST API:</b> Programmatic source of curated, high-impact machine learning pre-prints 
+                                and community discussions used for Track A's deterministic ingest.</li>
+                        </ul>
+
+                        <h2>Documentation (Coming Soon)</h2>
+                        <ul>
+                            <li>Prompt iterations</li>
+                            <li>Track A scoring breakdown</li>
+                            <li>Design choices</li>
+                            <li>Literature Review</li>
+                        </ul>
+                        <br>
+
+                        <h2>Next Steps</h2>
+                        <ul>
+                            <li>Refine pipeline resilience and debug edge-case anomalies across daily scheduled batches.</li>
+                            <li><b>Automated LLM Evaluation ("LLM-as-a-Judge"):</b> Introduce a verification node that scores the informational depth and 
+                                grounding of Track B deep-dives against raw research abstracts (new AI workflow).</li>
+                            <li><b>Decoupled System Specification vs. Ad-Hoc Prompting:</b> Architect a standalone, cache-friendly task specification document rather 
+                                than inline prompt instructions. This would provide an immutable contract for output schema validation, maximize prompt caching across 
+                                multi-turn agent loops, and curb token-wasting chain-of-thought drift.</li>
+                            <li><b>Deprecation Contingency:</b> Benchmark and select an alternative foundation model to replace NVIDIA Nemotron ahead of 
+                                its late-2026 deprecation</li>
+                            <li>Implement a self-benchmarking agentic pipeline that continuously evaluates newly released LLMs against historical digest datasets 
+                                to automatically recommend or promote superior models (new AI agent).</li>
+                        </ul>
+
+                        <!-- <h2>Literature Review</h2>
+                            <ul>
+                                <li>
+                                    <b>"Popular open-source OCR models and how they work"</b>, July 7, 2025,<br>
+                                    <a href="https://www.ultralytics.com/blog/popular-open-source-ocr-models-and-how-they-work" target="_blank">
+                                        https://www.ultralytics.com/blog/popular-open-source-ocr-models-and-how-they-work
+                                    </a>
+                                </li>
+                                <li>
+                                    <b>"I Spent May Evaluating Different Engines for OCR"</b>, June 3, 2026,<br>
+                                    <a href="https://towardsdatascience.com/i-spent-may-evaluating-different-engines-for-ocr/" target="_blank">
+                                        https://towardsdatascience.com/i-spent-may-evaluating-different-engines-for-ocr/
+                                    </a>
+                                </li>
+                                <li>
+                                    <b>"Supercharge your OCR Pipelines with Open Models"</b>, October 21, 2025,<br>
+                                    <a href="https://huggingface.co/blog/ocr-open-models#comparing-latest-models" target="_blank">
+                                        https://huggingface.co/blog/ocr-open-models#comparing-latest-models
+                                    </a>
+                                </li>
+                                <li>
+                                    <b>"8 Top Open-Source OCR Models Compared: A Complete Guide"</b>, March 31, 2025,<br>
+                                    <a href="https://modal.com/blog/8-top-open-source-ocr-models-compared" target="_blank">
+                                        https://modal.com/blog/8-top-open-source-ocr-models-compared
+                                    </a>
+                                </li>
+                                <li>
+                                    <b>"Best Open Source OCR Tools &amp; Models in 2026 — Developer’s Guide"</b>, June 12, 2026,<br>
+                                    <a href="https://unstract.com/blog/best-opensource-ocr-tools/" target="_blank">
+                                        https://unstract.com/blog/best-opensource-ocr-tools/
+                                    </a>
+                                </li>
+                                <li>
+                                    <b>"I Evaluated the 8 Best Free OCR Tools for Document Conversion"</b>, Jan 2, 2026,<br>
+                                    <a href="https://learn.g2.com/free-ocr-software" target="_blank">
+                                        https://learn.g2.com/free-ocr-software
+                                    </a>
+                                </li>
+                                <li>
+                                    <b>"OCR (Optical Character Recognition) with world-class Google Cloud AI"</b>, <i>as of Sep 3, 2026</i>,<br>
+                                    <a href="https://cloud.google.com/use-cases/ocr" target="_blank">
+                                        https://cloud.google.com/use-cases/ocr
+                                    </a>
+                                </li>
+                                <li>
+                                    <b>"Google Vision vs AWS Textract vs Azure: Cloud OCR Comparison 2026"</b>, June 30, 2026,<br>
+                                    <a href="https://imagetotable.ai/blog/google-vs-aws-vs-azure-ocr-2026" target="_blank">
+                                        https://imagetotable.ai/blog/google-vs-aws-vs-azure-ocr-2026
+                                    </a>
+                                </li>
+                            </ul> -->
+
+                        <!-- GitHub Repo Button -->
+                        <div class="modal-pdf-section">
+                            <a href="https://github.com/jaszmine/ai-benchmark-digest" target="_blank" class="modal-gh-repo-button">
+                                <span>Check out the GitHub Repo Here</span>
+                                <svg class="modal-gh-repo-arrow" viewBox="0 0 24 24" width="20" height="20">
+                                    <path fill="currentColor" d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <br>
+    
+                    </div>
+
+                    <br><br>
+                    <div class="modal-skills">
+                        <!-- Tech Stack -->
+                        <span class="modal-skill-tag">NVIDIA</span>
+                        <span class="modal-skill-tag">OpenRouter</span>
+                        <span class="modal-skill-tag">Tavily</span>
+                        <span class="modal-skill-tag">Hugging Face Daily Papers</span>
+                        <span class="modal-skill-tag">Resend REST API</span>
+                        <span class="modal-skill-tag">Python</span>
+                        <span class="modal-skill-tag">LangGraph</span>
+                        <span class="modal-skill-tag">LangChain</span>
+                        <span class="modal-skill-tag">BeautifulSoup4</span>
+                        <span class="modal-skill-tag">Jinja2</span>
+                        <span class="modal-skill-tag">Chart.js</span>
+                        <span class="modal-skill-tag">GitHub Actions</span>
+                        <span class="modal-skill-tag">CI/CD</span>
+                        <span class="modal-skill-tag">Cron Jobs</span>
+                        <span class="modal-skill-tag">GitHub Pages</span>
+                        <span class="modal-skill-tag">AI Workflows</span>
+                        <span class="modal-skill-tag">AI Agents</span>
+                        <span class="modal-skill-tag">Pipeline-Driven / Web-Augmented RAG</span>
+                    </div>
+                </div>
+            </div>
 
             <!-- Modal 14: Receipt Analyzer -->
             <div id="modal14" class="project-modal">
